@@ -1,0 +1,21 @@
+.wrapper {
+    border-radius: var(--border-radius);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.buttonText {
+    margin: var(--space-md) var(--space-lg);
+}
+
+.primary {
+    background-color: white;
+    color: var(--primary1000);
+}
+
+.secondary {
+    background-color: var(--primary800);
+    color: white;
+}

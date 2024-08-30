@@ -1,3 +1,149 @@
+:root {
+  --space-xxl: 72px;
+  --space-xl: 64px;
+  --space-lg: 48px;
+  --space-md: 32px;
+  --space-sm: 24px;
+  --space-xs: 16px;
+  --space-xxs: 8px;
+  --space-xxxs: 4px;
+
+  --font-size-xxl: 48px;
+  --font-size-xl: 32px;
+  --font-size-lg: 24px;
+  --font-size-md: 20px;
+  --font-size-sm: 18px;
+  --font-size-xs: 16px;
+  --font-size-xxs: 14px;
+  --font-size-xxxs: 12px;
+
+  --font-weight-light: 200;
+  --font-weight-regular: 300;
+
+  --primary1000: #23465E;
+  --primary800: #436983;
+  --primary500: #7392A8;
+  --primary300: #96ADBB;
+  --primary200: #A2B6C2;
+
+  --secondary100: #FAF9F9;
+
+  --transparent: #D9D9D91A;
+
+
+  --border-radius: 10px;
+}
+
 body {
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+.content-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  max-width: 1650px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-lg,
+.header-md,
+.header-sm {
+  font-family: var(--font-raleway);
+  font-weight: var(--font-weight-regular);
+  line-height: 125%;
+  letter-spacing: 2px;
+}
+
+.header-lg {
+  font-size: var(--font-size-xxl);
+}
+
+.header-md {
+  font-size: var(--font-size-xl);
+}
+
+.header-sm {
+  font-size: var(--font-size-lg);
+}
+
+.body-lg-l,
+.body-md-l,
+.body-sm-l,
+.body-xs-l {
   font-family: var(--font-jost);
+  font-weight: var(--font-weight-light);
+  line-height: 150%;
+  letter-spacing: 2px;
+}
+
+.body-lg-r,
+.body-md-r,
+.body-sm-r,
+.body-xs-r {
+  font-family: var(--font-jost);
+  font-weight: var(--font-weight-regular);
+}
+
+.body-lg-i,
+.body-md-i,
+.body-sm-i,
+.body-xs-i {
+  font-family: var(--font-jost);
+  font-style: italic;
+}
+
+.body-lg-l,
+.body-lg-r,
+.body-lg-i {
+  font-size: var(--font-size-xl);
+}
+
+.body-md-l,
+.body-md-r,
+.body-md-i {
+  font-size: var(--font-size-lg);
+}
+
+.body-sm-l,
+.body-sm-r,
+.body-sm-i {
+  font-size: var(--font-size-md);
+}
+
+
+.label-lg,
+.label-md,
+.label-sm {
+  font-family: var(--font-jost);
+  font-weight: var(--font-weight-light);
+  line-height: 82%;
+  letter-spacing: 2px;
+}
+
+.label-lg {
+  font-size: var(--font-size-xl);
+}
+
+.label-md {
+  font-size: var(--font-size-lg);
+}
+
+.label-sm {
+  font-size: var(--font-size-xs);
+}
+
+.transparent-wrapper {
+  background-color: var(--transparent);
+  border-radius: var(--border-radius);
 }

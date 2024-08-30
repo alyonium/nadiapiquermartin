@@ -4,14 +4,15 @@ import './globals.css';
 import classNames from 'classnames';
 
 const raleway = Raleway({
-  weight: '400',
+  weight: ['200', '300', '400'],
   subsets: ['latin'],
   variable: '--font-raleway',
 });
 
 const jost = Jost({
-  weight: '400',
+  weight: ['200', '300', '400'],
   subsets: ['latin'],
+  style: ['italic', 'normal'],
   variable: '--font-jost',
 });
 
