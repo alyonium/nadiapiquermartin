@@ -1,0 +1,68 @@
+.select {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: var(--space-xxs);
+}
+
+.select:focus {
+    outline: none;
+}
+
+.scrollAreaViewport {
+    height: 100%;
+    padding: var(--space-xs);
+    margin-top: var(--space-xs);
+    background-color: white;
+    color: var(--primary1000);
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xxs);
+}
+
+.itemWrapper:hover,
+.itemWrapper:active,
+.itemWrapper:focus {
+    outline: none;
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-xxs);
+    cursor: pointer;
+}
+
+.arrow {
+    margin-top: var(--space-xxs);
+    transition: 0.3s ease-out;
+}
+
+.select[aria-expanded="true"] .arrow {
+    transform: rotate(180deg);
+    transition: 0.3s ease-out;
+}
+
+[lang="ru"] .icon,
+[lang="es"] .icon {
+    margin-top: var(--space-xxxs);
+}
+
+[lang="ru"] .label,
+[lang="es"] .label {
+    line-height: 80%;
+}
+
+[lang="ru"] .arrow,
+[lang="es"] .arrow {
+    margin-top: var(--arrow-margin);
+}
+
+[lang="ua"] .icon {
+    margin-top: var(--space-xxxxs);
+}

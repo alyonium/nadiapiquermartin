@@ -1,4 +1,12 @@
 {
+  "header": {
+    "about": "Acerca de mí",
+    "services": "Servicios",
+    "reviews": "Reseñas",
+    "office": "Oficina",
+    "recommendations": "Recomendaciones",
+    "contacts": "Contactos"
+  },
   "intro": {
     "obstetrician": "Ginecología y Obstetricia en Valencia",
     "button": "Pedir cita"

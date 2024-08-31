@@ -1,4 +1,12 @@
 {
+  "header": {
+    "about": "Обо мне",
+    "services": "Услуги",
+    "reviews": "Отзывы",
+    "office": "Кабинет",
+    "recommendations": "Рекомендации",
+    "contacts": "Контакты"
+  },
   "intro": {
     "obstetrician": "Акушер-гинеколог в Валенсии",
     "button": "Записаться на приём"

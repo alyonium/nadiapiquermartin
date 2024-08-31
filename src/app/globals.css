@@ -7,6 +7,7 @@
   --space-xs: 16px;
   --space-xxs: 8px;
   --space-xxxs: 4px;
+  --space-xxxxs: 2px;
 
   --font-size-xxl: 48px;
   --font-size-xl: 32px;
@@ -32,6 +33,7 @@
 
 
   --border-radius: 10px;
+  --arrow-margin: 10px;
 }
 
 body {
@@ -77,21 +79,47 @@ h1 {
   font-size: var(--font-size-lg);
 }
 
+body[lang="ru"] .body-lg-l,
+body[lang="ru"] .body-md-l,
+body[lang="ru"] .body-sm-l,
+body[lang="ru"] .body-xs-l,
+body[lang="ru"] .body-lg-r,
+body[lang="ru"] .body-md-r,
+body[lang="ru"] .body-sm-r,
+body[lang="ru"] .body-xs-r,
+body[lang="ru"] .body-lg-i,
+body[lang="ru"] .body-md-i,
+body[lang="ru"] .body-sm-i,
+body[lang="ru"] .body-xs-i,
+
+body[lang="es"] .body-lg-l,
+body[lang="es"] .body-md-l,
+body[lang="es"] .body-sm-l,
+body[lang="es"] .body-xs-l,
+body[lang="es"] .body-lg-r,
+body[lang="es"] .body-md-r,
+body[lang="es"] .body-sm-r,
+body[lang="es"] .body-xs-r,
+body[lang="es"] .body-lg-i,
+body[lang="es"] .body-md-i,
+body[lang="es"] .body-sm-i,
+body[lang="es"] .body-xs-i {
+  font-family: var(--font-jost);
+  line-height: 150%;
+  letter-spacing: 2px;
+}
+
 .body-lg-l,
 .body-md-l,
 .body-sm-l,
 .body-xs-l {
-  font-family: var(--font-jost);
   font-weight: var(--font-weight-light);
-  line-height: 150%;
-  letter-spacing: 2px;
 }
 
 .body-lg-r,
 .body-md-r,
 .body-sm-r,
 .body-xs-r {
-  font-family: var(--font-jost);
   font-weight: var(--font-weight-regular);
 }
 
@@ -99,7 +127,6 @@ h1 {
 .body-md-i,
 .body-sm-i,
 .body-xs-i {
-  font-family: var(--font-jost);
   font-style: italic;
 }
 
@@ -143,7 +170,7 @@ body[lang="ua"] .body-xs-r {
 .label-sm {
   font-family: var(--font-jost);
   font-weight: var(--font-weight-light);
-  line-height: 82%;
+  line-height: 70%;
   letter-spacing: 2px;
 }
 
