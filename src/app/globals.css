@@ -121,6 +121,22 @@ h1 {
   font-size: var(--font-size-md);
 }
 
+body[lang="ua"] .body-lg-l,
+body[lang="ua"] .body-md-l,
+body[lang="ua"] .body-sm-l,
+body[lang="ua"] .body-xs-l,
+
+body[lang="ua"] .body-lg-i,
+body[lang="ua"] .body-md-i,
+body[lang="ua"] .body-sm-i,
+body[lang="ua"] .body-xs-i,
+
+body[lang="ua"] .body-lg-r,
+body[lang="ua"] .body-md-r,
+body[lang="ua"] .body-sm-r,
+body[lang="ua"] .body-xs-r {
+  font-family: var(--font-roboto);
+}
 
 .label-lg,
 .label-md,
@@ -141,6 +157,12 @@ h1 {
 
 .label-sm {
   font-size: var(--font-size-xs);
+}
+
+body[lang="ua"] .label-lg,
+body[lang="ua"] .label-md,
+body[lang="ua"] .label-sm {
+  font-family: var(--font-roboto);
 }
 
 .transparent-wrapper {

@@ -1,1 +1,4 @@
-export type ButtonType = 'primary' | 'secondary';
+export enum ButtonType {
+  primary = 'primary',
+  secondary = 'secondary',
+}

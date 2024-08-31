@@ -1,11 +1,5 @@
-import Intro from '@/modules/main/intro/Intro';
+import { redirect } from 'next/navigation';
 
-const Home = () => {
-  return (
-    <>
-      <Intro />
-    </>
-  );
-};
-
-export default Home;
+export default function RootPage() {
+  redirect('/ru');
+}

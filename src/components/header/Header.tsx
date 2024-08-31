@@ -1,12 +1,12 @@
 import styles from '@/components/Header/Header.module.css';
 import Image from 'next/image';
-import logo from '@/assets/logo.png';
+import logo from '/public/logo.png';
 import Dropdown from '@/components/dropdown/Dropdown';
 
 const Header = () => {
   return (
     <div className={styles.header}>
-      <Image src={logo} />
+      <Image alt='logo' src={logo} />
 
       <div className={styles.nav}>
         <span className='body-md-l'>Обо мне</span>
