@@ -66,3 +66,28 @@
 [lang="ua"] .icon {
     margin-top: var(--space-xxxxs);
 }
+
+/*md*/
+@media (max-width: 1727px) and (min-width: 1280px) {
+    .arrow {
+        margin-top: var(--space-xxs) !important;
+    }
+}
+
+/*sm*/
+@media (max-width: 1279px) and (min-width: 768px) {
+    .select {
+        gap: var(--space-xxxs);
+    }
+
+    .arrow {
+        margin-top: 7px !important;
+    }
+}
+
+/*xs*/
+@media (max-width: 767px) and (min-width: 320px) {
+    .arrow {
+        margin-top: 7px !important;
+    }
+}

@@ -33,7 +33,7 @@ export const SelectLang = () => {
               <Select.ItemText>
                 <div className={styles.item}>
                   <Image alt='esFlag' src={esImage} className={styles.icon} />
-                  <span className={classNames('label-lg', styles.label)}>
+                  <span className={classNames('body-lg-l', styles.label)}>
                     es
                   </span>
                 </div>
@@ -43,7 +43,7 @@ export const SelectLang = () => {
               <Select.ItemText>
                 <div className={styles.item}>
                   <Image alt='uaFlag' src={uaImage} className={styles.icon} />
-                  <span className={classNames('label-lg', styles.label)}>
+                  <span className={classNames('body-lg-l', styles.label)}>
                     ua
                   </span>
                 </div>
@@ -53,7 +53,7 @@ export const SelectLang = () => {
               <Select.ItemText>
                 <div className={styles.item}>
                   <Image alt='ruFlag' src={ruImage} className={styles.icon} />
-                  <span className={classNames('label-lg', styles.label)}>
+                  <span className={classNames('body-lg-l', styles.label)}>
                     ru
                   </span>
                 </div>

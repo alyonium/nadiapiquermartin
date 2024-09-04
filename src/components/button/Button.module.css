@@ -4,6 +4,20 @@
     align-content: center;
     justify-content: center;
     cursor: pointer;
+    transition: var(--base-transition);
+}
+
+.wrapper:hover {
+    background-color: var(--primary1000);
+    color: white;
+    transition: var(--base-transition);
+}
+
+.wrapper:active,
+.wrapper:focus {
+    background-color: var(--transparent);
+    color: white;
+    transition: var(--base-transition);
 }
 
 .buttonText {
@@ -18,4 +32,25 @@
 .secondary {
     background-color: var(--primary800);
     color: white;
+}
+
+/*md*/
+@media (max-width: 1727px) and (min-width: 1280px) {
+    .buttonText {
+        margin: var(--space-sm) var(--space-md);
+    }
+}
+
+/*sm*/
+@media (max-width: 1279px) and (min-width: 768px) {
+    .buttonText {
+        margin: var(--space-xs) var(--space-sm);
+    }
+}
+
+/*xs*/
+@media (max-width: 767px) and (min-width: 320px) {
+    .buttonText {
+        margin: var(--space-xs) var(--space-xs);
+    }
 }

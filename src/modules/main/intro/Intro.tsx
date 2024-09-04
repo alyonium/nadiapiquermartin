@@ -20,7 +20,11 @@ export const Intro = () => {
             styles.transparentBlockWrapper
           )}
         >
-          <Image alt='123' src={introPhoto} />
+          <Image
+            alt='doctora'
+            src={introPhoto}
+            className={styles.imageWrapper}
+          />
 
           <div className={styles.textBlockWrapper}>
             <div className={styles.textWrapper}>

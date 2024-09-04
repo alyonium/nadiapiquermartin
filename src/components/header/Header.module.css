@@ -6,6 +6,31 @@
     margin: var(--space-sm) 0;
 }
 
+.menuLink {
+    transition-duration: var(--base-transition);
+}
+
+.menuLink {
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+}
+
+.menuLink:hover {
+    color: var(--primary1000);
+}
+
+.menuLink:active {
+    color: var(--primary300);
+}
+
+.rightBlock {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-xxs);
+    align-items: center;
+}
+
 .nav {
     display: flex;
     justify-content: space-between;
@@ -18,3 +43,181 @@
     cursor: pointer;
     text-transform: lowercase;
 }
+
+.logo {
+    width: 85px;
+    object-fit: contain;
+}
+
+.logoWithName {
+    width: 270px;
+    object-fit: contain;
+}
+
+.sideMenu {
+    top: 0;
+    right: -350px;
+    width: 350px;
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    z-index: 5500;
+    background: var(--primary1000);
+    height: 100vh;
+    gap: var(--space-xxxl);
+    transition-duration: var(--base-transition);
+}
+
+.sideMenuNav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    text-transform: lowercase;
+    gap: var(--space-xs);
+}
+
+.burgerMenuIcon {
+    display: none;
+    height: 30px;
+    width: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.crossMenuIcon {
+    height: 30px;
+    width: 30px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    left: var(--space-xs);
+    top: var(--space-xs);
+}
+
+.sideMenuNavItem {
+    display: flex;
+    gap: var(--space-md);
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+}
+
+.sideMenuNavItem:after {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 32px;
+    width: 0;
+    height: 1px;
+    background-color: white;
+    content: "";
+    transition: width var(--base-transition) ease-out;
+}
+
+.sideMenuNavItem:hover:after,
+.sideMenuNavItem:focus:after {
+    width: 100%;
+}
+
+.navNumber {
+    color: var(--secondary400);
+}
+
+.blurLayer {
+    top: 0;
+    right: -100vw;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 5000;
+    backdrop-filter: blur(8px) brightness(105%);
+    transition-duration: var(--base-transition);
+}
+
+/*md*/
+@media (max-width: 1727px) and (min-width: 1280px) {
+    .logo {
+        width: 75px;
+        height: 100%;
+    }
+}
+
+/*sm*/
+@media (max-width: 1279px) and (min-width: 768px) {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: var(--space-xxs) 0;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .logo {
+        width: 50px;
+    }
+
+    .burgerMenuIcon {
+        display: block;
+        cursor: pointer;
+    }
+
+
+    body .sideMenu.open {
+        overflow: hidden;
+        right: 0;
+    }
+
+    body .blurLayer.open {
+        overflow: hidden;
+        right: 0;
+        transition-duration: 0.4s;
+    }
+}
+
+/*xs*/
+@media (max-width: 767px) and (min-width: 320px) {
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: var(--space-xxxxs) 0;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .logo {
+        width: 30px;
+    }
+
+    .burgerMenuIcon {
+        display: block;
+        cursor: pointer;
+    }
+
+    .sideMenu {
+        right: -100vw;
+        width: 100vw;
+    }
+
+    body .sideMenu.open {
+        overflow: hidden;
+        right: 0;
+    }
+
+    body .blurLayer.open {
+        overflow: hidden;
+        right: 0;
+        transition-duration: 0.4s;
+    }
+
+}
+
