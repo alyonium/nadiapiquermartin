@@ -212,6 +212,16 @@ body[lang="ua"] .label-sm {
   border-radius: var(--border-radius);
 }
 
+.ellipse {
+  border-radius: 50%;
+  background-color: var(--primary1000);
+  object-fit: contain;
+  max-width: 100%;
+  position: absolute;
+  z-index: -200;
+  filter: blur(120px);
+}
+
 
 /*md*/
 @media (max-width: 1727px) and (min-width: 1280px) {
@@ -388,5 +398,9 @@ body[lang="ua"] .label-sm {
     margin: 0 var(--space-sm);
     max-width: unset;
     min-width: 300px;
+  }
+
+  .ellipse {
+    filter: blur(50px);
   }
 }

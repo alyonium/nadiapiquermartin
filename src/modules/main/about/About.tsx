@@ -6,67 +6,22 @@ import aboutPhoto from '/public/aboutPhoto.png';
 import Button from '@/components/button/Button';
 import { ButtonType } from '@/types/types';
 import classNames from 'classnames';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useRef } from 'react';
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
-
-gsap.registerPlugin(useGSAP);
-gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
   const t = useTranslations();
 
-  const container = useRef();
-
-  useGSAP(
-    () => {
-      let tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: '.content-wrapper',
-          pin: true,
-          start: 'top top',
-          end: '+=500',
-          scrub: 1,
-          snap: {
-            snapTo: 'labels',
-            duration: { min: 0.2, max: 3 },
-            delay: 0.2,
-            ease: 'power1.inOut',
-          },
-        },
-      });
-
-      gsap.fromTo(
-        `.${styles.textBlockWrapper} .heading`,
-        {
-          opacity: 0,
-          x: -300,
-        },
-        {
-          scrollTrigger: {
-            trigger: '.content-wrapper',
-            start: '200',
-            end: '+=500',
-          },
-          opacity: 1,
-          x: 0,
-          duration: 1,
-          ease: 'power1',
-        }
-      );
-    },
-    { scope: container }
-  );
-
   return (
-    <div ref={container} className='content-wrapper'>
-      <div className={classNames('content', styles.blockWrapper)}>
+    <div className={classNames('content-wrapper', styles.contentWrapper)}>
+      <div className={classNames('content', styles.content)}>
         <div className={styles.textBlockWrapper}>
-          <Heading text={t('about.heading')} />
+          <Heading
+            trigger={styles.contentWrapper}
+            target={styles.content}
+            text={t('about.heading')}
+          />
 
           <div className={styles.imageBlockWrapper}>
-            <div className={styles.ellipse} />
+            <div className={classNames(styles.ellipse, 'ellipse')} />
 
             <Image
               alt='doctora'
@@ -102,7 +57,7 @@ const About = () => {
         </div>
 
         <div className={styles.rightBlockWrapper}>
-          <div className={styles.ellipse} />
+          <div className={classNames(styles.ellipse, 'ellipse')} />
 
           <Image
             alt='doctora'

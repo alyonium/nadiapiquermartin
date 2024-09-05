@@ -1,3 +1,5 @@
+'use client';
+
 import styles from '@/components/Header/Header.module.css';
 import Image from 'next/image';
 import logo from '/public/logo.png';

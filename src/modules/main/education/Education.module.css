@@ -1,0 +1,161 @@
+.contentWrapper {}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--space-xxl);
+}
+
+.blockWrapper {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-xxl);
+    align-items: center;
+}
+
+.textBlockWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--space-sm);
+}
+
+.leftBlockWrapper {
+    position: relative;
+    max-width: 100%;
+}
+
+.imageWrapper {
+    width: 618px;
+    height: 900px;
+}
+
+.ellipse {
+    width: 660px;
+    height: 660px;
+    top: -150px;
+    left: -450px;
+}
+
+.textBlockItem {
+    display: flex;
+    gap: var(--space-md);
+}
+
+.textBlockItemNumber {
+    color: var(--secondary400);
+}
+
+.textItem {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.textItemInfo {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xxs);
+    color: var(--primary800);
+}
+
+/*md*/
+@media (max-width: 1727px) and (min-width: 1280px) {
+    .content {
+        gap: var(--space-lg);
+    }
+
+    .blockWrapper {
+        gap: var(--space-xl);
+    }
+
+    .textBlockWrapper {
+        gap: var(--space-xs);
+    }
+
+    .textItem {
+        gap: var(--space-xxs);
+    }
+
+    .textItemInfo {
+        gap: var(--space-xxxs);
+    }
+
+    .imageWrapper {
+        width: 417px;
+        height: 626px;
+    }
+
+    .ellipse {
+        width: 500px;
+        height: 500px;
+        top: -100px;
+        left: -200px;
+    }
+}
+
+/*sm*/
+@media (max-width: 1279px) and (min-width: 768px) {
+    .content {
+        gap: var(--space-lg);
+    }
+
+    .blockWrapper {
+        flex-direction: column;
+        gap: var(--space-lg);
+    }
+
+    .textItem {
+        gap: var(--space-xxs);
+    }
+
+    .textItemInfo {
+        gap: var(--space-xxxxs);
+    }
+
+    .imageWrapper {
+        width: 233px;
+        height: 350px;
+    }
+
+    .ellipse {
+        width: 500px;
+        height: 500px;
+        top: -50px;
+        left: 0px;
+    }
+}
+
+/*xs*/
+@media (max-width: 767px) {
+    .content {
+        gap: var(--space-sm);
+    }
+
+    .blockWrapper {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+
+    .textItem {
+        gap: var(--space-xxs);
+    }
+
+    .textItemInfo {
+        gap: var(--space-xxxxs);
+    }
+
+    .imageWrapper {
+        width: 200px;
+        height: 300px;
+    }
+
+    .ellipse {
+        filter: blur(60px);
+        width: 200px;
+        height: 200px;
+        top: 150px;
+        left: -80px;
+    }
+}

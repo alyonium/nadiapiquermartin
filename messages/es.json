@@ -19,6 +19,16 @@
     "about3": "Me dedico al seguimiento del <italic>embarazo</italic>, <italic>diagnóstico</italic> y <italic>tratamiento</italic> de enfermedades ginecológicas y propias de la menopausia, <italic>asesoramiento</italic> en métodos anticonceptivos, así <italic>como revisiones</italic> ginecológicas rutinarias. Para mí, <italic>no solo es importante tratar</italic>, sino también <italic>apoyar</italic> a mis pacientes en cada etapa de su vida, ya sea en su primera consulta ginecológica, en la planificación familiar o en el período de la menopausia.",
     "about4": "Desde mi punto de vista, cada paciente es una persona única con su propia historia y necesidades. Me esfuerzo por crear un ambiente de <italic>confianza</italic> y <italic>comodidad</italic>, donde cada mujer pueda <italic>hablar abiertamente</italic> sobre sus problemas y recibir <italic>ayuda profesional</italic>. Mi enfoque se basa en la <italic>atención</italic>, el <italic>cuidado</italic> y el <italic>respeto</italic> hacia cada una."
   },
+  "education": {
+    "heading": "Formación académica",
+    "education1":  "Graduada en Medicina",
+    "education2":  "Especialización MIR en Obstetricia y Ginecología",
+    "education3":  "Estancia formativa en Paritorios y Área de Urgencias Obstétricas",
+    "education4":  "Estancia formativa en Unidad de Reproducción Humana y Esterilidad",
+    "education5":  "Máster título propio en Anticoncepción, Salud Sexual y Reproductiva por Federación Española de Contracepción",
+    "education6":  "Miembro del Colegio Oficial de Médicos de Valencia",
+    "education7":  "Miembro de Sociedad Española de Ginecología y Obstetricia"
+  },
   "Metadata": {
     "title": "wow"
   }

@@ -4,6 +4,7 @@
     align-items: center;
     gap: var(--space-md);
     opacity: 0;
+    color: var(--primary1000);
 }
 
 .line {
