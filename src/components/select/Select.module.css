@@ -53,6 +53,10 @@
     margin-top: var(--space-xxxs);
 }
 
+[lang="ua"] .icon {
+    margin-top: var(--space-xxxxs);
+}
+
 [lang="ru"] .label,
 [lang="es"] .label {
     line-height: 80%;
@@ -61,10 +65,6 @@
 [lang="ru"] .arrow,
 [lang="es"] .arrow {
     margin-top: 8px;
-}
-
-[lang="ua"] .icon {
-    margin-top: var(--space-xxxxs);
 }
 
 /*md*/
@@ -85,6 +85,11 @@
         gap: var(--space-xxxs);
     }
 
+    .item img {
+        width: 13px;
+        height: 13px;
+    }
+
     [lang="ru"] .arrow,
     [lang="es"] .arrow {
         margin-top: 5px;
@@ -92,17 +97,46 @@
 
     [lang="ua"] .arrow {
         margin-top: 5px;
+    }
+
+    [lang="ru"] .icon,
+    [lang="es"] .icon {
+        margin-top: 3px;
+    }
+
+    [lang="ua"] .icon {
+        margin-top: 1px;
     }
 }
 
 /*xs*/
 @media (max-width: 767px) {
+    .select {
+        gap: var(--space-xxxxs);
+    }
+
+    .item img {
+        width: 12px;
+        height: 12px;
+    }
+
     [lang="ru"] .arrow,
     [lang="es"] .arrow {
         margin-top: 5px;
     }
 
+
     [lang="ua"] .arrow {
         margin-top: 4px;
+    }
+
+
+    [lang="ru"] .icon,
+    [lang="es"] .icon {
+        margin-top: 2px;
+    }
+
+    [lang="ua"] .icon {
+        margin-top: 1px;
     }
 }

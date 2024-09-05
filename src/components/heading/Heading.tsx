@@ -1,4 +1,5 @@
 import classNames from 'classnames';
+import styles from '@/components/heading/Heading.module.css';
 
 type HeadingProps = {
   text: string;
@@ -6,8 +7,10 @@ type HeadingProps = {
 
 const Heading = ({ text }: HeadingProps) => {
   return (
-    <div>
+    <div className={classNames(styles.headingWrapper, 'heading')}>
+      <div className={styles.line} />
       <h2 className={classNames('header-lg')}>{text}</h2>
+      <div className={styles.line} />
     </div>
   );
 };

@@ -27,7 +27,7 @@
 .wrapper.primary:focus {
     background-color: var(--transparent);
     color: white;
-    border: 1px solid white;
+    outline: 1px solid white;
     transition: var(--base-transition);
 }
 
@@ -41,7 +41,7 @@
 .wrapper.secondary:focus {
     background-color: var(--transparent);
     color: var(--primary1000);
-    border: 1px solid var(--primary1000);
+    outline: 1px solid var(--primary1000);
     transition: var(--base-transition);
 }
 

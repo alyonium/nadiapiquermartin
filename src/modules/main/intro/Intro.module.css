@@ -94,7 +94,8 @@
 @media (max-width: 767px)  {
     .blockWrapper {
         background-size: cover;
-        min-height: 800px;
+        min-height: 500px;
+        height: 100vh;
     }
 
     .imageWrapper {

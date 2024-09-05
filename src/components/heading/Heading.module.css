@@ -1,0 +1,32 @@
+.headingWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-md);
+    opacity: 0;
+}
+
+.line {
+    width: 200px;
+    background-color: var(--primary1000);
+    height: 1px;
+}
+
+/*md*/
+@media (max-width: 1727px) and (min-width: 1280px) {
+
+}
+
+/*sm*/
+@media (max-width: 1279px) and (min-width: 768px) {
+    .line {
+        width: 100px;
+    }
+}
+
+/*xs*/
+@media (max-width: 767px) {
+    .line {
+        width: 20px;
+    }
+}
