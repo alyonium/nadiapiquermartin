@@ -181,7 +181,7 @@
 }
 
 /*xs*/
-@media (max-width: 767px) and (min-width: 320px) {
+@media (max-width: 767px) {
 
     .header {
         display: flex;

@@ -16,7 +16,11 @@ const buttonClassnames = {
 const Button = ({ text, type = ButtonType.primary }: Props) => {
   return (
     <div className={classNames(styles.wrapper, buttonClassnames[type])}>
-      <span className={classNames('label-lg', styles.buttonText)}>{text}</span>
+      <span
+        className={classNames('label-lg text-align-center', styles.buttonText)}
+      >
+        {text}
+      </span>
     </div>
   );
 };

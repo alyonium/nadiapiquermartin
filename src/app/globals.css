@@ -10,6 +10,10 @@
   --space-xxxs: 4px;
   --space-xxxxs: 2px;
 
+  --negative-space-xl: -64px;
+  --negative-space-lg: -48px;
+  --negative-space-md: -32px;
+
   --font-size-xxl: 48px;
   --font-size-xl: 32px;
   --font-size-lg: 24px;
@@ -19,8 +23,9 @@
   --font-size-xxs: 14px;
   --font-size-xxxs: 12px;
 
-  --font-weight-light: 200;
-  --font-weight-regular: 300;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-italic: 400;
 
   --primary1000: #23465E;
   --primary800: #436983;
@@ -35,21 +40,28 @@
 
 
   --border-radius: 10px;
-  --arrow-margin: 10px;
 
   --base-transition: 0.5s;
-  --long-transition: 1s;
+  --long-transition: 2s;
 }
 
-body, h1 {
+body, h1, h2 {
   margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.text-align-center {
+  text-align: center;
 }
 
 .content-wrapper {
   width: 100%;
-  height: 100vh;
   display: flex;
   justify-content: center;
+  margin-bottom: var(--space-xxl);
 }
 
 .content {
@@ -108,7 +120,7 @@ body[lang="es"] .body-sm-i,
 body[lang="es"] .body-xs-i {
   font-family: var(--font-jost);
   line-height: 150%;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 .body-lg-l,
@@ -129,6 +141,7 @@ body[lang="es"] .body-xs-i {
 .body-md-i,
 .body-sm-i,
 .body-xs-i {
+  font-weight: var(--font-weight-italic);
   font-style: italic;
 }
 
@@ -165,6 +178,7 @@ body[lang="ua"] .body-md-r,
 body[lang="ua"] .body-sm-r,
 body[lang="ua"] .body-xs-r {
   font-family: var(--font-roboto);
+  line-height: 150%;
 }
 
 .label-lg,
@@ -172,7 +186,7 @@ body[lang="ua"] .body-xs-r {
 .label-sm {
   font-family: var(--font-jost);
   font-weight: var(--font-weight-light);
-  line-height: 70%;
+  line-height: 120%;
   letter-spacing: 2px;
 }
 
@@ -202,6 +216,10 @@ body[lang="ua"] .label-sm {
 
 /*md*/
 @media (max-width: 1727px) and (min-width: 1280px) {
+  .content-wrapper {
+    margin-bottom: var(--space-xl);
+  }
+
   .content {
     max-width: 1200px;
   }
@@ -255,8 +273,7 @@ body[lang="ua"] .label-sm {
 @media (max-width: 1279px) and (min-width: 768px) {
 
   .content {
-    margin: 0 var(--space-sm);
-    max-width: unset;
+    max-width: 740px;
   }
 
   .header-lg {
@@ -311,7 +328,7 @@ body[lang="ua"] .label-sm {
 }
 
 /*xs*/
-@media (max-width: 767px) and (min-width: 320px) {
+@media (max-width: 767px) {
 
   .header-lg {
     font-size: var(--font-size-md);
@@ -365,5 +382,6 @@ body[lang="ua"] .label-sm {
   .content {
     margin: 0 var(--space-sm);
     max-width: unset;
+    min-width: 300px;
   }
 }

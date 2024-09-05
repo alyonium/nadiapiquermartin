@@ -3,10 +3,10 @@ import styles from '@/modules/main/intro/Intro.module.css';
 import Header from '@/components/header/Header';
 import Button from '@/components/button/Button';
 import Image from 'next/image';
-import introPhoto from '/public/intro-photo.png';
+import introPhoto from '/public/introPhoto.png';
 import { useTranslations } from 'next-intl';
 
-export const Intro = () => {
+const Intro = () => {
   const t = useTranslations();
 
   return (
@@ -28,8 +28,12 @@ export const Intro = () => {
 
           <div className={styles.textBlockWrapper}>
             <div className={styles.textWrapper}>
-              <h1 className='header-lg'>Dra. Nadia Piquer Martin</h1>
-              <span className='body-lg-l'>{t('intro.obstetrician')}</span>
+              <h1 className='header-lg text-align-center'>
+                Dra. Nadia Piquer Martin
+              </h1>
+              <span className='body-lg-l text-align-center'>
+                {t('intro.obstetrician')}
+              </span>
             </div>
             <Button text={t('intro.button')} />
           </div>

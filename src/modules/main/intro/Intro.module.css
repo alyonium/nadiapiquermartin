@@ -1,7 +1,7 @@
 .blockWrapper {
     background-image: url('../../../../public/background-blue.png');
-    background-size: 100%;
-    width: 100%;
+    background-size: cover;
+    min-height: 1030px;
 }
 
 .transparentBlockWrapper {
@@ -13,8 +13,8 @@
 }
 
 .imageWrapper {
-    width: 790px;
-    height: 100%;
+    width: 755px;
+    height: 778px;
 }
 
 .textBlockWrapper {
@@ -48,9 +48,13 @@
 
 /*md*/
 @media (max-width: 1727px) and (min-width: 1280px) {
+    .blockWrapper {
+        min-height: 800px;
+    }
+
     .imageWrapper {
-        width: 570px;
-        height: 100%;
+        width: 572px;
+        height: 597px;
     }
 
     .textBlockWrapper {
@@ -63,16 +67,18 @@
 @media (max-width: 1279px) and (min-width: 768px) {
     .blockWrapper {
         background-size: cover;
+        min-height: 620px;
     }
 
     .imageWrapper {
-        width: 400px;
-        height: 100%;
+        width: 407px;
+        height: 425px;
     }
 
     .textBlockWrapper {
         width: 100%;
         gap: var(--space-lg);
+        margin-left: var(--negative-space-xl);
     }
 
     .textWrapper {
@@ -85,9 +91,10 @@
 }
 
 /*xs*/
-@media (max-width: 767px) and (min-width: 320px) {
+@media (max-width: 767px)  {
     .blockWrapper {
         background-size: cover;
+        min-height: 800px;
     }
 
     .imageWrapper {
@@ -106,7 +113,8 @@
     .transparentBlockWrapper {
         align-items: center;
         justify-content: center;
-        padding: var(--space-lg) 0;
+        padding: var(--space-lg) var(--space-md);
         min-height: calc(100vh - 280px);
+        width: calc(100vw - 100px);
     }
 }

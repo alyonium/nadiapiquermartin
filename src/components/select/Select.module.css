@@ -60,7 +60,7 @@
 
 [lang="ru"] .arrow,
 [lang="es"] .arrow {
-    margin-top: var(--arrow-margin);
+    margin-top: 8px;
 }
 
 [lang="ua"] .icon {
@@ -69,8 +69,13 @@
 
 /*md*/
 @media (max-width: 1727px) and (min-width: 1280px) {
-    .arrow {
-        margin-top: var(--space-xxs) !important;
+    [lang="ru"] .arrow,
+    [lang="es"] .arrow {
+        margin-top: 7px;
+    }
+
+    [lang="ua"] .arrow {
+        margin-top: 6px;
     }
 }
 
@@ -80,14 +85,24 @@
         gap: var(--space-xxxs);
     }
 
-    .arrow {
-        margin-top: 7px !important;
+    [lang="ru"] .arrow,
+    [lang="es"] .arrow {
+        margin-top: 5px;
+    }
+
+    [lang="ua"] .arrow {
+        margin-top: 5px;
     }
 }
 
 /*xs*/
-@media (max-width: 767px) and (min-width: 320px) {
-    .arrow {
-        margin-top: 7px !important;
+@media (max-width: 767px) {
+    [lang="ru"] .arrow,
+    [lang="es"] .arrow {
+        margin-top: 5px;
+    }
+
+    [lang="ua"] .arrow {
+        margin-top: 4px;
     }
 }

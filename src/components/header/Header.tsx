@@ -14,6 +14,7 @@ const Header = () => {
   const [sideMenuOpen, setSideMenuOpen] = useState<boolean>(false);
 
   const toggleSideMenu = () => {
+    document.body.style.overflow = sideMenuOpen ? 'visible' : 'hidden';
     setSideMenuOpen(!sideMenuOpen);
   };
 

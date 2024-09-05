@@ -11,6 +11,14 @@
     "obstetrician": "Ginecología y Obstetricia en Valencia",
     "button": "Pedir cita"
   },
+  "about": {
+    "heading": "Sobre mí",
+    "button": "Pedir cita",
+    "about1": "¡Hola! Me llamo <italic>Nadia Piquer</italic>.",
+    "about2": "Soy <italic>médico</italic> obstetra y ginecóloga, y para mí esta profesión <italic>no es sólo un trabajo</italic>, sino una <italic>vocación</italic>. Cada día me esfuerzo por ayudar a las mujeres a mantener y mejorar su salud, y a atravesar etapas importantes de su vida con confianza y tranquilidad.",
+    "about3": "Me dedico al seguimiento del <italic>embarazo</italic>, <italic>diagnóstico</italic> y <italic>tratamiento</italic> de enfermedades ginecológicas y propias de la menopausia, <italic>asesoramiento</italic> en métodos anticonceptivos, así <italic>como revisiones</italic> ginecológicas rutinarias. Para mí, <italic>no solo es importante tratar</italic>, sino también <italic>apoyar</italic> a mis pacientes en cada etapa de su vida, ya sea en su primera consulta ginecológica, en la planificación familiar o en el período de la menopausia.",
+    "about4": "Desde mi punto de vista, cada paciente es una persona única con su propia historia y necesidades. Me esfuerzo por crear un ambiente de <italic>confianza</italic> y <italic>comodidad</italic>, donde cada mujer pueda <italic>hablar abiertamente</italic> sobre sus problemas y recibir <italic>ayuda profesional</italic>. Mi enfoque se basa en la <italic>atención</italic>, el <italic>cuidado</italic> y el <italic>respeto</italic> hacia cada una."
+  },
   "Metadata": {
     "title": "wow"
   }

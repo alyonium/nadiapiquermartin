@@ -4,9 +4,7 @@ import '../globals.css';
 import { getMessages } from 'next-intl/server';
 import classNames from 'classnames';
 import { NextIntlClientProvider } from 'next-intl';
-import { unstable_setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
-import { routing } from '@/i18n/routing';
 
 const roboto = Roboto({
   weight: ['100', '300', '400'],
@@ -34,10 +32,6 @@ export async function generateMetadata({ params: { locale } }: any) {
     title: t('title'),
   };
 }
-export function generateStaticParams() {
-  return routing.locales.map((locale) => ({ locale }));
-}
-
 export default async function RootLayout({
   children,
   params: { locale },
@@ -45,7 +39,6 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: { locale: string };
 }>) {
-  unstable_setRequestLocale(locale);
   const messages = await getMessages();
   return (
     <html lang={locale}>
