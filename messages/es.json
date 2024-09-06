@@ -1,19 +1,20 @@
 {
+  "modalHeading": "Pedir cita online",
   "header": {
     "about": "Sobre mí",
     "services": "Servicios",
     "reviews": "Reseñas",
-    "office": "Oficina",
+    "office": "Gabinete",
     "recommendations": "Recomendaciones",
     "contacts": "Contactos"
   },
   "intro": {
-    "obstetrician": "Ginecología y Obstetricia en Valencia",
+    "obstetrician": "Ginecólogo-obstetra en Valencia",
     "button": "Pedir cita"
   },
   "about": {
-    "heading": "Sobre mí",
-    "button": "Pedir cita",
+    "heading": "¿Quién soy?",
+    "button": "Quiero pedir una cita",
     "about1": "¡Hola! Me llamo <italic>Nadia Piquer</italic>.",
     "about2": "Soy <italic>médico</italic> obstetra y ginecóloga, y para mí esta profesión <italic>no es sólo un trabajo</italic>, sino una <italic>vocación</italic>. Cada día me esfuerzo por ayudar a las mujeres a mantener y mejorar su salud, y a atravesar etapas importantes de su vida con confianza y tranquilidad.",
     "about3": "Me dedico al seguimiento del <italic>embarazo</italic>, <italic>diagnóstico</italic> y <italic>tratamiento</italic> de enfermedades ginecológicas y propias de la menopausia, <italic>asesoramiento</italic> en métodos anticonceptivos, así <italic>como revisiones</italic> ginecológicas rutinarias. Para mí, <italic>no solo es importante tratar</italic>, sino también <italic>apoyar</italic> a mis pacientes en cada etapa de su vida, ya sea en su primera consulta ginecológica, en la planificación familiar o en el período de la menopausia.",
@@ -28,6 +29,9 @@
     "education5":  "Máster título propio en Anticoncepción, Salud Sexual y Reproductiva por Federación Española de Contracepción",
     "education6":  "Miembro del Colegio Oficial de Médicos de Valencia",
     "education7":  "Miembro de Sociedad Española de Ginecología y Obstetricia"
+  },
+  "services": {
+    "heading": "¿En qué te puedo ayudar?"
   },
   "Metadata": {
     "title": "wow"

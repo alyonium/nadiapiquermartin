@@ -45,13 +45,14 @@
 }
 
 .logo {
-    width: 85px;
-    object-fit: contain;
+    width: 60px;
+    height: auto;
 }
 
 .logoWithName {
-    width: 270px;
-    object-fit: contain;
+    width: 220px;
+    height: auto;
+    margin-top: var(--space-lg);
 }
 
 .sideMenu {
@@ -140,7 +141,7 @@
 /*md*/
 @media (max-width: 1727px) and (min-width: 1280px) {
     .logo {
-        width: 75px;
+        width: 50px;
         height: 100%;
     }
 }
@@ -151,7 +152,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: var(--space-xxs) 0;
+        margin: var(--space-xs) 0;
     }
 
     .nav {
@@ -159,7 +160,7 @@
     }
 
     .logo {
-        width: 50px;
+        width: 30px;
     }
 
     .burgerMenuIcon {
@@ -182,12 +183,11 @@
 
 /*xs*/
 @media (max-width: 767px) {
-
     .header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: var(--space-xxxxs) 0;
+        margin: var(--space-xs) 0;
     }
 
     .nav {

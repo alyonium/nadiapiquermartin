@@ -4,6 +4,7 @@ import Image from 'next/image';
 import procedurePhoto from '/public/procedurePhoto.png';
 import Heading from '@/components/heading/Heading';
 import { useTranslations } from 'next-intl';
+import ModalWindow from '@/components/modalWindow/ModalWindow';
 
 const Education = () => {
   const t = useTranslations();
@@ -141,6 +142,8 @@ const Education = () => {
             </div>
           </div>
         </div>
+
+        <ModalWindow />
       </div>
     </div>
   );

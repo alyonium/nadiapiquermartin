@@ -1,0 +1,81 @@
+.dialogOverlay {
+    background: rgba(0 0 0 / 0.5);
+    backdrop-filter: blur(8px) brightness(105%);
+    position: fixed;
+    inset: 0;
+    animation: overlayShow var(--base-transition) cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dialogContent {
+    background-color: white;
+    transform: translate(-50%, -50%);
+    border-radius: var(--border-radius);
+    box-shadow: hsl(206 22% 7% / 35%) 0 10px 38px -10px,
+                hsl(206 22% 7% / 20%) 0 10px 20px -15px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 90vw;
+    max-width: 900px;
+    padding: var(--space-sm);
+    animation: contentShow var(--base-transition) cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    color: var(--primary1000);
+}
+
+.closeButton {
+    background: transparent;
+    border: unset;
+    cursor: pointer;
+}
+
+.crossIcon {
+    width: 25px;
+    height: auto;
+}
+
+.iframe {
+    width: 100%;
+}
+
+.iframeWrapper {
+    max-height: 550px;
+    overflow: auto;
+}
+
+/*sm*/
+@media (max-width: 1279px) and (min-width: 768px){
+    .dialogContent {
+        max-width: 700px;
+        padding: var(--space-sm);
+    }
+
+    .iframe {
+        height: 500px;
+    }
+
+    .crossIcon {
+        width: 18px;
+    }
+}
+
+/*xs*/
+@media (max-width: 767px) {
+    .dialogContent {
+        min-width: 250px;
+        padding: var(--space-xs);
+        width: 85vw;
+    }
+
+    .iframe {
+        height: 500px;
+    }
+
+    .crossIcon {
+        width: 16px;
+    }
+}
