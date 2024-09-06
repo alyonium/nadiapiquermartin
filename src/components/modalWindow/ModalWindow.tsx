@@ -5,8 +5,13 @@ import { useState } from 'react';
 import styles from '@/components/modalWindow/ModalWindow.module.css';
 import { Cross1Icon } from '@radix-ui/react-icons';
 import { useTranslations } from 'next-intl';
+import { ReactNode } from 'react';
 
-const ModalWindow = () => {
+type ModalWindowProps = {
+  button: ReactNode;
+};
+
+const ModalWindow = ({ button }: ModalWindowProps) => {
   const t = useTranslations();
   const [open, setOpen] = useState<boolean>(false);
 
@@ -16,7 +21,9 @@ const ModalWindow = () => {
 
   return (
     <Dialog.Root>
-      <Dialog.Trigger onClick={toggleModal}>Open</Dialog.Trigger>
+      <Dialog.Trigger className={styles.dialogButton} onClick={toggleModal}>
+        {button}
+      </Dialog.Trigger>
       <Dialog.Portal>
         <Dialog.Overlay className={styles.dialogOverlay} />
         <Dialog.Content className={styles.dialogContent}>

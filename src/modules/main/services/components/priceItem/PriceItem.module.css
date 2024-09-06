@@ -1,0 +1,16 @@
+.wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: var(--primary1000);
+    gap: var(--space-xxl);
+}
+
+.nameWrapper {
+    display: flex;
+    gap: var(--space-sm);
+}
+
+.number {
+    line-height: 40px !important;
+}

@@ -31,7 +31,58 @@
     "education7":  "Miembro de Sociedad Española de Ginecología y Obstetricia"
   },
   "services": {
-    "heading": "¿En qué te puedo ayudar?"
+    "heading": "¿En qué te puedo ayudar?",
+    "payment": "Se acepta pago en metálico, tarjeta o transferencia por bizum.",
+    "button": "Pedir cita",
+    "consultations": {
+      "heading": "Consultas",
+      "offline": "Consulta presencial",
+      "online": "Consulta online"
+    },
+    "gynecological": {
+      "heading": "Servicios de ginecologia <italic>(precio no incluye la consulta)</italic>",
+      "cytology": "Citología de cuello del útero (pap-test)",
+      "HPV": "Detección y tipificación VPH",
+      "ultrasound": "Ecografía de órganos pélvicos",
+      "vaccinationHIV": "Vacunación VPH con vacuna nonavalente Gardasil (1 dosis)",
+      "biopsy": "Biopsia de tejidos ginecológicos",
+      "vaginalInfections": {
+        "heading": "Detección de infecciones vaginales",
+        "basic": "Básico (Candida, bacterias vaginales, tricomonas)",
+        "STDs4": "Detección ETS: panel 4 enfermedades (Chlamydia trachomatis,Neisseria gonorrhoeae, Trichomona vaginalis, Micoplasmas)",
+        "STDs7": "Detección ETS: panel 7 enfermedades (Chlamydia trachomatis, Neisseria gonorrhoeae, Trichomona vaginalis, Mycoplasma hominis, Mycoplasma genitalium, Ureaplasma urealyticum, Ureaplasma parvum)"
+      },
+      "packages": {
+        "heading": "Paquetes de servicios",
+        "basic": {
+          "heading": "Revisión ginecológica básica",
+          "consultation": "Consulta",
+          "cytology": "Citología (pap-test)",
+          "ultrasound": "Ecografía de órganos pélvicos",
+          "results": "Revisión de resultados"
+        },
+        "full": {
+          "heading": "Revisión Ginecológica Completa",
+          "consultation": "Consulta",
+          "cytology": "Citología con detección y tipificación del VPH",
+          "ultrasound": "Ecografía de órganos pélvicos",
+          "results": "Revisión de resultados"
+        },
+        "vaccinationHIV": {
+          "heading": "Vacunación Gardasil 9",
+          "vaccine": "3 dosis de la vacuna Gardasil 9",
+          "deliverVaccine": "Administración de las 3 dosis",
+          "info1": "Posibilidad de vacunar a las pacientes y sus parejas",
+          "info2": "Edad mínima de inicio de vacunación: 9 años"
+        }
+      }
+    },
+    "contraception": {
+      "heading": "Servicios de anticoncepción <italic>(precio no incluye la consulta)</italic>"
+    },
+    "obstetrics": {
+      "heading": "Servicios de obstetricia <italic>(precio no incluye la consulta)</italic>"
+    }
   },
   "Metadata": {
     "title": "wow"

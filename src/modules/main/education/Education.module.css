@@ -43,10 +43,6 @@
     gap: var(--space-md);
 }
 
-.textBlockItemNumber {
-    color: var(--secondary400);
-}
-
 .textItem {
     display: flex;
     flex-direction: column;

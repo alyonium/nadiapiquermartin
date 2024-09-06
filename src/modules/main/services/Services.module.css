@@ -1,0 +1,28 @@
+.contentWrapper {
+    background: linear-gradient(white, var(--secondary100), var(--primary300));
+    padding-bottom: var(--space-xxl);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xxl);
+}
+
+.collapseWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: var(--space-md);
+}
+
+.buttonWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.buttonWrapper > span {
+    color: var(--primary1000);
+}

@@ -123,10 +123,6 @@
     width: 100%;
 }
 
-.navNumber {
-    color: var(--secondary400);
-}
-
 .blurLayer {
     top: 0;
     right: -100vw;

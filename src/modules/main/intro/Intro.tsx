@@ -5,6 +5,7 @@ import Button from '@/components/button/Button';
 import Image from 'next/image';
 import introPhoto from '/public/introPhoto.png';
 import { useTranslations } from 'next-intl';
+import ModalWindow from '@/components/modalWindow/ModalWindow';
 
 const Intro = () => {
   const t = useTranslations();
@@ -35,7 +36,8 @@ const Intro = () => {
                 {t('intro.obstetrician')}
               </span>
             </div>
-            <Button text={t('intro.button')} />
+
+            <ModalWindow button={<Button text={t('intro.button')} />} />
           </div>
         </div>
       </div>

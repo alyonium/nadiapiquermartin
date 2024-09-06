@@ -31,11 +31,7 @@ const Education = () => {
 
           <div className={styles.textBlockWrapper}>
             <div className={styles.textBlockItem}>
-              <span
-                className={classNames('body-lg-i', styles.textBlockItemNumber)}
-              >
-                01
-              </span>
+              <span className='body-lg-i text-color-secondary400'>01</span>
               <div className={styles.textItem}>
                 <span className='body-md-r'>{t('education.education1')}</span>
                 <div className={styles.textItemInfo}>
@@ -46,11 +42,7 @@ const Education = () => {
             </div>
 
             <div className={styles.textBlockItem}>
-              <span
-                className={classNames('body-lg-i', styles.textBlockItemNumber)}
-              >
-                02
-              </span>
+              <span className='body-lg-i text-color-secondary400'>02</span>
               <div className={styles.textItem}>
                 <span className='body-md-r'>{t('education.education2')}</span>
                 <div className={styles.textItemInfo}>
@@ -63,11 +55,7 @@ const Education = () => {
             </div>
 
             <div className={styles.textBlockItem}>
-              <span
-                className={classNames('body-lg-i', styles.textBlockItemNumber)}
-              >
-                03
-              </span>
+              <span className='body-lg-i text-color-secondary400'>03</span>
               <div className={styles.textItem}>
                 <span className='body-md-r'>{t('education.education3')}</span>
                 <div className={styles.textItemInfo}>
@@ -80,11 +68,7 @@ const Education = () => {
             </div>
 
             <div className={styles.textBlockItem}>
-              <span
-                className={classNames('body-lg-i', styles.textBlockItemNumber)}
-              >
-                04
-              </span>
+              <span className='body-lg-i text-color-secondary400'>04</span>
               <div className={styles.textItem}>
                 <span className='body-md-r'>{t('education.education4')}</span>
                 <div className={styles.textItemInfo}>
@@ -97,11 +81,7 @@ const Education = () => {
             </div>
 
             <div className={styles.textBlockItem}>
-              <span
-                className={classNames('body-lg-i', styles.textBlockItemNumber)}
-              >
-                05
-              </span>
+              <span className='body-lg-i text-color-secondary400'>05</span>
               <div className={styles.textItem}>
                 <span className='body-md-r'>{t('education.education5')}</span>
                 <div className={styles.textItemInfo}>
@@ -112,11 +92,7 @@ const Education = () => {
             </div>
 
             <div className={styles.textBlockItem}>
-              <span
-                className={classNames('body-lg-i', styles.textBlockItemNumber)}
-              >
-                06
-              </span>
+              <span className='body-lg-i text-color-secondary400'>06</span>
               <div className={styles.textItem}>
                 <span className='body-md-r'>{t('education.education6')}</span>
                 <div className={styles.textItemInfo}>
@@ -127,11 +103,7 @@ const Education = () => {
             </div>
 
             <div className={styles.textBlockItem}>
-              <span
-                className={classNames('body-lg-i', styles.textBlockItemNumber)}
-              >
-                07
-              </span>
+              <span className='body-lg-i text-color-secondary400'>07</span>
               <div className={styles.textItem}>
                 <span className='body-md-r'>{t('education.education7')}</span>
                 <div className={styles.textItemInfo}>

@@ -6,6 +6,7 @@ import aboutPhoto from '/public/aboutPhoto.png';
 import Button from '@/components/button/Button';
 import { ButtonType } from '@/types/types';
 import classNames from 'classnames';
+import ModalWindow from '@/components/modalWindow/ModalWindow';
 
 const About = () => {
   const t = useTranslations();
@@ -53,7 +54,11 @@ const About = () => {
             </span>
           </div>
 
-          <Button text={t('about.button')} type={ButtonType.secondary} />
+          <ModalWindow
+            button={
+              <Button text={t('about.button')} type={ButtonType.secondary} />
+            }
+          />
         </div>
 
         <div className={styles.rightBlockWrapper}>

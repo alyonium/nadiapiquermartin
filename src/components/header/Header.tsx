@@ -65,39 +65,27 @@ const Header = () => {
 
         <div className={styles.sideMenuNav}>
           <div className={styles.sideMenuNavItem}>
-            <span className={classNames('body-lg-i', styles.navNumber)}>
-              01
-            </span>
+            <span className='body-lg-i text-color-secondary400'>01</span>
             <span className='body-lg-l'>{t('header.about')}</span>
           </div>
           <div className={styles.sideMenuNavItem}>
-            <span className={classNames('body-lg-i', styles.navNumber)}>
-              02
-            </span>
+            <span className='body-lg-i text-color-secondary400'>02</span>
             <span className='body-lg-l'>{t('header.services')}</span>
           </div>
           <div className={styles.sideMenuNavItem}>
-            <span className={classNames('body-lg-i', styles.navNumber)}>
-              03
-            </span>
+            <span className='body-lg-i text-color-secondary400'>03</span>
             <span className='body-lg-l'>{t('header.reviews')}</span>
           </div>
           <div className={styles.sideMenuNavItem}>
-            <span className={classNames('body-lg-i', styles.navNumber)}>
-              04
-            </span>
+            <span className='body-lg-i text-color-secondary400'>04</span>
             <span className='body-lg-l'>{t('header.office')}</span>
           </div>
           <div className={styles.sideMenuNavItem}>
-            <span className={classNames('body-lg-i', styles.navNumber)}>
-              05
-            </span>
+            <span className='body-lg-i text-color-secondary400'>05</span>
             <span className='body-lg-l'>{t('header.recommendations')}</span>
           </div>
           <div className={styles.sideMenuNavItem}>
-            <span className={classNames('body-lg-i', styles.navNumber)}>
-              06
-            </span>
+            <span className='body-lg-i text-color-secondary400'>06</span>
             <span className='body-lg-l'>{t('header.contacts')}</span>
           </div>
         </div>

@@ -1,5 +1,4 @@
 .dialogOverlay {
-    background: rgba(0 0 0 / 0.5);
     backdrop-filter: blur(8px) brightness(105%);
     position: fixed;
     inset: 0;
@@ -21,6 +20,12 @@
     animation: contentShow var(--base-transition) cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+.dialogButton {
+    border: unset;
+    background-color: transparent;
+    outline: unset !important;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -31,6 +36,7 @@
     background: transparent;
     border: unset;
     cursor: pointer;
+    outline: unset !important;
 }
 
 .crossIcon {

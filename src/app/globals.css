@@ -44,12 +44,20 @@
   --long-transition: 2s;
 }
 
-body, h1, h2 {
+body, h1, h2, h3 {
   margin: 0;
 }
 
 body {
   overflow-x: hidden;
+}
+
+.text-color-primary1000 {
+  color: var(--primary1000);
+}
+
+.text-color-secondary400 {
+  color: var(--secondary400);
 }
 
 .text-align-center {
