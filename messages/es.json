@@ -32,6 +32,7 @@
   },
   "services": {
     "heading": "¿En qué te puedo ayudar?",
+    "packagesHeading": "Paquetes de servicios",
     "payment": "Se acepta pago en metálico, tarjeta o transferencia por bizum.",
     "button": "Pedir cita",
     "consultations": {
@@ -45,7 +46,7 @@
       "HPV": "Detección y tipificación VPH",
       "ultrasound": "Ecografía de órganos pélvicos",
       "vaccinationHIV": "Vacunación VPH con vacuna nonavalente Gardasil (1 dosis)",
-      "biopsy": "Biopsia de tejidos ginecológicos",
+      "biopsy": "Biopsia de tejidos ginecológicos (endometrio, vulva, vagina)",
       "vaginalInfections": {
         "heading": "Detección de infecciones vaginales",
         "basic": "Básico (Candida, bacterias vaginales, tricomonas)",
@@ -53,7 +54,6 @@
         "STDs7": "Detección ETS: panel 7 enfermedades (Chlamydia trachomatis, Neisseria gonorrhoeae, Trichomona vaginalis, Mycoplasma hominis, Mycoplasma genitalium, Ureaplasma urealyticum, Ureaplasma parvum)"
       },
       "packages": {
-        "heading": "Paquetes de servicios",
         "basic": {
           "heading": "Revisión ginecológica básica",
           "consultation": "Consulta",

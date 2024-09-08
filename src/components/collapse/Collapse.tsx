@@ -3,9 +3,9 @@
 import * as Accordion from '@radix-ui/react-accordion';
 import { TriangleDownIcon } from '@radix-ui/react-icons';
 import { ReactNode } from 'react';
-import { useState } from 'react';
 import styles from '@/components/collapse/Collapse.module.css';
 import { CollapseSize } from '@/types/types';
+import classNames from 'classnames';
 
 type CollapseProps = {
   heading: string;
@@ -20,21 +20,12 @@ const Collapse = ({
   size = CollapseSize.large,
   price,
 }: CollapseProps) => {
-  const [open, setOpen] = useState<Boolean>(false);
-
-  const toggleCollapse = () => {
-    setOpen(!open);
-  };
-
   if (size === CollapseSize.small) {
     return (
       <Accordion.Root className={styles.smallCollapseWrapper} collapsible>
         <Accordion.Item value={heading}>
           <Accordion.Header>
-            <Accordion.Trigger
-              className={styles.smallTrigger}
-              onClick={toggleCollapse}
-            >
+            <Accordion.Trigger className={styles.smallTrigger}>
               <span className='body-md-r'>{heading}</span>
               <div className={styles.priceWrapper}>
                 <span className='body-md-r'>{price}€</span>
@@ -42,7 +33,12 @@ const Collapse = ({
               </div>
             </Accordion.Trigger>
           </Accordion.Header>
-          <Accordion.Content className={styles.smallContentWrapper}>
+          <Accordion.Content
+            className={classNames(
+              styles.contentWrapper,
+              styles.smallContentWrapper
+            )}
+          >
             {content}
           </Accordion.Content>
         </Accordion.Item>
@@ -51,13 +47,14 @@ const Collapse = ({
   }
 
   return (
-    <Accordion.Root className={styles.collapseWrapper} collapsible>
+    <Accordion.Root
+      type='single'
+      className={styles.collapseWrapper}
+      collapsible
+    >
       <Accordion.Item value={heading}>
         <Accordion.Header>
-          <Accordion.Trigger
-            className={styles.trigger}
-            onClick={toggleCollapse}
-          >
+          <Accordion.Trigger className={styles.trigger}>
             <span className='body-lg-r'>{heading}</span>
             <TriangleDownIcon className={styles.collapseIcon} />
           </Accordion.Trigger>

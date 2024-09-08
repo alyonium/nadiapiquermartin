@@ -8,6 +8,8 @@ import Button from '@/components/button/Button';
 import { ButtonType } from '@/types/types';
 import Consultations from '@/modules/main/services/components/consultations/Consultations';
 import Gynecological from '@/modules/main/services/components/gynecological/Gynecological';
+import Contraception from '@/modules/main/services/components/contraception/Contraception';
+import Obstetrics from '@/modules/main/services/components/obstetrics/Obstetrics';
 
 const Services = () => {
   const t = useTranslations();
@@ -38,14 +40,14 @@ const Services = () => {
             heading={t.rich('services.contraception.heading', {
               italic: (chunks) => <span className='body-lg-i'>{chunks}</span>,
             })}
-            content={<div>Content</div>}
+            content={<Contraception />}
           />
 
           <Collapse
             heading={t.rich('services.obstetrics.heading', {
               italic: (chunks) => <span className='body-lg-i'>{chunks}</span>,
             })}
-            content={<div>Content</div>}
+            content={<Obstetrics />}
           />
         </div>
 

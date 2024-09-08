@@ -25,4 +25,64 @@
 
 .buttonWrapper > span {
     color: var(--primary1000);
+    text-align: center;
+}
+
+
+/*md*/
+@media (max-width: 1727px) and (min-width: 1280px) {
+    .content {
+        gap: var(--space-lg);
+    }
+
+    .contentWrapper {
+        padding-bottom: var(--space-lg);
+    }
+
+    .buttonWrapper {
+        gap: var(--space-sm);
+    }
+
+    .collapseWrapper {
+        gap: var(--space-xs);
+    }
+
+}
+
+/*sm*/
+@media (max-width: 1279px) and (min-width: 768px) {
+    .content {
+        gap: var(--space-lg);
+    }
+
+    .contentWrapper {
+        padding-bottom: var(--space-md);
+    }
+
+    .buttonWrapper {
+        gap: var(--space-xs);
+    }
+
+    .collapseWrapper {
+        gap: var(--space-xs);
+    }
+}
+
+/*xs*/
+@media (max-width: 767px) {
+    .content {
+        gap: var(--space-sm);
+    }
+
+    .contentWrapper {
+        padding-bottom: var(--space-md);
+    }
+
+    .buttonWrapper {
+        gap: var(--space-xs);
+    }
+
+    .collapseWrapper {
+        gap: var(--space-xs);
+    }
 }

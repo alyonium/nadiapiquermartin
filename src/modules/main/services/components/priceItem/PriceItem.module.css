@@ -1,9 +1,23 @@
 .wrapper {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     color: var(--primary1000);
+    gap: var(--space-sm);
+}
+
+.priceWrapper {
+    width: 100%;
+    display: flex;
     gap: var(--space-xxl);
+    color: var(--primary1000);
+    justify-content: space-between;
+}
+
+.infoWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xxs);
 }
 
 .nameWrapper {
@@ -11,6 +25,17 @@
     gap: var(--space-sm);
 }
 
-.number {
-    line-height: 40px !important;
+/*xs*/
+@media (max-width: 767px) {
+    .wrapper {
+        gap: var(--space-xxs);
+    }
+
+    .nameWrapper {
+        gap: var(--space-xs);
+    }
+
+    .priceWrapper {
+        gap: var(--space-xs);
+    }
 }
