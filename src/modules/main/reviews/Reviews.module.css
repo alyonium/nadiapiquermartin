@@ -1,0 +1,32 @@
+.contentWrapper {
+    background-image: url('../../../../public/backgroundMarble.png');
+    background-size: cover;
+    padding-bottom: var(--space-xxl);
+}
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.buttonWrapper  {
+    max-width: 900px;
+}
+
+
+/*sm*/
+@media (max-width: 1279px) and (min-width: 768px) {
+    .buttonWrapper {
+        max-width: 600px;
+    }
+}
+
+
+/*xs*/
+@media (max-width: 767px) {
+    .buttonWrapper {
+        max-width: unset;
+    }
+}

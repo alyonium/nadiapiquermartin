@@ -1,4 +1,4 @@
-.blockWrapper {
+.contentWrapper {
     background-image: url('../../../../public/backgroundBlue.png');
     background-size: cover;
     min-height: 1030px;
@@ -48,7 +48,7 @@
 
 /*md*/
 @media (max-width: 1727px) and (min-width: 1280px) {
-    .blockWrapper {
+    .contentWrapper {
         min-height: 800px;
     }
 
@@ -65,7 +65,7 @@
 
 /*sm*/
 @media (max-width: 1279px) and (min-width: 768px) {
-    .blockWrapper {
+    .contentWrapper {
         background-size: cover;
         min-height: 620px;
     }
@@ -92,7 +92,7 @@
 
 /*xs*/
 @media (max-width: 767px)  {
-    .blockWrapper {
+    .contentWrapper {
         background-size: cover;
         min-height: 500px;
         height: 100vh;

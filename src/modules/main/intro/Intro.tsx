@@ -11,7 +11,7 @@ const Intro = () => {
   const t = useTranslations();
 
   return (
-    <div className={classNames('content-wrapper', styles.blockWrapper)}>
+    <div className={classNames('content-wrapper', styles.contentWrapper)}>
       <div className='content'>
         <Header />
 

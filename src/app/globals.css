@@ -79,6 +79,32 @@ body {
   align-items: center;
 }
 
+.buttonWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.buttonWrapper > span {
+  color: var(--primary1000);
+  text-align: center;
+}
+a {
+  text-decoration: none;
+}
+
+a.link {
+  color: var(--primary1000);
+  transition: 0.1s;
+}
+
+a.link:hover {
+  transition: 0.1s;
+  text-decoration: underline;
+  font-weight: var(--font-weight-regular);
+}
+
 .header-lg,
 .header-md,
 .header-sm {
@@ -241,6 +267,10 @@ body[lang="ua"] .label-sm {
     max-width: 1200px;
   }
 
+  .buttonWrapper {
+    gap: var(--space-sm);
+  }
+
   .header-lg {
     font-size: var(--font-size-xl);
   }
@@ -252,7 +282,6 @@ body[lang="ua"] .label-sm {
   .header-sm {
     font-size: var(--font-size-md);
   }
-
 
   .body-lg-l,
   .body-lg-r,
@@ -296,6 +325,10 @@ body[lang="ua"] .label-sm {
     max-width: 740px;
   }
 
+  .buttonWrapper {
+    gap: var(--space-xs);
+  }
+
   .header-lg {
     font-size: var(--font-size-lg);
   }
@@ -307,7 +340,6 @@ body[lang="ua"] .label-sm {
   .header-sm {
     font-size: var(--font-size-sm);
   }
-
 
   .body-lg-l,
   .body-lg-r,
@@ -353,6 +385,10 @@ body[lang="ua"] .label-sm {
     margin-bottom: var(--space-md);
   }
 
+  .buttonWrapper {
+    gap: var(--space-xs);
+  }
+
   .header-lg {
     font-size: var(--font-size-md);
   }
@@ -364,7 +400,6 @@ body[lang="ua"] .label-sm {
   .header-sm {
     font-size: var(--font-size-xs);
   }
-
 
   .body-lg-l,
   .body-lg-r,

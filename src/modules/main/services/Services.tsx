@@ -62,7 +62,7 @@ const Services = () => {
           />
         </div>
 
-        <div className={styles.buttonWrapper}>
+        <div className={classNames(styles.buttonWrapper, 'buttonWrapper')}>
           <span className='body-md-l'>{t('services.payment')}</span>
 
           <ModalWindow
