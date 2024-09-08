@@ -1,10 +1,22 @@
 .collapseWrapper {
     background: var(--transparent);
     border-radius: var(--border-radius);
+    padding: 0 var(--space-xl) 0 var(--space-xl);
+}
+
+.smallCollapseWrapper {
+    background: var(--primary200);
+    border-radius: var(--border-radius);
+    padding: 0 var(--space-md) 0 var(--space-md);
 }
 
 .collapseIcon {
     transition: var(--base-transition) ease-out;
+}
+
+.iconOpen.collapseIcon,
+.iconOpen.collapseIcon {
+    transform: rotate(180deg);
 }
 
 .trigger {
@@ -12,56 +24,45 @@
     outline: unset;
     border: unset;
     border-radius: var(--border-radius);
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: var(--primary1000);
-    padding: var(--space-md) var(--space-xl);
+    padding: var(--space-md) 0;
     margin: unset;
     cursor: pointer;
 }
 
-.trigger[aria-expanded="true"] .collapseIcon,
-.smallTrigger[aria-expanded="true"] .collapseIcon {
-    transform: rotate(180deg);
-}
-
-.contentWrapper {
+.contentWrapper,
+.smallContentWrapper {
+    height: 0;
     display: flex;
     flex-direction: column;
     gap: var(--space-md);
     overflow: hidden;
 }
 
-/*.contentWrapper[data-state='open'] {*/
-/*    animation: slideDown 300ms ease-out;*/
-/*}*/
+.collapseOpen.contentWrapper,
+.collapseOpen.smallContentWrapper {
+    height: auto;
+}
 
-/*.contentWrapper[data-state='closed'] {*/
-/*    animation: slideUp 300ms ease-out;*/
-/*}*/
+.space {
+    height: 1px;
+}
 
-/*@keyframes slideDown {*/
-/*    from {*/
-/*        height: 0;*/
-/*    }*/
-/*    to {*/
-/*        height: var(--radix-accordion-content-height);*/
-/*    }*/
-/*}*/
-
-/*@keyframes slideUp {*/
-/*    from {*/
-/*        height: var(--radix-accordion-content-height);*/
-/*    }*/
-/*    to {*/
-/*        height: 0;*/
-/*    }*/
-/*}*/
-
-.contentWrapper[data-state="open"] {
-    padding: 0 var(--space-xl) var(--space-md) var(--space-xl);
+.smallTrigger {
+    background: var(--primary200);
+    outline: unset;
+    border: unset;
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--primary1000);
+    padding: var(--space-xs) 0;
+    margin: unset;
+    cursor: pointer;
 }
 
 .line {
@@ -70,46 +71,24 @@
     background-color: var(--primary1000);
 }
 
-.smallCollapseWrapper {
-    background: var(--primary200);
-    border-radius: var(--border-radius);
-}
-
-.smallTrigger {
-    background: var(--primary200);
-    outline: unset;
-    border: unset;
-    border-radius: var(--border-radius);
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: var(--primary1000);
-    padding: var(--space-xs) var(--space-md);
-    margin: unset;
-    cursor: pointer;
-}
-
 .priceWrapper {
     display: flex;
     align-items: center;
     gap: var(--space-xxs);
 }
 
-.smallContentWrapper[data-state="open"] {
-    /*padding: 0 var(--space-md) var(--space-xs) var(--space-md);*/
-}
-
 /*sm*/
 @media (max-width: 1279px) and (min-width: 768px) {
     .contentWrapper {
-        display: flex;
-        flex-direction: column;
         gap: var(--space-sm);
     }
 
-    .contentWrapper[data-state="open"] {
-        padding: 0 var(--space-sm) var(--space-sm) var(--space-sm);
+    .collapseWrapper {
+        padding: 0 var(--space-sm) 0 var(--space-sm);
+    }
+
+    .smallCollapseWrapper {
+        padding: 0 var(--space-xs) 0 var(--space-xs);
     }
 
     .trigger {
@@ -119,22 +98,20 @@
     .smallTrigger {
         padding: var(--space-xs) var(--space-xs);
     }
-
-    .smallContentWrapper[data-state="open"] {
-        padding: 0 var(--space-xs) var(--space-xs) var(--space-xs);
-    }
 }
 
 /*xs*/
 @media (max-width: 767px) {
     .contentWrapper {
-        display: flex;
-        flex-direction: column;
         gap: var(--space-xs);
     }
 
-    .contentWrapper[data-state="open"] {
-        padding: 0 var(--space-xxs) var(--space-xxs) var(--space-xxs);
+    .collapseWrapper {
+        padding: 0 var(--space-xxs) 0 var(--space-xxs);
+    }
+
+    .smallCollapseWrapper {
+        padding: 0 var(--space-xxs) 0 var(--space-xxs);
     }
 
     .trigger {
@@ -152,9 +129,5 @@
     .smallTrigger {
         text-align: start;
         padding: var(--space-xxs) var(--space-xxs);
-    }
-
-    .smallContentWrapper[data-state="open"] {
-        padding: 0 var(--space-xxs) var(--space-xxs) var(--space-xxs);
     }
 }

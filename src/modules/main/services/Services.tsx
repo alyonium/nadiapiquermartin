@@ -25,28 +25,39 @@ const Services = () => {
 
         <div className={styles.collapseWrapper}>
           <Collapse
+            id='consultations'
             heading={t('services.consultations.heading')}
             content={<Consultations />}
           />
 
           <Collapse
-            heading={t.rich('services.gynecological.heading', {
-              italic: (chunks) => <span className='body-lg-i'>{chunks}</span>,
-            })}
+            id='gynecological'
+            heading={
+              t.rich('services.gynecological.heading', {
+                italic: (chunks) => <span className='body-lg-i'>{chunks}</span>,
+              }) as string
+            }
             content={<Gynecological />}
           />
 
           <Collapse
-            heading={t.rich('services.contraception.heading', {
-              italic: (chunks) => <span className='body-lg-i'>{chunks}</span>,
-            })}
+            id='contraception'
+            price={400}
+            heading={
+              t.rich('services.contraception.heading', {
+                italic: (chunks) => <span className='body-lg-i'>{chunks}</span>,
+              }) as string
+            }
             content={<Contraception />}
           />
 
           <Collapse
-            heading={t.rich('services.obstetrics.heading', {
-              italic: (chunks) => <span className='body-lg-i'>{chunks}</span>,
-            })}
+            id='obstetrics'
+            heading={
+              t.rich('services.obstetrics.heading', {
+                italic: (chunks) => <span className='body-lg-i'>{chunks}</span>,
+              }) as string
+            }
             content={<Obstetrics />}
           />
         </div>

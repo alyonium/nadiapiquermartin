@@ -34,8 +34,10 @@ const Gynecological = () => {
         {mt('packagesHeading')}:
       </span>
 
-      {price.gynecological.packages.map((item: PriceType) => (
+      {price.gynecological.packages.map((item: PriceType, index) => (
         <Collapse
+          id={item.label}
+          key={index}
           heading={t(item.label)}
           price={item.value}
           size={CollapseSize.small}

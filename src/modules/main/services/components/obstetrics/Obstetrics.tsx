@@ -7,6 +7,7 @@ import Collapse from '@/components/collapse/Collapse';
 const Obstetrics = () => {
   const t = useTranslations('services.obstetrics');
   const mt = useTranslations('services');
+
   return (
     <>
       {price.obstetrics.base.map((item: PriceType, index) => (
@@ -22,8 +23,10 @@ const Obstetrics = () => {
         {mt('packagesHeading')}:
       </span>
 
-      {price.obstetrics.packages.map((item: PriceType) => (
+      {price.obstetrics.packages.map((item: PriceType, index) => (
         <Collapse
+          id={item.label}
+          key={index}
           heading={t(item.label)}
           price={item.value}
           size={CollapseSize.small}
