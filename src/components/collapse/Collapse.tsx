@@ -29,12 +29,10 @@ const Collapse = ({
     setOpen(!open);
   };
 
-  // по неизвестной мне причине анимация не работает на внутренних аккордионах, сломала уже всю голову. попробовать еще раз
-
   useEffect(() => {
     if (open) {
       gsap.to(`#${id}.${styles.contentWrapper}`, {
-        height: '100%',
+        height: 'auto',
         opacity: 1,
         duration: 0.5,
       });
@@ -46,8 +44,6 @@ const Collapse = ({
       });
     }
   }, [open]);
-
-  // , #${id}.${styles.smallContentWrapper}
 
   if (size === CollapseSize.small) {
     return (
@@ -67,7 +63,6 @@ const Collapse = ({
         <div
           id={id}
           className={classNames(
-            styles.contentWrapper,
             styles.smallContentWrapper,
             open ? styles.collapseOpen : false
           )}

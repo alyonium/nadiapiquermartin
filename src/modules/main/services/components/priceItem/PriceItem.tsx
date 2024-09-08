@@ -1,7 +1,6 @@
 import styles from '@/modules/main/services/components/priceItem/PriceItem.module.css';
 import classNames from 'classnames';
 import { PriceItemType } from '@/types/types';
-import { spans } from 'next/dist/build/webpack/plugins/profiling-plugin';
 
 type PriceItem = {
   label: string;

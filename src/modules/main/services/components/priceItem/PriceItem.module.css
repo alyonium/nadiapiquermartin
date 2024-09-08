@@ -25,6 +25,13 @@
     gap: var(--space-sm);
 }
 
+/*sm*/
+@media (max-width: 1279px) and (min-width: 768px) {
+    .nameWrapper {
+        gap: var(--space-xs);
+    }
+}
+
 /*xs*/
 @media (max-width: 767px) {
     .wrapper {
@@ -32,7 +39,7 @@
     }
 
     .nameWrapper {
-        gap: var(--space-xs);
+        gap: var(--space-xxs);
     }
 
     .priceWrapper {

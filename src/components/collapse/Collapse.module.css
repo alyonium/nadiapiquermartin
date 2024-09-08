@@ -42,8 +42,19 @@
     overflow: hidden;
 }
 
-.collapseOpen.contentWrapper,
-.collapseOpen.smallContentWrapper {
+.smallContentWrapper {
+    opacity:0;
+    transition: opacity 0.5s ease-out;
+    gap: var(--space-sm);
+}
+
+.smallContentWrapper.collapseOpen {
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+    height: auto;
+}
+
+.collapseOpen.contentWrapper {
     height: auto;
 }
 
@@ -83,6 +94,10 @@
         gap: var(--space-sm);
     }
 
+    .smallContentWrapper {
+        gap: var(--space-xs);
+    }
+
     .collapseWrapper {
         padding: 0 var(--space-sm) 0 var(--space-sm);
     }
@@ -92,11 +107,11 @@
     }
 
     .trigger {
-        padding: var(--space-sm) var(--space-sm);
+        padding: var(--space-sm) 0;
     }
 
     .smallTrigger {
-        padding: var(--space-xs) var(--space-xs);
+        padding: var(--space-xs) 0;
     }
 }
 
@@ -114,9 +129,13 @@
         padding: 0 var(--space-xxs) 0 var(--space-xxs);
     }
 
+    .smallContentWrapper {
+        gap: var(--space-xxs);
+    }
+
     .trigger {
         text-align: start;
-        padding: var(--space-xxs) var(--space-xxs);
+        padding: var(--space-xxs) 0;
         min-height: 61px;
     }
 
@@ -128,6 +147,6 @@
 
     .smallTrigger {
         text-align: start;
-        padding: var(--space-xxs) var(--space-xxs);
+        padding: var(--space-xxs) 0;
     }
 }
