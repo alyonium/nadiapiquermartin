@@ -11,7 +11,12 @@ const Intro = () => {
   const t = useTranslations();
 
   return (
-    <div className={classNames('content-wrapper', styles.contentWrapper)}>
+    <div
+      className={classNames(
+        'content-wrapper backgroundBlue',
+        styles.contentWrapper
+      )}
+    >
       <div className='content'>
         <Header />
 

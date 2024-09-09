@@ -230,7 +230,10 @@ const Review = () => {
       {temp.map((item: Review) => (
         <div
           key={item.reviewId}
-          className={classNames(styles.contentWrapper, 'transparent-wrapper')}
+          className={classNames(
+            styles.contentWrapper,
+            'transparent-wrapper box-shadow'
+          )}
         >
           <div className={styles.nameWrapper}>
             <Image

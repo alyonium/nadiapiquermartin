@@ -10,7 +10,12 @@ const Reviews = () => {
   const t = useTranslations();
 
   return (
-    <div className={classNames('content-wrapper', styles.contentWrapper)}>
+    <div
+      className={classNames(
+        'content-wrapper backgroundMarble',
+        styles.contentWrapper
+      )}
+    >
       <div className={classNames('content', styles.content)}>
         <Heading
           trigger={styles.contentWrapper}

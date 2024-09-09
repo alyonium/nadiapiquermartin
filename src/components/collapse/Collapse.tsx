@@ -75,7 +75,7 @@ const Collapse = ({
   }
 
   return (
-    <div className={styles.collapseWrapper}>
+    <div className={classNames(styles.collapseWrapper, 'box-shadow')}>
       <div onClick={toggleCollapse} className={styles.trigger}>
         <span className='body-lg-r'>{heading}</span>
         <TriangleDownIcon
