@@ -9,7 +9,7 @@ import classNames from 'classnames';
 import ModalWindow from '@/components/modalWindow/ModalWindow';
 
 const About = () => {
-  const t = useTranslations();
+  const t = useTranslations('about');
 
   return (
     <div className={classNames('content-wrapper', styles.contentWrapper)}>
@@ -18,7 +18,7 @@ const About = () => {
           <Heading
             trigger={styles.contentWrapper}
             target={styles.content}
-            text={t('about.heading')}
+            text={t('heading')}
           />
 
           <div className={styles.imageBlockWrapper}>
@@ -33,31 +33,29 @@ const About = () => {
 
           <div className={styles.textWrapper}>
             <span className='body-md-l text-align-center'>
-              {t.rich('about.about1', {
+              {t.rich('about1', {
                 italic: (chunks) => <span className='body-md-i'>{chunks}</span>,
               })}
             </span>
             <span className='body-md-l text-align-center'>
-              {t.rich('about.about2', {
+              {t.rich('about2', {
                 italic: (chunks) => <span className='body-md-i'>{chunks}</span>,
               })}
             </span>
             <span className='body-md-l text-align-center'>
-              {t.rich('about.about3', {
+              {t.rich('about3', {
                 italic: (chunks) => <span className='body-md-i'>{chunks}</span>,
               })}
             </span>
             <span className='body-md-l text-align-center'>
-              {t.rich('about.about4', {
+              {t.rich('about4', {
                 italic: (chunks) => <span className='body-md-i'>{chunks}</span>,
               })}
             </span>
           </div>
 
           <ModalWindow
-            button={
-              <Button text={t('about.button')} type={ButtonType.secondary} />
-            }
+            button={<Button text={t('button')} type={ButtonType.secondary} />}
           />
         </div>
 

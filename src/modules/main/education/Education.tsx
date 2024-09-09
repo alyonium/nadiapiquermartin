@@ -7,7 +7,7 @@ import { useTranslations } from 'next-intl';
 import ModalWindow from '@/components/modalWindow/ModalWindow';
 
 const Education = () => {
-  const t = useTranslations();
+  const t = useTranslations('education');
 
   return (
     <div className={classNames('content-wrapper', styles.contentWrapper)}>
@@ -15,7 +15,7 @@ const Education = () => {
         <Heading
           trigger={styles.contentWrapper}
           target={styles.content}
-          text={t('education.heading')}
+          text={t('heading')}
         />
 
         <div className={styles.blockWrapper}>
@@ -25,7 +25,7 @@ const Education = () => {
             <Image
               alt='procedure'
               src={procedurePhoto}
-              className={styles.imageWrapper}
+              className={classNames(styles.imageWrapper, 'imageWrapper')}
             />
           </div>
 
@@ -33,7 +33,7 @@ const Education = () => {
             <div className={styles.textBlockItem}>
               <span className='body-lg-i text-color-secondary400'>01</span>
               <div className={styles.textItem}>
-                <span className='body-md-r'>{t('education.education1')}</span>
+                <span className='body-md-r'>{t('education1')}</span>
                 <div className={styles.textItemInfo}>
                   <span className='body-sm-i'>Universitat de València</span>
                   <span className='body-sm-l'>2009 - 2016</span>
@@ -44,7 +44,7 @@ const Education = () => {
             <div className={styles.textBlockItem}>
               <span className='body-lg-i text-color-secondary400'>02</span>
               <div className={styles.textItem}>
-                <span className='body-md-r'>{t('education.education2')}</span>
+                <span className='body-md-r'>{t('education2')}</span>
                 <div className={styles.textItemInfo}>
                   <span className='body-sm-i'>
                     Hospital Universitario de la Ribera, Alzira
@@ -57,7 +57,7 @@ const Education = () => {
             <div className={styles.textBlockItem}>
               <span className='body-lg-i text-color-secondary400'>03</span>
               <div className={styles.textItem}>
-                <span className='body-md-r'>{t('education.education3')}</span>
+                <span className='body-md-r'>{t('education3')}</span>
                 <div className={styles.textItemInfo}>
                   <span className='body-sm-i'>
                     Hospital Universitario Cruces, Barakaldo
@@ -70,7 +70,7 @@ const Education = () => {
             <div className={styles.textBlockItem}>
               <span className='body-lg-i text-color-secondary400'>04</span>
               <div className={styles.textItem}>
-                <span className='body-md-r'>{t('education.education4')}</span>
+                <span className='body-md-r'>{t('education4')}</span>
                 <div className={styles.textItemInfo}>
                   <span className='body-sm-i'>
                     Hospital Universitario Son Espases, Palma de Mallorca
@@ -83,7 +83,7 @@ const Education = () => {
             <div className={styles.textBlockItem}>
               <span className='body-lg-i text-color-secondary400'>05</span>
               <div className={styles.textItem}>
-                <span className='body-md-r'>{t('education.education5')}</span>
+                <span className='body-md-r'>{t('education5')}</span>
                 <div className={styles.textItemInfo}>
                   <span className='body-sm-i'>Universidad de Alcalá</span>
                   <span className='body-sm-l'>2021 - 2022</span>
@@ -94,7 +94,7 @@ const Education = () => {
             <div className={styles.textBlockItem}>
               <span className='body-lg-i text-color-secondary400'>06</span>
               <div className={styles.textItem}>
-                <span className='body-md-r'>{t('education.education6')}</span>
+                <span className='body-md-r'>{t('education6')}</span>
                 <div className={styles.textItemInfo}>
                   <span className='body-sm-i'>València</span>
                   <span className='body-sm-l'>2018 - настоящее время</span>
@@ -105,7 +105,7 @@ const Education = () => {
             <div className={styles.textBlockItem}>
               <span className='body-lg-i text-color-secondary400'>07</span>
               <div className={styles.textItem}>
-                <span className='body-md-r'>{t('education.education7')}</span>
+                <span className='body-md-r'>{t('education7')}</span>
                 <div className={styles.textItemInfo}>
                   <span className='body-sm-i'>España</span>
                   <span className='body-sm-l'>2019 - настоящее время</span>
@@ -114,8 +114,6 @@ const Education = () => {
             </div>
           </div>
         </div>
-
-        <ModalWindow />
       </div>
     </div>
   );

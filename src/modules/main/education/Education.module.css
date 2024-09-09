@@ -26,10 +26,7 @@
     max-width: 100%;
 }
 
-.imageWrapper {
-    width: 618px;
-    height: 900px;
-}
+.imageWrapper {}
 
 .ellipse {
     width: 660px;
@@ -79,11 +76,6 @@
         gap: var(--space-xxxs);
     }
 
-    .imageWrapper {
-        width: 417px;
-        height: 626px;
-    }
-
     .ellipse {
         width: 500px;
         height: 500px;
@@ -111,11 +103,6 @@
         gap: var(--space-xxxxs);
     }
 
-    .imageWrapper {
-        width: 233px;
-        height: 350px;
-    }
-
     .ellipse {
         width: 500px;
         height: 500px;
@@ -141,11 +128,6 @@
 
     .textItemInfo {
         gap: var(--space-xxxxs);
-    }
-
-    .imageWrapper {
-        width: 200px;
-        height: 300px;
     }
 
     .ellipse {

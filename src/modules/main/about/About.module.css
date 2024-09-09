@@ -7,10 +7,7 @@
     gap: var(--space-xxl);
 }
 
-.imageWrapper {
-    width: 613px;
-    height: 900px;
-}
+.imageWrapper {}
 
 .textBlockWrapper {
     display: flex;
@@ -54,11 +51,6 @@
 
     .textWrapper {
         gap: var(--space-sm);
-    }
-
-    .imageWrapper {
-        width: 438px;
-        height: 661px;
     }
 
     .ellipse {
@@ -121,8 +113,6 @@
 
     .imageWrapper {
         display: block;
-        width: 200px;
-        height: 300px;
     }
 
     .ellipse {

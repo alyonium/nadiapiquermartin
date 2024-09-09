@@ -1,0 +1,67 @@
+import { useTranslations } from 'next-intl';
+import classNames from 'classnames';
+import styles from '@/modules/main/contacts/Contacts.module.css';
+import Heading from '@/components/heading/Heading';
+import Image from 'next/image';
+import contactsPhoto from '/public/contactsPhoto.png';
+import Button from '@/components/button/Button';
+import { ButtonType } from '@/types/types';
+import ModalWindow from '@/components/modalWindow/ModalWindow';
+
+const Contacts = () => {
+  const t = useTranslations('contacts');
+
+  return (
+    <div className={classNames('content-wrapper', styles.contentWrapper)}>
+      <div className={classNames('content', styles.content)}>
+        <Heading
+          trigger={styles.contentWrapper}
+          target={styles.content}
+          text={t('heading')}
+        />
+
+        <div className={styles.contentBlockWrapper}>
+          <div className={styles.imageBlockWrapper}>
+            <div className={classNames(styles.ellipse, 'ellipse')} />
+
+            <Image
+              alt='doctors work'
+              src={contactsPhoto}
+              className={classNames(styles.imageWrapper, 'imageWrapper')}
+            />
+          </div>
+
+          <div className={styles.textBlockWrapper}>
+            <div className={styles.textWrapper}>
+              <span className='body-lg-l text-color-primary1000'>
+                {t.rich('contacts1', {
+                  italic: (chunks) => (
+                    <span className='body-lg-i'>{chunks}</span>
+                  ),
+                })}
+              </span>
+
+              <span className='body-lg-l text-color-primary1000'>
+                {t('contacts2')}:
+              </span>
+
+              <span className='body-lg-l text-color-primary1000'>
+                {t.rich('contacts3', {
+                  italic: (chunks) => (
+                    <span className='body-lg-i'>{chunks}</span>
+                  ),
+                })}
+              </span>
+            </div>
+
+            <ModalWindow
+              button={<Button text={t('button')} type={ButtonType.secondary} />}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Contacts;

@@ -113,6 +113,12 @@ body {
   color: var(--primary1000);
   text-align: center;
 }
+
+.imageWrapper {
+  width: 620px;
+  height: auto;
+}
+
 a {
   text-decoration: none;
 }
@@ -290,6 +296,10 @@ body[lang="ua"] .label-sm {
     max-width: 1200px;
   }
 
+  .imageWrapper {
+    width: 570px;
+  }
+
   .buttonWrapper {
     gap: var(--space-sm);
   }
@@ -324,7 +334,6 @@ body[lang="ua"] .label-sm {
     font-size: var(--font-size-xxs);
   }
 
-
   .label-lg {
     font-size: var(--font-size-lg);
   }
@@ -352,6 +361,10 @@ body[lang="ua"] .label-sm {
     gap: var(--space-xs);
   }
 
+  .imageWrapper {
+    width: 400px;
+  }
+
   .header-lg {
     font-size: var(--font-size-lg);
   }
@@ -385,7 +398,6 @@ body[lang="ua"] .label-sm {
     letter-spacing: 1px !important;
   }
 
-
   .label-lg {
     font-size: var(--font-size-md);
     letter-spacing: 1px !important;
@@ -408,8 +420,18 @@ body[lang="ua"] .label-sm {
     margin-bottom: var(--space-md);
   }
 
+  .content {
+    margin: 0 var(--space-sm);
+    max-width: unset;
+    min-width: 300px;
+  }
+
   .buttonWrapper {
     gap: var(--space-xs);
+  }
+
+  .imageWrapper {
+    width: 200px;
   }
 
   .header-lg {
@@ -458,12 +480,6 @@ body[lang="ua"] .label-sm {
   .label-sm {
     font-size: var(--font-size-xxxs);
     letter-spacing: 1px !important;
-  }
-
-  .content {
-    margin: 0 var(--space-sm);
-    max-width: unset;
-    min-width: 300px;
   }
 
   .ellipse {

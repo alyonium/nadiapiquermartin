@@ -1,0 +1,55 @@
+.contentWrapper {}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--space-xxl);
+}
+
+.contentBlockWrapper {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-xxl);
+}
+
+.imageBlockWrapper {}
+
+.ellipse {}
+
+.textBlockWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+}
+
+.textWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.imageWrapper {}
+
+/*md*/
+@media (max-width: 1727px) and (min-width: 1280px) {
+    .textWrapper {
+        gap: var(--space-lg);
+    }
+}
+
+/*sm*/
+@media (max-width: 1279px) and (min-width: 768px) {
+    .textWrapper {
+        text-align: center;
+        gap: var(--space-md);
+    }
+}
+
+/*xs*/
+@media (max-width: 767px) {
+    .textWrapper {
+        text-align: center;
+        gap: var(--space-sm);
+    }
+}

@@ -8,7 +8,7 @@ import { useTranslations } from 'next-intl';
 import ModalWindow from '@/components/modalWindow/ModalWindow';
 
 const Intro = () => {
-  const t = useTranslations();
+  const t = useTranslations('intro');
 
   return (
     <div
@@ -29,7 +29,7 @@ const Intro = () => {
           <Image
             alt='doctora'
             src={introPhoto}
-            className={styles.imageWrapper}
+            className={classNames(styles.imageWrapper)}
           />
 
           <div className={styles.textBlockWrapper}>
@@ -38,11 +38,11 @@ const Intro = () => {
                 Dra. Nadia Piquer Martin
               </h1>
               <span className='body-lg-l text-align-center'>
-                {t('intro.obstetrician')}
+                {t('obstetrician')}
               </span>
             </div>
 
-            <ModalWindow button={<Button text={t('intro.button')} />} />
+            <ModalWindow button={<Button text={t('button')} />} />
           </div>
         </div>
       </div>

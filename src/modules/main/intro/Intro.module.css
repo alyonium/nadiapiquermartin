@@ -14,7 +14,7 @@
 
 .imageWrapper {
     width: 755px;
-    height: 778px;
+    height: auto;
 }
 
 .textBlockWrapper {
@@ -54,7 +54,6 @@
 
     .imageWrapper {
         width: 572px;
-        height: 597px;
     }
 
     .textBlockWrapper {
@@ -72,7 +71,6 @@
 
     .imageWrapper {
         width: 407px;
-        height: 425px;
     }
 
     .textBlockWrapper {
