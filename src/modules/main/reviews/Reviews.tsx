@@ -5,9 +5,10 @@ import Heading from '@/components/heading/Heading';
 import Review from '@/modules/main/reviews/components/review/Review';
 import Button from '@/components/button/Button';
 import { ButtonType } from '@/types/types';
+import { temp, ReviewType } from '@/modules/main/reviews/tempData';
 
 const Reviews = () => {
-  const t = useTranslations();
+  const t = useTranslations('reviews');
 
   return (
     <div
@@ -20,20 +21,22 @@ const Reviews = () => {
         <Heading
           trigger={styles.contentWrapper}
           target={styles.content}
-          text={t('reviews.heading')}
+          text={t('heading')}
         />
 
-        <span className='body-md-l text-color-primary1000'>
-          {t('reviews.subheading')}
+        <span className='body-md-l text-color-primary1000 text-align-center'>
+          {t('subheading')}
         </span>
 
-        <>
-          <Review />
-        </>
+        <div className={styles.reviewWrapper}>
+          {temp.map((item: ReviewType) => (
+            <Review key={item.reviewId} data={item} />
+          ))}
+        </div>
 
         <div className={classNames(styles.buttonWrapper, 'buttonWrapper')}>
           <span className='body-md-l text-color-primary1000'>
-            {t('reviews.linkToGoogle')}{' '}
+            {t('linkToGoogle')}{' '}
             <a
               className='body-md-r link'
               rel='stylesheet'
@@ -44,7 +47,7 @@ const Reviews = () => {
           </span>
 
           <a href='https://maps.app.goo.gl/rvdg9PoqHQVow2KS9'>
-            <Button text={t('reviews.button')} type={ButtonType.secondary} />
+            <Button text={t('button')} type={ButtonType.secondary} />
           </a>
         </div>
       </div>

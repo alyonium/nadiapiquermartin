@@ -1,14 +1,11 @@
-import {
-  temp,
-  Review,
-  StarRating,
-} from '@/modules/main/reviews/components/Review/tempData';
+import { ReviewType, StarRating } from '@/modules/main/reviews/tempData';
 import styles from '@/modules/main/reviews/components/review/Review.module.css';
 import classNames from 'classnames';
 import Image from 'next/image';
 import aboutPhoto from '/public/aboutPhoto.png';
 import star from '/public/star.png';
 import emptyStar from '/public/emptyStar.png';
+import { getDate } from '@/utils/getDate';
 
 const getRating = (num) => {
   if (num === StarRating.ONE) {
@@ -219,47 +216,41 @@ const getRating = (num) => {
   return '';
 };
 
-const getDate = (timestamp: string) => {
-  const date = new Date(timestamp);
-
-  return date.getDate() + '/' + date.getMonth() + '/' + date.getFullYear();
+type ReviewProps = {
+  data: ReviewType;
 };
-const Review = () => {
-  return (
-    <>
-      {temp.map((item: Review) => (
-        <div
-          key={item.reviewId}
-          className={classNames(
-            styles.contentWrapper,
-            'transparent-wrapper box-shadow'
-          )}
-        >
-          <div className={styles.nameWrapper}>
-            <Image
-              src={aboutPhoto}
-              className={styles.googleImg}
-              alt={item.reviewer.displayName}
-              width={32}
-              height={32}
-            />
-            <span className='body-md-r text-color-primary1000'>
-              {item.reviewer.displayName}
-            </span>
-          </div>
-          <div className={styles.ratingWrapper}>
-            <span>{getRating(item.starRating)}</span>
-            <span className='label-sm text-color-primary1000'>
-              {getDate(item.createTime)}
-            </span>
-          </div>
 
-          <span className='body-md-l  text-color-primary1000'>
-            {item.comment}
-          </span>
-        </div>
-      ))}
-    </>
+const Review = ({ data }: ReviewProps) => {
+  return (
+    <div
+      className={classNames(
+        styles.contentWrapper,
+        'transparent-wrapper box-shadow'
+      )}
+    >
+      <div className={styles.nameWrapper}>
+        <Image
+          src={aboutPhoto}
+          className={styles.googleImg}
+          alt={data.reviewer.displayName}
+          width={32}
+          height={32}
+        />
+        <span className='body-md-r text-color-primary1000'>
+          {data.reviewer.displayName}
+        </span>
+      </div>
+      <div className={styles.ratingWrapper}>
+        <span>{getRating(data.starRating)}</span>
+        <span className='label-sm text-color-primary1000'>
+          {getDate(data.createTime)}
+        </span>
+      </div>
+
+      <span className='body-md-l  text-color-primary1000 text-overflow'>
+        {data.comment}
+      </span>
+    </div>
   );
 };
 

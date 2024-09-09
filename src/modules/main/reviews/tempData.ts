@@ -1,4 +1,4 @@
-export const temp: Review[] = [
+export const temp: ReviewType[] = [
   {
     name: 'Isabel Peña Roja',
     reviewId: '213213321dkfksmwe',
@@ -46,7 +46,7 @@ export const temp: Review[] = [
   },
 ];
 
-export type Review = {
+export type ReviewType = {
   name: string;
   reviewId: string;
   reviewer: Reviewer;

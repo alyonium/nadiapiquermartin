@@ -35,7 +35,6 @@
 /*xs*/
 @media (max-width: 767px) {
     .contentWrapper {
-        max-width: 300px;
         padding: var(--space-xxs);
         gap: var(--space-xxs);
     }

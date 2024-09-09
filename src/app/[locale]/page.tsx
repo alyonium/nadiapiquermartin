@@ -4,6 +4,7 @@ import Education from '@/modules/main/education/Education';
 import Services from '@/modules/main/services/Services';
 import Reviews from '@/modules/main/reviews/Reviews';
 import Office from '@/modules/main/office/Office';
+import Recommendations from '@/modules/main/recommendations/Recommendations';
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <Services />
       <Reviews />
       <Office />
+      <Recommendations />
     </>
   );
 };
