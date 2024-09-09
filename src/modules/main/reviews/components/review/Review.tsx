@@ -7,7 +7,7 @@ import star from '/public/star.png';
 import emptyStar from '/public/emptyStar.png';
 import { getDate } from '@/utils/getDate';
 
-const getRating = (num) => {
+const getRating = (num: StarRating) => {
   if (num === StarRating.ONE) {
     return (
       <div>

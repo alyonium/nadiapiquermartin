@@ -57,7 +57,7 @@ const Office = () => {
               height='450'
               className={styles.map}
               frameBorder='0'
-              allowFullScreen=''
+              allowFullScreen={false}
               loading='lazy'
               referrerPolicy='no-referrer-when-downgrade'
             ></iframe>

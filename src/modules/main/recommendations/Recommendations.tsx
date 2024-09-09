@@ -29,7 +29,7 @@ const Recommendations = () => {
 
         <div className={styles.recommendationWrapper}>
           {temp.map((item: RecommendationType) => (
-            <Recommendation data={item} />
+            <Recommendation key={item.name} data={item} />
           ))}
         </div>
 

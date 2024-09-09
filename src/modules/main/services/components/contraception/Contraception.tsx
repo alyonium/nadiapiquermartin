@@ -14,12 +14,13 @@ const Contraception = () => {
 
       {price.contraception.HID.install.map((item: PriceType, index) => (
         <PriceItem
+          data={{
+            number: index,
+            label: t(item.label),
+            value: item.value,
+            type: PriceItemType.withNumber,
+          }}
           key={index}
-          number={index}
-          label={t(item.label)}
-          value={item.value}
-          type={PriceItemType.withNumber}
-          info={item?.info?.map((item) => t(item))}
         />
       ))}
 
@@ -29,48 +30,61 @@ const Contraception = () => {
 
       {price.contraception.HID.replace.map((item: PriceType, index) => (
         <PriceItem
+          data={{
+            number: index,
+            label: t(item.label),
+            value: item.value,
+            type: PriceItemType.withNumber,
+          }}
           key={index}
-          number={index}
-          label={t(item.label)}
-          value={item.value}
-          type={PriceItemType.withNumber}
-          info={item?.info?.map((item) => t(item))}
         />
       ))}
 
       {price.contraception.HID.base.map((item: PriceType, index) => (
         <PriceItem
+          data={{
+            label: t(item.label),
+            value: item.value,
+            type: PriceItemType.classic,
+            info: item?.info?.map((item) => t(item)),
+          }}
           key={index}
-          label={t(item.label)}
-          value={item.value}
-          info={item?.info?.map((item) => t(item))}
         />
       ))}
 
       {price.contraception.implant.install.map((item: PriceType, index) => (
         <PriceItem
+          data={{
+            label: t(item.label),
+            value: item.value,
+            type: PriceItemType.classic,
+            info: item?.info?.map((item) => t(item)),
+          }}
           key={index}
-          label={t(item.label)}
-          value={item.value}
-          info={item?.info?.map((item) => t(item))}
         />
       ))}
 
       {price.contraception.implant.remove.map((item: PriceType, index) => (
         <PriceItem
           key={index}
-          label={t(item.label)}
-          value={item.value}
-          info={item?.info?.map((item) => t(item))}
+          data={{
+            label: t(item.label),
+            value: item.value,
+            type: PriceItemType.classic,
+            info: item?.info?.map((item) => t(item)),
+          }}
         />
       ))}
 
       {price.contraception.implant.replace.map((item: PriceType, index) => (
         <PriceItem
           key={index}
-          label={t(item.label)}
-          value={item.value}
-          info={item?.info?.map((item) => t(item))}
+          data={{
+            label: t(item.label),
+            value: item.value,
+            type: PriceItemType.classic,
+            info: item?.info?.map((item) => t(item)),
+          }}
         />
       ))}
 
@@ -78,9 +92,12 @@ const Contraception = () => {
         (item: PriceType, index) => (
           <PriceItem
             key={index}
-            label={t(item.label)}
-            value={item.value}
-            info={item?.info?.map((item) => t(item))}
+            data={{
+              label: t(item.label),
+              value: item.value,
+              type: PriceItemType.classic,
+              info: item?.info?.map((item) => t(item)),
+            }}
           />
         )
       )}

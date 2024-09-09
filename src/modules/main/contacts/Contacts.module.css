@@ -10,6 +10,7 @@
 .contentBlockWrapper {
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: var(--space-xxl);
 }
 
@@ -30,6 +31,12 @@
 }
 
 .imageWrapper {}
+
+.icon {
+    width: 36px;
+    height: 36px;
+    color: var(--primary1000);
+}
 
 /*md*/
 @media (max-width: 1727px) and (min-width: 1280px) {

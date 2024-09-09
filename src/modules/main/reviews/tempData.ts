@@ -1,3 +1,28 @@
+export enum StarRating {
+  STAR_RATING_UNSPECIFIED,
+  ONE,
+  TWO,
+  THREE,
+  FOUR,
+  FIVE,
+}
+
+export type ReviewType = {
+  name: string;
+  reviewId: string;
+  reviewer: Reviewer;
+  starRating: StarRating;
+  comment: string;
+  createTime: string;
+  updateTime: string;
+};
+
+type Reviewer = {
+  profilePhotoUrl: string;
+  displayName: string;
+  isAnonymous: boolean;
+};
+
 export const temp: ReviewType[] = [
   {
     name: 'Isabel Peña Roja',
@@ -45,28 +70,3 @@ export const temp: ReviewType[] = [
     updateTime: '2014-10-02T15:01:23Z',
   },
 ];
-
-export type ReviewType = {
-  name: string;
-  reviewId: string;
-  reviewer: Reviewer;
-  starRating: StarRating;
-  comment: string;
-  createTime: string;
-  updateTime: string;
-};
-
-export enum StarRating {
-  STAR_RATING_UNSPECIFIED,
-  ONE,
-  TWO,
-  THREE,
-  FOUR,
-  FIVE,
-}
-
-type Reviewer = {
-  profilePhotoUrl: string;
-  displayName: string;
-  isAnonymous: boolean;
-};

@@ -7,6 +7,10 @@ import contactsPhoto from '/public/contactsPhoto.png';
 import Button from '@/components/button/Button';
 import { ButtonType } from '@/types/types';
 import ModalWindow from '@/components/modalWindow/ModalWindow';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone } from '@fortawesome/free-solid-svg-icons/faPhone';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons/faEnvelope';
+import { faSquareWhatsapp } from '@fortawesome/free-brands-svg-icons/faSquareWhatsapp';
 
 const Contacts = () => {
   const t = useTranslations('contacts');
@@ -44,6 +48,30 @@ const Contacts = () => {
               <span className='body-lg-l text-color-primary1000'>
                 {t('contacts2')}:
               </span>
+
+              <div>
+                <div>
+                  <FontAwesomeIcon className={styles.icon} icon={faPhone} />
+                  <span className='body-lg-l text-color-primary1000'>
+                    623 951 878
+                  </span>
+                </div>
+                <div>
+                  <FontAwesomeIcon className={styles.icon} icon={faEnvelope} />
+                  <span className='body-lg-l text-color-primary1000'>
+                    info@nadiapiquermartin.com
+                  </span>
+                </div>
+                <div>
+                  <FontAwesomeIcon
+                    className={styles.icon}
+                    icon={faSquareWhatsapp}
+                  />
+                  <span className='body-lg-l text-color-primary1000'>
+                    623 951 878
+                  </span>
+                </div>
+              </div>
 
               <span className='body-lg-l text-color-primary1000'>
                 {t.rich('contacts3', {

@@ -12,10 +12,13 @@ const Obstetrics = () => {
     <>
       {price.obstetrics.base.map((item: PriceType, index) => (
         <PriceItem
+          data={{
+            label: t(item.label),
+            value: item.value,
+            type: PriceItemType.classic,
+            info: item?.info?.map((item) => t(item)),
+          }}
           key={index}
-          label={t(item.label)}
-          value={item.value}
-          info={item?.info?.map((item) => t(item))}
         />
       ))}
 
@@ -34,10 +37,12 @@ const Obstetrics = () => {
             <>
               {item.content?.map((key, index) => (
                 <PriceItem
+                  data={{
+                    number: index,
+                    label: t(item.label),
+                    type: PriceItemType.packageItem,
+                  }}
                   key={index}
-                  label={t(key)}
-                  number={index}
-                  type={PriceItemType.packageItem}
                 />
               ))}
               {item.info?.map((key, index) => (

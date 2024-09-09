@@ -13,7 +13,14 @@ const Gynecological = () => {
   return (
     <>
       {price.gynecological.base.map((item: PriceType, index) => (
-        <PriceItem key={index} label={t(item.label)} value={item.value} />
+        <PriceItem
+          data={{
+            label: t(item.label),
+            value: item.value,
+            type: PriceItemType.classic,
+          }}
+          key={index}
+        />
       ))}
 
       <span className='body-md-i text-color-primary1000'>
@@ -22,11 +29,13 @@ const Gynecological = () => {
 
       {price.gynecological.vaginalInfections.map((item, index) => (
         <PriceItem
+          data={{
+            number: index,
+            label: t(item.label),
+            value: item.value,
+            type: PriceItemType.withNumber,
+          }}
           key={index}
-          label={t(item.label)}
-          value={item.value}
-          number={index}
-          type={PriceItemType.withNumber}
         />
       ))}
 
@@ -45,13 +54,15 @@ const Gynecological = () => {
             <>
               {item.content?.map((key, index) => (
                 <PriceItem
+                  data={{
+                    number: index,
+                    label: t(key),
+                    type: PriceItemType.packageItem,
+                  }}
                   key={index}
-                  label={t(key)}
-                  number={index}
-                  type={PriceItemType.packageItem}
                 />
               ))}
-              {item.info?.length > 0 && (
+              {item.info && item.info.length > 0 && (
                 <div className={styles.infoWrapper}>
                   {item.info?.map((key, index) => (
                     <span
