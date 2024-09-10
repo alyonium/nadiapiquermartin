@@ -10,14 +10,31 @@ import { HamburgerMenuIcon } from '@radix-ui/react-icons';
 import { useState } from 'react';
 import classNames from 'classnames';
 import { Cross1Icon } from '@radix-ui/react-icons';
+import { gsap } from 'gsap';
+import { useGSAP } from '@gsap/react';
+import ScrollToPlugin from 'gsap/ScrollToPlugin';
+
+gsap.registerPlugin(ScrollToPlugin);
 
 const Header = () => {
   const t = useTranslations('header');
   const [sideMenuOpen, setSideMenuOpen] = useState<boolean>(false);
 
+  const { contextSafe } = useGSAP();
+
   const toggleSideMenu = () => {
-    document.body.style.overflow = sideMenuOpen ? 'visible' : 'hidden';
+    document.body.style.overflowY = sideMenuOpen ? 'visible' : 'hidden';
     setSideMenuOpen(!sideMenuOpen);
+  };
+
+  const scroll = (id: string) => {
+    return contextSafe(() => {
+      gsap.to(window, {
+        opacity: 1,
+        duration: 0.5,
+        scrollTo: `#${id}`,
+      });
+    });
   };
 
   return (
@@ -25,32 +42,38 @@ const Header = () => {
       <Image alt='logo' src={logo} className={styles.logo} />
 
       <div className={styles.nav}>
-        <a href='#about' className={classNames(styles.menuLink, 'body-md-l')}>
+        <span
+          onClick={scroll('about')}
+          className={classNames(styles.menuLink, 'body-md-l')}
+        >
           {t('about')}
-        </a>
-        <a
-          href='#services'
+        </span>
+        <span
+          onClick={scroll('services')}
           className={classNames(styles.menuLink, 'body-md-l')}
         >
           {t('services')}
-        </a>
+        </span>
         {/*Todo*/}
         {/*<span className={classNames(styles.menuLink, 'body-md-l')}>*/}
         {/*  {t('reviews')}*/}
         {/*</span>*/}
-        <a href='#office' className={classNames(styles.menuLink, 'body-md-l')}>
+        <span
+          onClick={scroll('office')}
+          className={classNames(styles.menuLink, 'body-md-l')}
+        >
           {t('office')}
-        </a>
+        </span>
         {/*Todo*/}
         {/*<span className={classNames(styles.menuLink, 'body-md-l')}>*/}
         {/*  {t('recommendations')}*/}
         {/*</span>*/}
-        <a
-          href='#contacts'
+        <span
+          onClick={scroll('contacts')}
           className={classNames(styles.menuLink, 'body-md-l')}
         >
           {t('contacts')}
-        </a>
+        </span>
       </div>
 
       <div className={styles.rightBlock}>
@@ -73,16 +96,16 @@ const Header = () => {
 
         <div className={styles.sideMenuNav}>
           <a
-            onClick={toggleSideMenu}
             href='#about'
+            onClick={toggleSideMenu}
             className={styles.sideMenuNavItem}
           >
             <span className='body-lg-i text-color-secondary400'>01</span>
             <span className='body-lg-l'>{t('about')}</span>
           </a>
           <a
-            onClick={toggleSideMenu}
             href='#services'
+            onClick={toggleSideMenu}
             className={styles.sideMenuNavItem}
           >
             <span className='body-lg-i text-color-secondary400'>02</span>
@@ -98,8 +121,8 @@ const Header = () => {
           {/*  <span className='body-lg-l'>{t('reviews')}</span>*/}
           {/*</a>*/}
           <a
-            onClick={toggleSideMenu}
             href='#office'
+            onClick={toggleSideMenu}
             className={styles.sideMenuNavItem}
           >
             <span className='body-lg-i text-color-secondary400'>03</span>
@@ -111,8 +134,8 @@ const Header = () => {
           {/*  <span className='body-lg-l'>{t('recommendations')}</span>*/}
           {/*</div>*/}
           <a
-            onClick={toggleSideMenu}
             href='#contacts'
+            onClick={toggleSideMenu}
             className={styles.sideMenuNavItem}
           >
             {/*Todo*/}
