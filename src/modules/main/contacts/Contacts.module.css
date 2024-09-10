@@ -14,7 +14,9 @@
     gap: var(--space-xxl);
 }
 
-.imageBlockWrapper {}
+.imageBlockWrapper {
+    position: relative;
+}
 
 .ellipse {}
 
@@ -50,6 +52,13 @@
     color: var(--primary1000);
 }
 
+.ellipse {
+    width: 660px;
+    height: 660px;
+    top: 220px;
+    left: -550px;
+}
+
 /*md*/
 @media (max-width: 1727px) and (min-width: 1280px) {
     .content {
@@ -66,6 +75,12 @@
 
     .textWrapper {
         gap: var(--space-md);
+    }
+    .ellipse {
+        width: 500px;
+        height: 500px;
+        top: 220px;
+        left: -350px;
     }
 }
 
@@ -93,6 +108,13 @@
     .textWrapper {
         text-align: center;
         gap: var(--space-sm);
+    }
+
+    .ellipse {
+        width: 500px;
+        height: 500px;
+        top: 120px;
+        left: 0px;
     }
 }
 
@@ -129,5 +151,13 @@
 
     .icon {
         width: 20px;
+    }
+
+    .ellipse {
+        filter: blur(60px);
+        width: 200px;
+        height: 200px;
+        top: 100px;
+        left: 50px;
     }
 }

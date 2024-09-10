@@ -161,10 +161,11 @@
 
     .placeIconWrapper {
         white-space: break-spaces;
+        flex-direction: column;
     }
 
     .placeIconWrapper svg {
-        width: 28px;
+        width: 20px;
     }
 
     .onlineWrapper {

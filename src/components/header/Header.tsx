@@ -12,7 +12,7 @@ import classNames from 'classnames';
 import { Cross1Icon } from '@radix-ui/react-icons';
 
 const Header = () => {
-  const t = useTranslations();
+  const t = useTranslations('header');
   const [sideMenuOpen, setSideMenuOpen] = useState<boolean>(false);
 
   const toggleSideMenu = () => {
@@ -26,22 +26,24 @@ const Header = () => {
 
       <div className={styles.nav}>
         <span className={classNames(styles.menuLink, 'body-md-l')}>
-          {t('header.about')}
+          {t('about')}
         </span>
         <span className={classNames(styles.menuLink, 'body-md-l')}>
-          {t('header.services')}
+          {t('services')}
         </span>
+        {/*Todo*/}
+        {/*<span className={classNames(styles.menuLink, 'body-md-l')}>*/}
+        {/*  {t('reviews')}*/}
+        {/*</span>*/}
         <span className={classNames(styles.menuLink, 'body-md-l')}>
-          {t('header.reviews')}
+          {t('office')}
         </span>
+        {/*Todo*/}
+        {/*<span className={classNames(styles.menuLink, 'body-md-l')}>*/}
+        {/*  {t('recommendations')}*/}
+        {/*</span>*/}
         <span className={classNames(styles.menuLink, 'body-md-l')}>
-          {t('header.office')}
-        </span>
-        <span className={classNames(styles.menuLink, 'body-md-l')}>
-          {t('header.recommendations')}
-        </span>
-        <span className={classNames(styles.menuLink, 'body-md-l')}>
-          {t('header.contacts')}
+          {t('contacts')}
         </span>
       </div>
 
@@ -66,27 +68,30 @@ const Header = () => {
         <div className={styles.sideMenuNav}>
           <div className={styles.sideMenuNavItem}>
             <span className='body-lg-i text-color-secondary400'>01</span>
-            <span className='body-lg-l'>{t('header.about')}</span>
+            <span className='body-lg-l'>{t('about')}</span>
           </div>
           <div className={styles.sideMenuNavItem}>
             <span className='body-lg-i text-color-secondary400'>02</span>
-            <span className='body-lg-l'>{t('header.services')}</span>
+            <span className='body-lg-l'>{t('services')}</span>
           </div>
           <div className={styles.sideMenuNavItem}>
             <span className='body-lg-i text-color-secondary400'>03</span>
-            <span className='body-lg-l'>{t('header.reviews')}</span>
+            <span className='body-lg-l'>{t('reviews')}</span>
           </div>
+          {/*Todo*/}
+          {/*<div className={styles.sideMenuNavItem}>*/}
+          {/*  <span className='body-lg-i text-color-secondary400'>04</span>*/}
+          {/*  <span className='body-lg-l'>{t('office')}</span>*/}
+          {/*</div>*/}
+          {/*Todo*/}
+          {/*<div className={styles.sideMenuNavItem}>*/}
+          {/*  <span className='body-lg-i text-color-secondary400'>05</span>*/}
+          {/*  <span className='body-lg-l'>{t('recommendations')}</span>*/}
+          {/*</div>*/}
           <div className={styles.sideMenuNavItem}>
+            {/*Todo*/}
             <span className='body-lg-i text-color-secondary400'>04</span>
-            <span className='body-lg-l'>{t('header.office')}</span>
-          </div>
-          <div className={styles.sideMenuNavItem}>
-            <span className='body-lg-i text-color-secondary400'>05</span>
-            <span className='body-lg-l'>{t('header.recommendations')}</span>
-          </div>
-          <div className={styles.sideMenuNavItem}>
-            <span className='body-lg-i text-color-secondary400'>06</span>
-            <span className='body-lg-l'>{t('header.contacts')}</span>
+            <span className='body-lg-l'>{t('contacts')}</span>
           </div>
         </div>
       </div>

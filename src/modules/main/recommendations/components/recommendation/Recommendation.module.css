@@ -9,7 +9,8 @@
 }
 
 
-.contentWrapper:hover {
+.contentWrapper:hover,
+.contentWrapper:active {
     transition-duration: var(--base-transition);
     background: var(--primary500);
 }

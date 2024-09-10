@@ -1,3 +1,5 @@
+'use client';
+
 import { useTranslations } from 'next-intl';
 import classNames from 'classnames';
 import styles from '@/modules/main/recommendations/Recommendations.module.css';
@@ -9,9 +11,11 @@ import {
   temp,
   RecommendationType,
 } from '@/modules/main/recommendations/tempData';
+import { useRouter } from 'next/navigation';
 
 const Recommendations = () => {
   const t = useTranslations('recommendations');
+  const { push } = useRouter();
 
   return (
     <div
@@ -33,7 +37,7 @@ const Recommendations = () => {
           ))}
         </div>
 
-        <a href='https://maps.app.goo.gl/rvdg9PoqHQVow2KS9'>
+        <a onClick={() => push(`/recommendations`)}>
           <Button text={t('button')} type={ButtonType.secondary} />
         </a>
       </div>
