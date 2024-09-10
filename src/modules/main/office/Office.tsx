@@ -11,7 +11,10 @@ const Office = () => {
   const mt = useTranslations();
 
   return (
-    <div className={classNames('content-wrapper', styles.contentWrapper)}>
+    <div
+      id='office'
+      className={classNames('content-wrapper', styles.contentWrapper)}
+    >
       <div className={classNames('content', styles.content)}>
         <Heading
           trigger={styles.contentWrapper}

@@ -4,13 +4,15 @@ import Image from 'next/image';
 import procedurePhoto from '/public/procedurePhoto.png';
 import Heading from '@/components/heading/Heading';
 import { useTranslations } from 'next-intl';
-import ModalWindow from '@/components/modalWindow/ModalWindow';
 
 const Education = () => {
   const t = useTranslations('education');
 
   return (
-    <div className={classNames('content-wrapper', styles.contentWrapper)}>
+    <div
+      id='education'
+      className={classNames('content-wrapper', styles.contentWrapper)}
+    >
       <div className={classNames('content', styles.content)}>
         <Heading
           trigger={styles.contentWrapper}

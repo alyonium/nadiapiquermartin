@@ -2,6 +2,7 @@
     background-image: url('../../../../public/backgroundBlue.png');
     background-size: cover;
     min-height: 1030px;
+    padding-top: unset;
 }
 
 .transparentBlockWrapper {

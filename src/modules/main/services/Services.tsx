@@ -12,28 +12,31 @@ import Contraception from '@/modules/main/services/components/contraception/Cont
 import Obstetrics from '@/modules/main/services/components/obstetrics/Obstetrics';
 
 const Services = () => {
-  const t = useTranslations();
+  const t = useTranslations('services');
 
   return (
-    <div className={classNames('content-wrapper', styles.contentWrapper)}>
+    <div
+      id='services'
+      className={classNames('content-wrapper', styles.contentWrapper)}
+    >
       <div className={classNames('content', styles.content)}>
         <Heading
           trigger={styles.contentWrapper}
           target={styles.content}
-          text={t('services.heading')}
+          text={t('heading')}
         />
 
         <div className={styles.collapseWrapper}>
           <Collapse
             id='consultations'
-            heading={t('services.consultations.heading')}
+            heading={t('consultations.heading')}
             content={<Consultations />}
           />
 
           <Collapse
             id='gynecological'
             heading={
-              t.rich('services.gynecological.heading', {
+              t.rich('gynecological.heading', {
                 italic: (chunks) => <span className='body-lg-i'>{chunks}</span>,
               }) as string
             }
@@ -44,7 +47,7 @@ const Services = () => {
             id='contraception'
             price={400}
             heading={
-              t.rich('services.contraception.heading', {
+              t.rich('contraception.heading', {
                 italic: (chunks) => <span className='body-lg-i'>{chunks}</span>,
               }) as string
             }
@@ -54,7 +57,7 @@ const Services = () => {
           <Collapse
             id='obstetrics'
             heading={
-              t.rich('services.obstetrics.heading', {
+              t.rich('obstetrics.heading', {
                 italic: (chunks) => <span className='body-lg-i'>{chunks}</span>,
               }) as string
             }
@@ -63,12 +66,10 @@ const Services = () => {
         </div>
 
         <div className={classNames(styles.buttonWrapper, 'buttonWrapper')}>
-          <span className='body-md-l'>{t('services.payment')}</span>
+          <span className='body-md-l'>{t('payment')}</span>
 
           <ModalWindow
-            button={
-              <Button text={t('services.button')} type={ButtonType.secondary} />
-            }
+            button={<Button text={t('button')} type={ButtonType.secondary} />}
           />
         </div>
       </div>

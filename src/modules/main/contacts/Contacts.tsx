@@ -16,7 +16,10 @@ const Contacts = () => {
   const t = useTranslations('contacts');
 
   return (
-    <div className={classNames('content-wrapper', styles.contentWrapper)}>
+    <div
+      id='contacts'
+      className={classNames('content-wrapper', styles.contentWrapper)}
+    >
       <div className={classNames('content', styles.content)}>
         <Heading
           trigger={styles.contentWrapper}

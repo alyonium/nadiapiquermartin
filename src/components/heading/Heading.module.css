@@ -15,7 +15,9 @@
 
 /*md*/
 @media (max-width: 1727px) and (min-width: 1280px) {
-
+    .line {
+        width: 150px;
+    }
 }
 
 /*sm*/

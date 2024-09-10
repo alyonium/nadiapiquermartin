@@ -2,7 +2,7 @@ import { useTranslations } from 'next-intl';
 import styles from '@/modules/main/about/About.module.css';
 import Heading from '@/components/heading/Heading';
 import Image from 'next/image';
-import aboutPhoto from '/public/aboutPhoto.jpg';
+import aboutPhoto from '/public/aboutPhoto.png';
 import Button from '@/components/button/Button';
 import { ButtonType } from '@/types/types';
 import classNames from 'classnames';
@@ -12,7 +12,10 @@ const About = () => {
   const t = useTranslations('about');
 
   return (
-    <div className={classNames('content-wrapper', styles.contentWrapper)}>
+    <div
+      id='about'
+      className={classNames('content-wrapper', styles.contentWrapper)}
+    >
       <div className={classNames('content', styles.content)}>
         <div className={styles.textBlockWrapper}>
           <Heading

@@ -92,7 +92,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-bottom: var(--space-xxl);
+  padding-top: var(--space-xxl);
 }
 
 .content {
@@ -291,7 +291,7 @@ body[lang="ua"] .label-sm {
 /*md*/
 @media (max-width: 1727px) and (min-width: 1280px) {
   .content-wrapper {
-    margin-bottom: var(--space-xl);
+    padding-top: var(--space-xl);
   }
 
   .content {
@@ -352,7 +352,7 @@ body[lang="ua"] .label-sm {
 /*sm*/
 @media (max-width: 1279px) and (min-width: 768px) {
   .content-wrapper {
-    margin-bottom: var(--space-lg);
+    padding-top: var(--space-lg);
   }
 
   .content {
@@ -419,7 +419,7 @@ body[lang="ua"] .label-sm {
 /*xs*/
 @media (max-width: 767px) {
   .content-wrapper {
-    margin-bottom: var(--space-md);
+    padding-top: var(--space-md);
   }
 
   .content {

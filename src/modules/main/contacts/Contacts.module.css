@@ -1,4 +1,6 @@
-.contentWrapper {}
+.contentWrapper {
+    padding-bottom: var(--space-xxl);
+}
 
 .content {
     display: flex;
@@ -61,6 +63,10 @@
 
 /*md*/
 @media (max-width: 1727px) and (min-width: 1280px) {
+    .content-wrapper {
+        padding-bottom: var(--space-xl);
+    }
+
     .content {
         gap: var(--space-lg);
     }
@@ -86,6 +92,10 @@
 
 /*sm*/
 @media (max-width: 1279px) and (min-width: 768px) {
+    .content-wrapper {
+        padding-bottom: var(--space-lg);
+    }
+
     .content {
         gap: var(--space-lg);
     }
@@ -120,6 +130,10 @@
 
 /*xs*/
 @media (max-width: 767px) {
+    .content-wrapper {
+        padding-bottom: var(--space-md);
+    }
+
     .content {
         gap: var(--space-sm);
     }

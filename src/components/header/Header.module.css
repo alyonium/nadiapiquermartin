@@ -8,6 +8,8 @@
 
 .menuLink {
     transition-duration: var(--base-transition);
+    color: white;
+    text-transform: lowercase;
 }
 
 .menuLink {
@@ -104,6 +106,7 @@
     cursor: pointer;
     position: relative;
     text-decoration: none;
+    color: white;
 }
 
 .sideMenuNavItem:after {

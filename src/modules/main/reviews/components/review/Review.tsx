@@ -2,7 +2,7 @@ import { ReviewType, StarRating } from '@/modules/main/reviews/tempData';
 import styles from '@/modules/main/reviews/components/review/Review.module.css';
 import classNames from 'classnames';
 import Image from 'next/image';
-import aboutPhoto from '/public/aboutPhoto.jpg';
+import aboutPhoto from '/public/aboutPhoto.png';
 import star from '/public/star.png';
 import emptyStar from '/public/emptyStar.png';
 import { getDate } from '@/utils/getDate';
