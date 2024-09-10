@@ -38,7 +38,7 @@
     }
 
     .content {
-        gap: var(--space-md);
+        gap: var(--space-lg);
     }
 
     .recommendationWrapper {

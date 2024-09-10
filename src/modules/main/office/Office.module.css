@@ -98,7 +98,7 @@
 
     .textWrapper {
         text-align: center;
-        gap: var(--space-sm);
+        gap: var(--space-xs);
     }
 
     .mapWrapper {

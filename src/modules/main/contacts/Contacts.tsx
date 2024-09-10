@@ -49,27 +49,36 @@ const Contacts = () => {
                 {t('contacts2')}:
               </span>
 
-              <div>
-                <div>
+              <div className={styles.iconBlockWrapper}>
+                <div className={styles.iconWrapper}>
                   <FontAwesomeIcon className={styles.icon} icon={faPhone} />
-                  <span className='body-lg-l text-color-primary1000'>
+                  <a
+                    href='tel: +34623951878'
+                    className='body-lg-l text-color-primary1000'
+                  >
                     623 951 878
-                  </span>
+                  </a>
                 </div>
-                <div>
+                <div className={styles.iconWrapper}>
                   <FontAwesomeIcon className={styles.icon} icon={faEnvelope} />
-                  <span className='body-lg-l text-color-primary1000'>
+                  <a
+                    href='mailto:info@nadiapiquermartin.com'
+                    className='body-lg-l text-color-primary1000'
+                  >
                     info@nadiapiquermartin.com
-                  </span>
+                  </a>
                 </div>
-                <div>
+                <div className={styles.iconWrapper}>
                   <FontAwesomeIcon
                     className={styles.icon}
                     icon={faSquareWhatsapp}
                   />
-                  <span className='body-lg-l text-color-primary1000'>
+                  <a
+                    href='https://wa.me/+34623951878'
+                    className='body-lg-l text-color-primary1000'
+                  >
                     623 951 878
-                  </span>
+                  </a>
                 </div>
               </div>
 

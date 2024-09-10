@@ -27,7 +27,7 @@ const About = () => {
             <Image
               alt='doctora'
               src={aboutPhoto}
-              className={styles.imageWrapper}
+              className={classNames(styles.imageWrapper, 'imageWrapper')}
             />
           </div>
 
@@ -65,7 +65,7 @@ const About = () => {
           <Image
             alt='doctora'
             src={aboutPhoto}
-            className={styles.imageWrapper}
+            className={classNames(styles.imageWrapper, 'imageWrapper')}
           />
         </div>
       </div>

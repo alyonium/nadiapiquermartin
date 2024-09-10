@@ -5,8 +5,18 @@
     flex-direction: column;
     gap: var(--space-xxs);
     cursor: pointer;
+    transition-duration: var(--base-transition);
 }
 
+
+.contentWrapper:hover {
+    transition-duration: var(--base-transition);
+    background: var(--primary500);
+}
+
+.contentWrapper:hover * {
+    color: white;
+}
 
 /*xs*/
 @media (max-width: 767px) {
