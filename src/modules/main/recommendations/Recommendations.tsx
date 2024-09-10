@@ -7,10 +7,7 @@ import Heading from '@/components/heading/Heading';
 import Button from '@/components/button/Button';
 import { ButtonType } from '@/types/types';
 import Recommendation from '@/modules/main/recommendations/components/recommendation/Recommendation';
-import {
-  temp,
-  RecommendationType,
-} from '@/modules/main/recommendations/tempData';
+import { temp, RecommendationType } from '@/temp/tempData';
 import { useRouter } from 'next/navigation';
 
 const Recommendations = () => {

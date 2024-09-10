@@ -17,9 +17,8 @@ const Intro = () => {
         styles.contentWrapper
       )}
     >
+      <Header />
       <div className='content'>
-        <Header />
-
         <div
           className={classNames(
             'transparent-wrapper',

@@ -10,12 +10,13 @@ type HeadingProps = {
   text: string;
   trigger: string;
   target: string;
+  isLine?: boolean;
 };
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
 
-const Heading = ({ text, trigger, target }: HeadingProps) => {
+const Heading = ({ text, trigger, target, isLine = true }: HeadingProps) => {
   useGSAP(() => {
     gsap.fromTo(
       `.${target} .${styles.headingWrapper}`,
@@ -37,9 +38,9 @@ const Heading = ({ text, trigger, target }: HeadingProps) => {
 
   return (
     <div className={classNames(styles.headingWrapper, 'heading')}>
-      <div className={styles.line} />
+      {isLine && <div className={styles.line} />}
       <h2 className='header-lg text-align-center'>{text}</h2>
-      <div className={styles.line} />
+      {isLine && <div className={styles.line} />}
     </div>
   );
 };

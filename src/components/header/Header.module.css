@@ -1,4 +1,9 @@
+.contentWrapper {
+    padding-top: unset;
+}
+
 .header {
+    max-width: 1650px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -139,6 +144,10 @@
 
 /*md*/
 @media (max-width: 1727px) and (min-width: 1280px) {
+    .header {
+        max-width: 1200px;
+    }
+
     .logo {
         width: 50px;
         height: 100%;
@@ -152,6 +161,7 @@
         justify-content: space-between;
         align-items: center;
         margin: var(--space-xs) 0;
+        max-width: 740px;
     }
 
     .nav {
@@ -186,7 +196,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: var(--space-xs) 0;
+        margin: var(--space-xs);
+        /*margin: 0 var(--space-sm);*/
+        max-width: unset;
+        min-width: 300px;
     }
 
     .nav {

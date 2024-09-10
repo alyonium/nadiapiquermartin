@@ -1,0 +1,13 @@
+.cardWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+    padding: var(--space-xl);
+    backdrop-filter: blur(20px) brightness(97%);
+}
+
+.buttonWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
