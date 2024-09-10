@@ -1,0 +1,183 @@
+.footer {
+    background-color: var(--primary500);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-md);
+}
+
+.footer * {
+    color: white;
+}
+
+.contentWrapper {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.contentWrapper > * {
+    width: 33.3%;
+}
+
+.leftWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+    gap: var(--space-md);
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+}
+
+.scheduleWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    gap: var(--space-xxs);
+}
+
+.daysWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-xxs);
+}
+
+.dayWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-xxs);
+}
+
+.onlineWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-xxs);
+}
+
+.timeIconWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-xxxs);
+}
+
+.timeIconWrapper svg,
+.placeIconWrapper svg {
+    width: 14px;
+    height: auto;
+}
+
+.placeIconWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    white-space: nowrap;
+    gap: var(--space-xxxs);
+}
+
+/*md*/
+@media (max-width: 1727px) and (min-width: 1280px) {
+    .logo {
+        width: 100px;
+        height: auto;
+    }
+}
+
+/*sm*/
+@media (max-width: 1279px) and (min-width: 768px) {
+    .footer {
+        gap: var(--space-sm);
+    }
+
+    .contentWrapper > div {
+        width: 30%;
+    }
+
+    .logo {
+        width: 80px;
+        height: 106px;
+        align-self: center;
+    }
+
+    .placeIconWrapper {
+        white-space: break-spaces;
+    }
+
+    .placeIconWrapper svg {
+        width: 28px;
+    }
+
+    .onlineWrapper {
+        gap: var(--space-xxxxs);
+    }
+
+    .dayWrapper {
+        gap: var(--space-xxxxs);
+    }
+}
+
+/*xs*/
+@media (max-width: 767px) {
+    .footer {
+        padding: var(--space-xs);
+        gap: var(--space-xs);
+    }
+
+    .contentWrapper {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+
+    .contentWrapper > div {
+        width: 100%;
+    }
+
+    .rightWrapper {
+        order: 1;
+    }
+
+    .leftWrapper {
+        order: 2;
+    }
+
+    .placeIconWrapper {
+        white-space: break-spaces;
+    }
+
+    .placeIconWrapper svg {
+        width: 28px;
+    }
+
+    .onlineWrapper {
+        gap: var(--space-xxxxs);
+    }
+
+    .dayWrapper {
+        gap: var(--space-xxxxs);
+    }
+
+    .logo {
+        order: 3;
+        width: 50px;
+        align-self: center;
+    }
+}

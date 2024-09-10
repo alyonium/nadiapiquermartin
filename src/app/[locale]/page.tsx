@@ -6,6 +6,7 @@ import Reviews from '@/modules/main/reviews/Reviews';
 import Office from '@/modules/main/office/Office';
 import Recommendations from '@/modules/main/recommendations/Recommendations';
 import Contacts from '@/modules/main/contacts/Contacts';
+import Footer from '@/components/footer/Footer';
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <Office />
       <Recommendations />
       <Contacts />
+      <Footer />
     </>
   );
 };

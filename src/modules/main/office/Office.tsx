@@ -7,7 +7,8 @@ import Button from '@/components/button/Button';
 import { ButtonType } from '@/types/types';
 
 const Office = () => {
-  const t = useTranslations();
+  const t = useTranslations('office');
+  const mt = useTranslations();
 
   return (
     <div className={classNames('content-wrapper', styles.contentWrapper)}>
@@ -15,27 +16,26 @@ const Office = () => {
         <Heading
           trigger={styles.contentWrapper}
           target={styles.content}
-          text={t('office.heading')}
+          text={t('heading')}
         />
 
         <div className={styles.contentBlockWrapper}>
           <div className={styles.textBlockWrapper}>
             <div className={styles.textWrapper}>
               <span className='body-lg-l text-color-primary1000'>
-                {t('office.info1')}
+                {t('info1')}
               </span>
               <span className='body-lg-l text-color-primary1000'>
-                {t('office.info2')}{' '}
+                {t('info2')}{' '}
                 <a
                   className='body-lg-r link'
                   href='https://maps.app.goo.gl/rvdg9PoqHQVow2KS9'
                 >
-                  Calle San Vicente Mártir, 85, 7-й этаж, офис G, 46007,
-                  Valencia
+                  {mt('address')}
                 </a>
               </span>
               <span className='body-lg-l text-color-primary1000'>
-                {t.rich('office.info3', {
+                {t.rich('info3', {
                   italic: (chunks) => (
                     <span className='body-lg-i'>{chunks}</span>
                   ),
@@ -44,9 +44,7 @@ const Office = () => {
             </div>
 
             <ModalWindow
-              button={
-                <Button text={t('office.button')} type={ButtonType.secondary} />
-              }
+              button={<Button text={t('button')} type={ButtonType.secondary} />}
             />
           </div>
 

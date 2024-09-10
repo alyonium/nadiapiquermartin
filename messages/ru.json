@@ -1,5 +1,6 @@
 {
   "modalHeading": "Онлайн-запись",
+  "address": "Calle San Vicente Mártir, 85, 7-й этаж, офис G, 46007, Valencia",
   "header": {
     "about": "Обо мне",
     "services": "Услуги",
@@ -7,6 +8,17 @@
     "office": "Кабинет",
     "recommendations": "Рекомендации",
     "contacts": "Контакты"
+  },
+  "footer": {
+    "offline": "График работы очной консультации",
+    "online": "График работы онлайн консультации",
+    "monday": "Понедельник",
+    "tuesday": "Вторник",
+    "wednesday": "Среда",
+    "thursday": "Четверг",
+    "friday": "Пятница",
+    "saturday": "Суббота",
+    "sunday": "Воскресенье"
   },
   "intro": {
     "obstetrician": "Акушер-гинеколог в Валенсии",
