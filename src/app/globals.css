@@ -54,11 +54,11 @@ body {
 }
 
 .backgroundBlue {
-  background-image: url('../../public/backgroundBlue.png');
+  background-image: url('../../public/backgroundBlue.webp');
 }
 
 .backgroundMarble {
-  background-image: url('../../public/backgroundMarble.png');
+  background-image: url('../../public/backgroundMarble.webp');
 }
 
 .backgroundTransparent {

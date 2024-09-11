@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import styles from '@/modules/main/education/Education.module.css';
 import Image from 'next/image';
-import procedurePhoto from '/public/procedurePhoto.png';
+import procedurePhoto from '/public/procedurePhoto.webp';
 import Heading from '@/components/heading/Heading';
 import { useTranslations } from 'next-intl';
 

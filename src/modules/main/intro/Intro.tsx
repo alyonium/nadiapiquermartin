@@ -3,7 +3,7 @@ import styles from '@/modules/main/intro/Intro.module.css';
 import Header from '@/components/header/Header';
 import Button from '@/components/button/Button';
 import Image from 'next/image';
-import introPhoto from '/public/introPhoto.png';
+import introPhoto from '/public/introPhoto.webp';
 import { useTranslations } from 'next-intl';
 import ModalWindow from '@/components/modalWindow/ModalWindow';
 

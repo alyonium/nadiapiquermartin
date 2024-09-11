@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl';
 import styles from '@/components/footer/Footer.module.css';
-import logo from '/public/logo.png';
+import logo from '/public/logo.webp';
 import Image from 'next/image';
 import { getYear } from '@/utils/getYear';
 import { DotFilledIcon } from '@radix-ui/react-icons';

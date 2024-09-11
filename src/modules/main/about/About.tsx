@@ -2,7 +2,7 @@ import { useTranslations } from 'next-intl';
 import styles from '@/modules/main/about/About.module.css';
 import Heading from '@/components/heading/Heading';
 import Image from 'next/image';
-import aboutPhoto from '/public/aboutPhoto.png';
+import aboutPhoto from '/public/aboutPhoto.webp';
 import Button from '@/components/button/Button';
 import { ButtonType } from '@/types/types';
 import classNames from 'classnames';

@@ -30,6 +30,8 @@ export async function generateMetadata({ params: { locale } }: any) {
 
   return {
     title: t('title'),
+    keywords: t('keywords'),
+    description: t('description'),
   };
 }
 export default async function RootLayout({

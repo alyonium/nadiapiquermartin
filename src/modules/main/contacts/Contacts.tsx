@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import styles from '@/modules/main/contacts/Contacts.module.css';
 import Heading from '@/components/heading/Heading';
 import Image from 'next/image';
-import contactsPhoto from '/public/contactsPhoto.png';
+import contactsPhoto from '/public/contactsPhoto.webp';
 import Button from '@/components/button/Button';
 import { ButtonType } from '@/types/types';
 import ModalWindow from '@/components/modalWindow/ModalWindow';

@@ -2,8 +2,8 @@
 
 import styles from '@/components/header/Header.module.css';
 import Image from 'next/image';
-import logo from '/public/logo.png';
-import logoWithName from '/public/logoWithName.png';
+import logo from '/public/logo.webp';
+import logoWithName from '/public/logoWithName.webp';
 import { useTranslations } from 'next-intl';
 import { SelectLang } from '@/components/select/Select';
 import { HamburgerMenuIcon } from '@radix-ui/react-icons';

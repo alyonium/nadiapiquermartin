@@ -46,10 +46,11 @@
     display: flex;
     flex-direction: row;
     gap: var(--space-xs);
+    align-items: center;
 }
 
 .icon {
-    width: 36px;
+    width: 32px;
     height: auto;
     color: var(--primary1000);
 }
@@ -82,6 +83,11 @@
     .textWrapper {
         gap: var(--space-md);
     }
+
+    .icon {
+        width: 24px;
+    }
+
     .ellipse {
         width: 500px;
         height: 500px;
@@ -118,6 +124,10 @@
     .textWrapper {
         text-align: center;
         gap: var(--space-sm);
+    }
+
+    .icon {
+        width: 20px;
     }
 
     .ellipse {
