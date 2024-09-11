@@ -1,6 +1,6 @@
 'use client';
 
-import styles from '@/components/Header/Header.module.css';
+import styles from '@/components/header/header.module.css';
 import Image from 'next/image';
 import logo from '/public/logo.png';
 import logoWithName from '/public/logoWithName.png';
