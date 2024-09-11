@@ -1,4 +1,4 @@
-import { RecommendationType } from '@/temp/tempData';
+import { RecommendationType } from '@/temp/recommendationsTempData';
 import classNames from 'classnames';
 import styles from '@/modules/main/recommendations/components/recommendation/Recommendation.module.css';
 import { getDate } from '@/utils/getDate';
