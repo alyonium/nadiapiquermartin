@@ -99,7 +99,7 @@ const Education = () => {
                 <span className='body-md-r'>{t('education6')}</span>
                 <div className={styles.textItemInfo}>
                   <span className='body-sm-i'>València</span>
-                  <span className='body-sm-l'>2018 - настоящее время</span>
+                  <span className='body-sm-l'>2018 - {t('present')}</span>
                 </div>
               </div>
             </div>
@@ -110,7 +110,7 @@ const Education = () => {
                 <span className='body-md-r'>{t('education7')}</span>
                 <div className={styles.textItemInfo}>
                   <span className='body-sm-i'>España</span>
-                  <span className='body-sm-l'>2019 - настоящее время</span>
+                  <span className='body-sm-l'>2019 - {t('present')}</span>
                 </div>
               </div>
             </div>
