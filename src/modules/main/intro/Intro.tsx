@@ -8,7 +8,7 @@ import { useTranslations } from 'next-intl';
 import ModalWindow from '@/components/modalWindow/ModalWindow';
 
 const Intro = () => {
-  const t = useTranslations('intro');
+  const t = useTranslations('main.intro');
 
   return (
     <div

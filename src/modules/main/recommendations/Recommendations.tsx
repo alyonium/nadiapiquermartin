@@ -11,7 +11,7 @@ import { temp, RecommendationType } from '@/temp/recommendationsTempData';
 import { useRouter } from 'next/navigation';
 
 const Recommendations = () => {
-  const t = useTranslations('recommendations');
+  const t = useTranslations('main.recommendations');
   const { push } = useRouter();
 
   return (

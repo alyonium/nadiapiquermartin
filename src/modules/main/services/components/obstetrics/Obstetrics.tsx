@@ -5,8 +5,8 @@ import PriceItem from '@/modules/main/services/components/priceItem/PriceItem';
 import Collapse from '@/components/collapse/Collapse';
 
 const Obstetrics = () => {
-  const t = useTranslations('services.obstetrics');
-  const mt = useTranslations('services');
+  const t = useTranslations('main.services.obstetrics');
+  const mt = useTranslations('main.services');
 
   return (
     <>

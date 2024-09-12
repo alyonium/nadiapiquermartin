@@ -8,7 +8,7 @@ import { ButtonType } from '@/types/types';
 import { temp, ReviewType } from '@/modules/main/reviews/tempData';
 
 const Reviews = () => {
-  const t = useTranslations('reviews');
+  const t = useTranslations('main.reviews');
 
   return (
     <div

@@ -6,7 +6,7 @@ import Heading from '@/components/heading/Heading';
 import { useTranslations } from 'next-intl';
 
 const Education = () => {
-  const t = useTranslations('education');
+  const t = useTranslations('main.education');
 
   return (
     <div

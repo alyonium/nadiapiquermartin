@@ -13,7 +13,7 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons/faEnvelope';
 import { faSquareWhatsapp } from '@fortawesome/free-brands-svg-icons/faSquareWhatsapp';
 
 const Contacts = () => {
-  const t = useTranslations('contacts');
+  const t = useTranslations('main.contacts');
 
   return (
     <div

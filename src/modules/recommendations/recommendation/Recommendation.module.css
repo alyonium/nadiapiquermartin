@@ -18,7 +18,6 @@
 }
 
 .marbleContent {
-    max-width: 1650px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,7 +26,58 @@
 
 .transparentWrapper {
     padding: var(--space-xl);
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--border-radius);
+    gap: var(--space-xl);
     backdrop-filter: blur(20px) brightness(97%);
 }
 
-.QR {}
+.QRwrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-xl);
+}
+
+.QR {
+    width: 500px;
+    height: 500px;
+    background-color: var(--primary1000);
+}
+
+/*md*/
+@media (max-width: 1727px) and (min-width: 1280px) {
+    .marbleContentWrapper {
+        padding-top: var(--space-xl);
+        padding-bottom: var(--space-xl);
+    }
+
+    .marbleContent {
+        gap: var(--space-xl);
+    }
+}
+
+/*sm*/
+@media (max-width: 1279px) and (min-width: 768px) {
+    .marbleContentWrapper {
+        padding-top: var(--space-lg);
+        padding-bottom: var(--space-lg);
+    }
+
+    .marbleContent {
+        gap: var(--space-lg);
+    }
+}
+
+/*xs*/
+@media (max-width: 767px) {
+    .marbleContentWrapper {
+        padding-top: var(--space-sm);
+        padding-bottom: var(--space-sm);
+    }
+
+    .marbleContent {
+        gap: var(--space-sm);
+    }
+}

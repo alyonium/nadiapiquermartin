@@ -10,7 +10,7 @@ import classNames from 'classnames';
 
 const Footer = () => {
   const t = useTranslations('footer');
-  const mt = useTranslations();
+  const mt = useTranslations('main');
 
   return (
     <div className={styles.footer}>

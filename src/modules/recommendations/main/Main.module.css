@@ -11,16 +11,38 @@
 .marbleContentWrapper {
     width: 100vw;
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    justify-content: center;
     padding-top: var(--space-xxl);
     padding-bottom: var(--space-xxl);
 }
 
 .marbleContent {
-    max-width: 1650px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: var(--space-xxl);
+}
+
+/*md*/
+@media (max-width: 1727px) and (min-width: 1280px) {
+    .marbleContent {
+        gap: var(--space-xl);
+    }
+}
+
+/*sm*/
+@media (max-width: 1279px) and (min-width: 768px) {
+    .marbleContent {
+        gap: var(--space-lg);
+    }
+}
+
+/*xs*/
+@media (max-width: 767px)  {
+    .marbleContentWrapper {
+    }
+
+    .marbleContent {
+        gap: var(--space-sm);
+    }
 }

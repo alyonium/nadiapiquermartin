@@ -12,7 +12,7 @@ type ModalWindowProps = {
 };
 
 const ModalWindow = ({ button }: ModalWindowProps) => {
-  const t = useTranslations();
+  const t = useTranslations('main');
   const [open, setOpen] = useState<boolean>(false);
 
   const toggleModal = () => {
