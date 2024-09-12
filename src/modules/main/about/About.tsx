@@ -9,7 +9,7 @@ import classNames from 'classnames';
 import ModalWindow from '@/components/modalWindow/ModalWindow';
 
 const About = () => {
-  const t = useTranslations('about');
+  const t = useTranslations('main.about');
 
   return (
     <div

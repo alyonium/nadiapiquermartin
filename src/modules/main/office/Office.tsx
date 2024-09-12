@@ -7,8 +7,8 @@ import Button from '@/components/button/Button';
 import { ButtonType } from '@/types/types';
 
 const Office = () => {
-  const t = useTranslations('office');
-  const mt = useTranslations();
+  const t = useTranslations('main.office');
+  const mt = useTranslations('main');
 
   return (
     <div

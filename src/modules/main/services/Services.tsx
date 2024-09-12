@@ -12,7 +12,7 @@ import Contraception from '@/modules/main/services/components/contraception/Cont
 import Obstetrics from '@/modules/main/services/components/obstetrics/Obstetrics';
 
 const Services = () => {
-  const t = useTranslations('services');
+  const t = useTranslations('main.services');
 
   return (
     <div

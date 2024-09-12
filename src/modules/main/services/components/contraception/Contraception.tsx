@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 import { PriceItemType, PriceType } from '@/types/types';
 
 const Contraception = () => {
-  const t = useTranslations('services.contraception');
+  const t = useTranslations('main.services.contraception');
 
   return (
     <>

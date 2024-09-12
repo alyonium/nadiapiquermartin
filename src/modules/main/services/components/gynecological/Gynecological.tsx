@@ -7,8 +7,8 @@ import { PriceType } from '@/types/types';
 import styles from '@/modules/main/services/components/gynecological/Gynecological.module.css';
 
 const Gynecological = () => {
-  const t = useTranslations('services.gynecological');
-  const mt = useTranslations('services');
+  const t = useTranslations('main.services.gynecological');
+  const mt = useTranslations('main.services');
 
   return (
     <>

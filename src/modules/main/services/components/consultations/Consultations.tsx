@@ -4,7 +4,7 @@ import PriceItem from '@/modules/main/services/components/priceItem/PriceItem';
 import { PriceItemType } from '@/types/types';
 
 const Consultations = () => {
-  const t = useTranslations('services.consultations');
+  const t = useTranslations('main.services.consultations');
 
   return (
     <>

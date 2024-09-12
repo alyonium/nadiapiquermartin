@@ -1,14 +1,4 @@
 {
-  "modalHeading": "Pedir cita online",
-  "address": "Calle San Vicente Mártir, 85, planta 7ª, despacho G, 46007, Valencia",
-  "header": {
-    "about": "Sobre mí",
-    "services": "Servicios",
-    "reviews": "Reseñas",
-    "office": "Gabinete",
-    "recommendations": "Recomendaciones",
-    "contacts": "Contactos"
-  },
   "footer": {
     "offline": "Horario de consulta presencial",
     "online": "Horario de consulta online",
@@ -20,168 +10,180 @@
     "saturday": "Sábado",
     "sunday": "Domingo"
   },
-  "intro": {
-    "obstetrician": "Ginecólogo-obstetra en Valencia",
-    "button": "Pedir cita"
+  "header": {
+    "about": "Sobre mí",
+    "services": "Servicios",
+    "reviews": "Reseñas",
+    "office": "Gabinete",
+    "recommendations": "Recomendaciones",
+    "contacts": "Contactos"
   },
-  "about": {
-    "heading": "¿Quién soy?",
-    "button": "Quiero pedir una cita",
-    "about1": "¡Hola! Me llamo <italic>Nadia Piquer</italic>.",
-    "about2": "Soy <italic>médico</italic> obstetra y ginecóloga, y para mí esta profesión <italic>no es sólo un trabajo</italic>, sino una <italic>vocación</italic>. Cada día me esfuerzo por ayudar a las mujeres a mantener y mejorar su salud, y a atravesar etapas importantes de su vida con confianza y tranquilidad.",
-    "about3": "Me dedico al seguimiento del <italic>embarazo</italic>, <italic>diagnóstico</italic> y <italic>tratamiento</italic> de enfermedades ginecológicas y propias de la menopausia, <italic>asesoramiento</italic> en métodos anticonceptivos, así <italic>como revisiones</italic> ginecológicas rutinarias. Para mí, <italic>no solo es importante tratar</italic>, sino también <italic>apoyar</italic> a mis pacientes en cada etapa de su vida, ya sea en su primera consulta ginecológica, en la planificación familiar o en el período de la menopausia.",
-    "about4": "Desde mi punto de vista, cada paciente es una persona única con su propia historia y necesidades. Me esfuerzo por crear un ambiente de <italic>confianza</italic> y <italic>comodidad</italic>, donde cada mujer pueda <italic>hablar abiertamente</italic> sobre sus problemas y recibir <italic>ayuda profesional</italic>. Mi enfoque se basa en la <italic>atención</italic>, el <italic>cuidado</italic> y el <italic>respeto</italic> hacia cada una."
-  },
-  "education": {
-    "heading": "Formación académica",
-    "education1":  "Graduada en Medicina",
-    "education2":  "Especialización MIR en Obstetricia y Ginecología",
-    "education3":  "Estancia formativa en Paritorios y Área de Urgencias Obstétricas",
-    "education4":  "Estancia formativa en Unidad de Reproducción Humana y Esterilidad",
-    "education5":  "Máster título propio en Anticoncepción, Salud Sexual y Reproductiva por Federación Española de Contracepción",
-    "education6":  "Miembro del Colegio Oficial de Médicos de Valencia",
-    "education7":  "Miembro de Sociedad Española de Ginecología y Obstetricia",
-    "present": "presente"
-  },
-  "services": {
-    "heading": "¿En qué te puedo ayudar?",
-    "packagesHeading": "Paquetes de servicios",
-    "payment": "Se acepta pago en metálico, tarjeta o transferencia por bizum.",
-    "button": "Pedir cita",
-    "consultations": {
-      "heading": "Consultas",
-      "offline": "Consulta presencial",
-      "online": "Consulta online"
+  "main": {
+    "modalHeading": "Pedir cita online",
+    "address": "Calle San Vicente Mártir, 85, planta 7ª, despacho G, 46007, Valencia",
+    "intro": {
+      "obstetrician": "Ginecólogo-obstetra en Valencia",
+      "button": "Pedir cita"
     },
-    "gynecological": {
-      "heading": "Servicios de ginecologia <italic>(precio no incluye la consulta)</italic>",
-      "cytology": "Citología de cuello del útero (pap-test)",
-      "HPV": "Detección y tipificación VPH",
-      "ultrasound": "Ecografía de órganos pélvicos",
-      "vaccinationHIV": "Vacunación VPH con vacuna nonavalente Gardasil (1 dosis)",
-      "biopsy": "Biopsia de tejidos ginecológicos (endometrio, vulva, vagina)",
-      "vaginalInfections": {
-        "heading": "Detección de infecciones vaginales",
-        "basic": "Básico (Candida, bacterias vaginales, tricomonas)",
-        "STDs4": "Detección ETS: panel 4 enfermedades (Chlamydia trachomatis,Neisseria gonorrhoeae, Trichomona vaginalis, Micoplasmas)",
-        "STDs7": "Detección ETS: panel 7 enfermedades (Chlamydia trachomatis, Neisseria gonorrhoeae, Trichomona vaginalis, Mycoplasma hominis, Mycoplasma genitalium, Ureaplasma urealyticum, Ureaplasma parvum)"
+    "about": {
+      "heading": "¿Quién soy?",
+      "button": "Quiero pedir una cita",
+      "about1": "¡Hola! Me llamo <italic>Nadia Piquer</italic>.",
+      "about2": "Soy <italic>médico</italic> obstetra y ginecóloga, y para mí esta profesión <italic>no es sólo un trabajo</italic>, sino una <italic>vocación</italic>. Cada día me esfuerzo por ayudar a las mujeres a mantener y mejorar su salud, y a atravesar etapas importantes de su vida con confianza y tranquilidad.",
+      "about3": "Me dedico al seguimiento del <italic>embarazo</italic>, <italic>diagnóstico</italic> y <italic>tratamiento</italic> de enfermedades ginecológicas y propias de la menopausia, <italic>asesoramiento</italic> en métodos anticonceptivos, así <italic>como revisiones</italic> ginecológicas rutinarias. Para mí, <italic>no solo es importante tratar</italic>, sino también <italic>apoyar</italic> a mis pacientes en cada etapa de su vida, ya sea en su primera consulta ginecológica, en la planificación familiar o en el período de la menopausia.",
+      "about4": "Desde mi punto de vista, cada paciente es una persona única con su propia historia y necesidades. Me esfuerzo por crear un ambiente de <italic>confianza</italic> y <italic>comodidad</italic>, donde cada mujer pueda <italic>hablar abiertamente</italic> sobre sus problemas y recibir <italic>ayuda profesional</italic>. Mi enfoque se basa en la <italic>atención</italic>, el <italic>cuidado</italic> y el <italic>respeto</italic> hacia cada una."
+    },
+    "education": {
+      "heading": "Formación académica",
+      "education1":  "Graduada en Medicina",
+      "education2":  "Especialización MIR en Obstetricia y Ginecología",
+      "education3":  "Estancia formativa en Paritorios y Área de Urgencias Obstétricas",
+      "education4":  "Estancia formativa en Unidad de Reproducción Humana y Esterilidad",
+      "education5":  "Máster título propio en Anticoncepción, Salud Sexual y Reproductiva por Federación Española de Contracepción",
+      "education6":  "Miembro del Colegio Oficial de Médicos de Valencia",
+      "education7":  "Miembro de Sociedad Española de Ginecología y Obstetricia",
+      "present": "presente"
+    },
+    "services": {
+      "heading": "¿En qué te puedo ayudar?",
+      "packagesHeading": "Paquetes de servicios",
+      "payment": "Se acepta pago en metálico, tarjeta o transferencia por bizum.",
+      "button": "Pedir cita",
+      "consultations": {
+        "heading": "Consultas",
+        "offline": "Consulta presencial",
+        "online": "Consulta online"
       },
-      "packages": {
-        "basic": {
-          "heading": "Revisión ginecológica básica",
-          "consultation": "Consulta",
-          "cytology": "Citología (pap-test)",
-          "ultrasound": "Ecografía de órganos pélvicos",
-          "results": "Revisión de resultados"
+      "gynecological": {
+        "heading": "Servicios de ginecologia <italic>(precio no incluye la consulta)</italic>",
+        "cytology": "Citología de cuello del útero (pap-test)",
+        "HPV": "Detección y tipificación VPH",
+        "ultrasound": "Ecografía de órganos pélvicos",
+        "vaccinationHIV": "Vacunación VPH con vacuna nonavalente Gardasil (1 dosis)",
+        "biopsy": "Biopsia de tejidos ginecológicos (endometrio, vulva, vagina)",
+        "vaginalInfections": {
+          "heading": "Detección de infecciones vaginales",
+          "basic": "Básico (Candida, bacterias vaginales, tricomonas)",
+          "STDs4": "Detección ETS: panel 4 enfermedades (Chlamydia trachomatis,Neisseria gonorrhoeae, Trichomona vaginalis, Micoplasmas)",
+          "STDs7": "Detección ETS: panel 7 enfermedades (Chlamydia trachomatis, Neisseria gonorrhoeae, Trichomona vaginalis, Mycoplasma hominis, Mycoplasma genitalium, Ureaplasma urealyticum, Ureaplasma parvum)"
         },
-        "full": {
-          "heading": "Revisión Ginecológica Completa",
-          "consultation": "Consulta",
-          "cytology": "Citología con detección y tipificación del VPH",
-          "ultrasound": "Ecografía de órganos pélvicos",
-          "results": "Revisión de resultados"
+        "packages": {
+          "basic": {
+            "heading": "Revisión ginecológica básica",
+            "consultation": "Consulta",
+            "cytology": "Citología (pap-test)",
+            "ultrasound": "Ecografía de órganos pélvicos",
+            "results": "Revisión de resultados"
+          },
+          "full": {
+            "heading": "Revisión Ginecológica Completa",
+            "consultation": "Consulta",
+            "cytology": "Citología con detección y tipificación del VPH",
+            "ultrasound": "Ecografía de órganos pélvicos",
+            "results": "Revisión de resultados"
+          },
+          "vaccinationHIV": {
+            "heading": "Vacunación Gardasil 9",
+            "vaccine": "3 dosis de la vacuna Gardasil 9",
+            "deliverVaccine": "Administración de las 3 dosis",
+            "info1": "Posibilidad de vacunar a las pacientes y sus parejas",
+            "info2": "Edad mínima de inicio de vacunación: 9 años"
+          }
+        }
+      },
+      "contraception": {
+        "heading": "Servicios de anticoncepción <italic>(precio no incluye la consulta)</italic>",
+        "installNonHID": {
+          "heading": "Colocación del DIU no hormonal",
+          "info1": "Incluye el DIU Novaplus T 380 normal o mini y medicación preparatoria para la inserción"
         },
-        "vaccinationHIV": {
-          "heading": "Vacunación Gardasil 9",
-          "vaccine": "3 dosis de la vacuna Gardasil 9",
-          "deliverVaccine": "Administración de las 3 dosis",
-          "info1": "Posibilidad de vacunar a las pacientes y sus parejas",
-          "info2": "Edad mínima de inicio de vacunación: 9 años"
+        "installHID": {
+          "heading": "Colocación del DIU hormonal (incluye ambos DIU y la medicación preparatoria para la inserción)",
+          "mirena": "DIU Mirena",
+          "kyleena": "DIU Kyleena"
+        },
+        "removeHID": "Retirada de cualquier tipo de DIU",
+        "replaceHID": {
+          "heading": "Renovación del DIU (retirada + colocación e incluye el DIU y la medicación preparatoria para la inserción)",
+          "novaplus": "DIU Novaplus T 380 normal o mini",
+          "mirena": "DIU Mirena",
+          "kyleena": "DIU Kyleena"
+        },
+        "installImplant": {
+          "heading": "Colocación del implante subcutáneo",
+          "info1": "Incluye IMPLANON NXT"
+        },
+        "removeImplant": "Retirada del implante subcutáneo",
+        "replaceImplant": {
+          "heading": "Renovación del implante (retirada + colocación del implante subcutáneo)",
+          "info1": "Incluye IMPLANON NXT",
+          "info2": "Incluye aplicación de anestésico local y posterior revisión de la herida, si se precisara"
+        },
+        "injectionDepoProgevera": {
+          "heading": "Inyección trimestral de Depo-progevera",
+          "info1": "Incluye el fármaco y su inyección"
+        }
+      },
+      "obstetrics": {
+        "heading": "Servicios de obstetricia <italic>(precio no incluye la consulta)</italic>",
+        "earlyUltrasound": {
+          "heading": "Ecografía precoz (antes de las 11 semanas)",
+          "info1": "Es el momento de confirmar el embarazo, ver dónde se localiza, saber cuántos bebés vienen en camino y ajustar con más precisión la fecha de última regla y la fecha probable del parto",
+          "info2": "Incluye informe de la ecografía, primeras fotografías de tu bebé (en soporte digital o a través de la aplicación en tu teléfono móvil) y consejos higiénico-dietéticos en el embarazo"
+        },
+        "secondUltrasound": {
+          "heading": "Ecografía de segundo trimestre (de la semana 14 a la 28)",
+          "info1": "Momento ideal para conocer el sexo del bebé y ver cómo se van desarrollando sus órganos internos",
+          "info2": "Incluye informe de la ecografía, fotografías de tu bebé (en soporte digital o a través de la aplicación en tu teléfono móvil) e información sobre los movimientos fetales",
+          "info3": "En el caso de que el bebé se coloque de una forma favorable, se pueden realizar fotografías en 3D"
+        },
+        "thirdUltrasound": {
+          "heading": "Ecografía de tercer trimestre (a partir de la semana 28)",
+          "info1": "La ecografía de tercer trimestre evalúa el crecimiento del bebé y estima su peso. También determina la posición del bebé, la cantidad de líquido amniótico, el estado y posición de la placenta",
+          "info2": "Incluye el estudio Doppler del bebé para valorar el flujo sanguíneo que le llega y su bienestar dentro de tu vientre",
+          "info3": "Entre la semana 30 y 32, es el mejor momento para ver la carita de tu bebé a través de la ecografía 3D. En el caso de que el bebé se coloque de una forma favorable, se pueden realizar fotografías en 3D",
+          "info4": "Incluye informe de la ecografía, fotografías de tu bebé (en soporte digital o a través de la aplicación en tu móvil) e información sobre los signos de alarma que hay que vigilar en estas etapas del embarazo"
+        },
+        "packages": {
+          "basic": {
+            "heading": "Seguimiento del embarazo básico (3 ecografías de seguimiento)",
+            "ultrasound1": "1 ecografía inicial",
+            "ultrasound2": "1 ecografía de segundo trimestre",
+            "ultrasound3": "1 ecografía de tercer trimestre",
+            "info": "Incluye todos los informes ecográficos, estudio Doppler del feto, las fotografías 2D y 3D en soporte digital o a través de la aplicación móvil y las recomendaciones propias de cada momento del embarazo"
+          },
+          "full": {
+            "heading": "Seguimiento del embarazo ampliado (8 ecografías de seguimiento)",
+            "ultrasound1": "1 ecografía cada 4 semanas hasta el final del embarazo",
+            "info": "Incluye todos los informes ecográficos, estudio Doppler del feto, las fotografías 2D y 3D en soporte digital o a través de la aplicación móvil y las recomendaciones propias de cada momento del embarazo"
+          }
         }
       }
     },
-    "contraception": {
-      "heading": "Servicios de anticoncepción <italic>(precio no incluye la consulta)</italic>",
-      "installNonHID": {
-        "heading": "Colocación del DIU no hormonal",
-        "info1": "Incluye el DIU Novaplus T 380 normal o mini y medicación preparatoria para la inserción"
-      },
-      "installHID": {
-        "heading": "Colocación del DIU hormonal (incluye ambos DIU y la medicación preparatoria para la inserción)",
-        "mirena": "DIU Mirena",
-        "kyleena": "DIU Kyleena"
-      },
-      "removeHID": "Retirada de cualquier tipo de DIU",
-      "replaceHID": {
-        "heading": "Renovación del DIU (retirada + colocación e incluye el DIU y la medicación preparatoria para la inserción)",
-        "novaplus": "DIU Novaplus T 380 normal o mini",
-        "mirena": "DIU Mirena",
-        "kyleena": "DIU Kyleena"
-      },
-      "installImplant": {
-        "heading": "Colocación del implante subcutáneo",
-        "info1": "Incluye IMPLANON NXT"
-      },
-      "removeImplant": "Retirada del implante subcutáneo",
-      "replaceImplant": {
-        "heading": "Renovación del implante (retirada + colocación del implante subcutáneo)",
-        "info1": "Incluye IMPLANON NXT",
-        "info2": "Incluye aplicación de anestésico local y posterior revisión de la herida, si se precisara"
-      },
-      "injectionDepoProgevera": {
-        "heading": "Inyección trimestral de Depo-progevera",
-        "info1": "Incluye el fármaco y su inyección"
-      }
+    "reviews": {
+      "heading": "Reseñas",
+      "subheading": "Reseñas de mis pacientes de la plataforma Google",
+      "linkToGoogle": "Puede dejar su opinión sobre la visita y ver todas las reseñas accediendo a la plataforma",
+      "button": "Dejar reseña"
     },
-    "obstetrics": {
-      "heading": "Servicios de obstetricia <italic>(precio no incluye la consulta)</italic>",
-      "earlyUltrasound": {
-        "heading": "Ecografía precoz (antes de las 11 semanas)",
-        "info1": "Es el momento de confirmar el embarazo, ver dónde se localiza, saber cuántos bebés vienen en camino y ajustar con más precisión la fecha de última regla y la fecha probable del parto",
-        "info2": "Incluye informe de la ecografía, primeras fotografías de tu bebé (en soporte digital o a través de la aplicación en tu teléfono móvil) y consejos higiénico-dietéticos en el embarazo"
-      },
-      "secondUltrasound": {
-        "heading": "Ecografía de segundo trimestre (de la semana 14 a la 28)",
-        "info1": "Momento ideal para conocer el sexo del bebé y ver cómo se van desarrollando sus órganos internos",
-        "info2": "Incluye informe de la ecografía, fotografías de tu bebé (en soporte digital o a través de la aplicación en tu teléfono móvil) e información sobre los movimientos fetales",
-        "info3": "En el caso de que el bebé se coloque de una forma favorable, se pueden realizar fotografías en 3D"
-      },
-      "thirdUltrasound": {
-        "heading": "Ecografía de tercer trimestre (a partir de la semana 28)",
-        "info1": "La ecografía de tercer trimestre evalúa el crecimiento del bebé y estima su peso. También determina la posición del bebé, la cantidad de líquido amniótico, el estado y posición de la placenta",
-        "info2": "Incluye el estudio Doppler del bebé para valorar el flujo sanguíneo que le llega y su bienestar dentro de tu vientre",
-        "info3": "Entre la semana 30 y 32, es el mejor momento para ver la carita de tu bebé a través de la ecografía 3D. En el caso de que el bebé se coloque de una forma favorable, se pueden realizar fotografías en 3D",
-        "info4": "Incluye informe de la ecografía, fotografías de tu bebé (en soporte digital o a través de la aplicación en tu móvil) e información sobre los signos de alarma que hay que vigilar en estas etapas del embarazo"
-      },
-      "packages": {
-        "basic": {
-          "heading": "Seguimiento del embarazo básico (3 ecografías de seguimiento)",
-          "ultrasound1": "1 ecografía inicial",
-          "ultrasound2": "1 ecografía de segundo trimestre",
-          "ultrasound3": "1 ecografía de tercer trimestre",
-          "info": "Incluye todos los informes ecográficos, estudio Doppler del feto, las fotografías 2D y 3D en soporte digital o a través de la aplicación móvil y las recomendaciones propias de cada momento del embarazo"
-        },
-        "full": {
-          "heading": "Seguimiento del embarazo ampliado (8 ecografías de seguimiento)",
-          "ultrasound1": "1 ecografía cada 4 semanas hasta el final del embarazo",
-          "info": "Incluye todos los informes ecográficos, estudio Doppler del feto, las fotografías 2D y 3D en soporte digital o a través de la aplicación móvil y las recomendaciones propias de cada momento del embarazo"
-        }
-      }
+    "office": {
+      "heading": "¿Dónde estoy?",
+      "info1": "Atiendo a las pacientes en una cómoda consulta médica, así como también realizo consultas por teléfono.",
+      "info2": "Mi consulta se ecnuentra en",
+      "info3": "A 5 minutos de la estación de metro <italic>Plaza España</italic> y <italic>Xàtiva</italic>, así como de la estación de tren <italic>València Nord</italic>. Varios aparcamientos privados disponibles en la zona.",
+      "button": "Pedir cita"
+    },
+    "recommendations": {
+      "heading": "Últimas recomendaciones",
+      "button": "Ir a todas las recomendaciones"
+    },
+    "contacts": {
+      "heading": "Contactos",
+      "contacts1": "¿Quiere <italic>agendar</italic> una cita o hacer una <italic>pregunta</italic>?",
+      "contacts2": "Contacte conmigo",
+      "contacts3": "¡No postergue el cuidado de su <italic>salud</italic>!",
+      "button": "Agendar una cita"
     }
-  },
-  "reviews": {
-    "heading": "Reseñas",
-    "subheading": "Reseñas de mis pacientes de la plataforma Google",
-    "linkToGoogle": "Puede dejar su opinión sobre la visita y ver todas las reseñas accediendo a la plataforma",
-    "button": "Dejar reseña"
-  },
-  "office": {
-    "heading": "¿Dónde estoy?",
-    "info1": "Atiendo a las pacientes en una cómoda consulta médica, así como también realizo consultas por teléfono.",
-    "info2": "Mi consulta se ecnuentra en",
-    "info3": "A 5 minutos de la estación de metro <italic>Plaza España</italic> y <italic>Xàtiva</italic>, así como de la estación de tren <italic>València Nord</italic>. Varios aparcamientos privados disponibles en la zona.",
-    "button": "Pedir cita"
-  },
-  "recommendations": {
-    "heading": "Últimas recomendaciones",
-    "button": "Ir a todas las recomendaciones"
-  },
-  "contacts": {
-    "heading": "Contactos",
-    "contacts1": "¿Quiere <italic>agendar</italic> una cita o hacer una <italic>pregunta</italic>?",
-    "contacts2": "Contacte conmigo",
-    "contacts3": "¡No postergue el cuidado de su <italic>salud</italic>!",
-    "button": "Agendar una cita"
   },
   "Metadata": {
     "title": "Ginecólogo-obstetra en Valencia - Dra. Nadia Piquer Martin",

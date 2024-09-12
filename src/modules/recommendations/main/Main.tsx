@@ -15,8 +15,8 @@ const Main = () => {
         )}
       >
         <Header isBlue={true} />
-        <div className={classNames(styles.marbleContentWrapper, 'content')}>
-          <div className={styles.marbleContent}>
+        <div className={classNames(styles.marbleContentWrapper)}>
+          <div className={classNames(styles.marbleContent, 'content')}>
             <Heading
               isLine={false}
               trigger={styles.contentWrapper}
