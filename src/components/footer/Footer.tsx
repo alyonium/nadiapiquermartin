@@ -6,6 +6,7 @@ import { getYear } from '@/utils/getYear';
 import { DotFilledIcon } from '@radix-ui/react-icons';
 import { ClockIcon } from '@radix-ui/react-icons';
 import { SewingPinFilledIcon } from '@radix-ui/react-icons';
+import Link from 'next/link';
 
 const Footer = () => {
   const t = useTranslations('footer');
@@ -31,14 +32,13 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          {/*TODO*/}
-          <a
+          <Link
             className={styles.placeIconWrapper}
             href='https://maps.app.goo.gl/rvdg9PoqHQVow2KS9'
           >
             <SewingPinFilledIcon />
             <span className='body-sm-l'>{mt('address')}</span>
-          </a>
+          </Link>
         </div>
         <Image alt='logo' src={logo} className={styles.logo} />
         <div className={styles.rightWrapper}>

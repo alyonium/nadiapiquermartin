@@ -42,7 +42,8 @@
     }
 
     /* button */
-    .buttonWrapper > div {
+    .buttonWrapper a,
+    .buttonWrapper  div {
         width: 100%;
     }
 }

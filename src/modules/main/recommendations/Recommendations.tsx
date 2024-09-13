@@ -23,6 +23,7 @@ const Recommendations = () => {
 
   return (
     <div
+      id='recommendations'
       className={classNames(
         'content-wrapper backgroundMarble',
         styles.contentWrapper

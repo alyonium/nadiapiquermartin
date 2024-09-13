@@ -57,8 +57,12 @@ const Recommendation = () => {
               text={data.data[0].attributes.title}
             />
 
-            {/*Todo rich text*/}
-            <div className={styles.transparentWrapper}>
+            <div
+              className={classNames(
+                styles.transparentWrapper,
+                'transparent-wrapper box-shadow'
+              )}
+            >
               <div className='body-lg-l'>
                 <RichTextRenderer content={data.data[0].attributes.content} />
               </div>

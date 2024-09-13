@@ -15,7 +15,7 @@ const Recommendation = ({ data }: RecommendationsProps) => {
 
   return (
     <Link
-      href={`${pathname}/recommendations/${data.id}`}
+      href={`${pathname}/recommendations/${data.attributes.slug}`}
       className={classNames(
         styles.contentWrapper,
         'transparent-wrapper box-shadow'
