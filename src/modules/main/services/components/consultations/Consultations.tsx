@@ -1,14 +1,16 @@
 import { useTranslations } from 'next-intl';
-import { price } from '@/const/price';
 import PriceItem from '@/modules/main/services/components/priceItem/PriceItem';
 import { PriceItemType } from '@/types/types';
+import { useSuspenseQuery } from '@tanstack/react-query';
+import { priceOptions } from '@/api/price';
 
 const Consultations = () => {
   const t = useTranslations('main.services.consultations');
+  const { data } = useSuspenseQuery(priceOptions);
 
   return (
     <>
-      {price.consultations.map((item) => (
+      {data.data.attributes.prices.consultations.map((item) => (
         <PriceItem
           data={{
             label: t(item.label),

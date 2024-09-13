@@ -18,9 +18,10 @@ gsap.registerPlugin(ScrollToPlugin);
 
 type HeaderProps = {
   isBlue?: boolean;
+  getNewPathnameForLocale: (newLocale: string) => string;
 };
 
-const Header = ({ isBlue }: HeaderProps) => {
+const Header = ({ isBlue, getNewPathnameForLocale }: HeaderProps) => {
   const t = useTranslations('header');
   const [sideMenuOpen, setSideMenuOpen] = useState<boolean>(false);
 
@@ -88,7 +89,7 @@ const Header = ({ isBlue }: HeaderProps) => {
         </div>
 
         <div className={styles.rightBlock}>
-          <SelectLang />
+          <SelectLang getNewPathnameForLocale={getNewPathnameForLocale} />
 
           <HamburgerMenuIcon
             onClick={toggleSideMenu}

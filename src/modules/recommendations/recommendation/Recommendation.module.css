@@ -28,6 +28,7 @@
     padding: var(--space-xl);
     display: flex;
     flex-direction: column;
+    align-items: center;
     border-radius: var(--border-radius);
     gap: var(--space-xl);
     backdrop-filter: blur(20px) brightness(97%);
@@ -41,9 +42,8 @@
 }
 
 .QR {
-    width: 500px;
-    height: 500px;
-    background-color: var(--primary1000);
+    width: 400px;
+    height: 400px;
 }
 
 /*md*/
@@ -55,6 +55,15 @@
 
     .marbleContent {
         gap: var(--space-xl);
+    }
+
+    .QRwrapper {
+        gap: var(--space-lg);
+    }
+
+    .QR {
+        width: 350px;
+        height: 350px;
     }
 }
 
@@ -68,6 +77,15 @@
     .marbleContent {
         gap: var(--space-lg);
     }
+
+    .QRwrapper {
+        gap: var(--space-md);
+    }
+
+    .QR {
+        width: 250px;
+        height: 250px;
+    }
 }
 
 /*xs*/
@@ -79,5 +97,14 @@
 
     .marbleContent {
         gap: var(--space-sm);
+    }
+
+    .QRwrapper {
+        gap: var(--space-xs);
+    }
+
+    .QR {
+        width: 200px;
+        height: 200px;
     }
 }

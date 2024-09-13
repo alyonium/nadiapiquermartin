@@ -1,3 +1,5 @@
+'use client';
+
 import { useTranslations } from 'next-intl';
 import classNames from 'classnames';
 import styles from '@/modules/main/services/Services.module.css';

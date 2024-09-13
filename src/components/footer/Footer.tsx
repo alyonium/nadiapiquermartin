@@ -6,7 +6,6 @@ import { getYear } from '@/utils/getYear';
 import { DotFilledIcon } from '@radix-ui/react-icons';
 import { ClockIcon } from '@radix-ui/react-icons';
 import { SewingPinFilledIcon } from '@radix-ui/react-icons';
-import classNames from 'classnames';
 
 const Footer = () => {
   const t = useTranslations('footer');
@@ -32,7 +31,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-
+          {/*TODO*/}
           <a
             className={styles.placeIconWrapper}
             href='https://maps.app.goo.gl/rvdg9PoqHQVow2KS9'

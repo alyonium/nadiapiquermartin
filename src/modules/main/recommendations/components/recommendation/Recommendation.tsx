@@ -1,29 +1,36 @@
-import { RecommendationType } from '@/temp/recommendationsTempData';
 import classNames from 'classnames';
 import styles from '@/modules/main/recommendations/components/recommendation/Recommendation.module.css';
 import { getDate } from '@/utils/getDate';
+import RichTextRenderer from '@/components/richTextRenderer/RichTextRenderer';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { RecommendationType } from '@/types/recommendations';
 
 type RecommendationsProps = {
   data: RecommendationType;
 };
 
 const Recommendation = ({ data }: RecommendationsProps) => {
+  const pathname = usePathname();
+
   return (
-    <a
-      href='#'
+    <Link
+      href={`${pathname}/recommendations/${data.id}`}
       className={classNames(
         styles.contentWrapper,
         'transparent-wrapper box-shadow'
       )}
     >
-      <span className='body-lg-r text-color-primary1000'>{data.name}</span>
+      <span className='body-lg-r text-color-primary1000'>
+        {data.attributes.title}
+      </span>
       <span className='label-sm text-color-primary1000'>
-        {getDate(data.date)}
+        {getDate(data.attributes.createdAt)}
       </span>
       <span className='body-md-l  text-color-primary1000 text-overflow'>
-        {data.text}
+        <RichTextRenderer content={data.attributes.content} />
       </span>
-    </a>
+    </Link>
   );
 };
 

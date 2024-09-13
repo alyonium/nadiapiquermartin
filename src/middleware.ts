@@ -7,5 +7,3 @@ export const config = {
   // Match only internationalized pathnames
   matcher: ['/', '/(es|ru|ua)/:path*'],
 };
-
-console.log('SHIT');
