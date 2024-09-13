@@ -13,6 +13,8 @@ import { Cross1Icon } from '@radix-ui/react-icons';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import ScrollToPlugin from 'gsap/ScrollToPlugin';
+import { useParams, usePathname, useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -24,6 +26,9 @@ type HeaderProps = {
 const Header = ({ isBlue, getNewPathnameForLocale }: HeaderProps) => {
   const t = useTranslations('header');
   const [sideMenuOpen, setSideMenuOpen] = useState<boolean>(false);
+  const { locale } = useParams<{ locale: string }>();
+  const pathname = usePathname();
+  const { push } = useRouter();
 
   const { contextSafe } = useGSAP();
 
@@ -32,14 +37,21 @@ const Header = ({ isBlue, getNewPathnameForLocale }: HeaderProps) => {
     setSideMenuOpen(!sideMenuOpen);
   };
 
-  const scroll = (id: string) => {
-    return contextSafe(() => {
-      gsap.to(window, {
-        opacity: 1,
-        duration: 0.5,
-        scrollTo: `#${id}`,
-      });
+  const scroll = contextSafe((id: string) => {
+    gsap.to(window, {
+      opacity: 1,
+      duration: 0.5,
+      scrollTo: `#${id}`,
     });
+  });
+
+  const goToBlock = (id: string) => {
+    if (pathname.length > 3) {
+      push(`/${locale}`);
+      scroll(id);
+    } else {
+      scroll(id);
+    }
   };
 
   return (
@@ -51,17 +63,22 @@ const Header = ({ isBlue, getNewPathnameForLocale }: HeaderProps) => {
       )}
     >
       <div className={styles.header}>
-        <Image alt='logo' src={logo} className={styles.logo} />
+        <Image
+          alt='logo'
+          src={logo}
+          className={styles.logo}
+          onClick={() => push(`/${locale}`)}
+        />
 
         <div className={styles.nav}>
           <span
-            onClick={scroll('about')}
+            onClick={() => goToBlock('about')}
             className={classNames(styles.menuLink, 'body-md-l')}
           >
             {t('about')}
           </span>
           <span
-            onClick={scroll('services')}
+            onClick={() => goToBlock('services')}
             className={classNames(styles.menuLink, 'body-md-l')}
           >
             {t('services')}
@@ -71,17 +88,21 @@ const Header = ({ isBlue, getNewPathnameForLocale }: HeaderProps) => {
           {/*  {t('reviews')}*/}
           {/*</span>*/}
           <span
-            onClick={scroll('office')}
+            onClick={() => goToBlock('office')}
             className={classNames(styles.menuLink, 'body-md-l')}
           >
             {t('office')}
           </span>
-          {/*Todo*/}
-          {/*<span className={classNames(styles.menuLink, 'body-md-l')}>*/}
-          {/*  {t('recommendations')}*/}
-          {/*</span>*/}
+
           <span
-            onClick={scroll('contacts')}
+            onClick={() => goToBlock('recommendations')}
+            className={classNames(styles.menuLink, 'body-md-l')}
+          >
+            {t('recommendations')}
+          </span>
+
+          <span
+            onClick={() => goToBlock('contacts')}
             className={classNames(styles.menuLink, 'body-md-l')}
           >
             {t('contacts')}
@@ -116,22 +137,24 @@ const Header = ({ isBlue, getNewPathnameForLocale }: HeaderProps) => {
           />
 
           <div className={styles.sideMenuNav}>
-            <a
-              href='#about'
+            <Link
+              href={`/${locale}#about`}
               onClick={toggleSideMenu}
               className={styles.sideMenuNavItem}
             >
               <span className='body-lg-i text-color-secondary400'>01</span>
               <span className='body-lg-l'>{t('about')}</span>
-            </a>
-            <a
-              href='#services'
+            </Link>
+
+            <Link
+              href={`/${locale}#services`}
               onClick={toggleSideMenu}
               className={styles.sideMenuNavItem}
             >
               <span className='body-lg-i text-color-secondary400'>02</span>
               <span className='body-lg-l'>{t('services')}</span>
-            </a>
+            </Link>
+
             {/*Todo*/}
             {/*<a*/}
             {/*  onClick={toggleSideMenu}*/}
@@ -141,28 +164,33 @@ const Header = ({ isBlue, getNewPathnameForLocale }: HeaderProps) => {
             {/*  <span className='body-lg-i text-color-secondary400'>03</span>*/}
             {/*  <span className='body-lg-l'>{t('reviews')}</span>*/}
             {/*</a>*/}
-            <a
-              href='#office'
+
+            <Link
+              href={`/${locale}#office`}
               onClick={toggleSideMenu}
               className={styles.sideMenuNavItem}
             >
               <span className='body-lg-i text-color-secondary400'>03</span>
               <span className='body-lg-l'>{t('office')}</span>
-            </a>
-            {/*Todo*/}
-            {/*<div className={styles.sideMenuNavItem}>*/}
-            {/*  <span className='body-lg-i text-color-secondary400'>05</span>*/}
-            {/*  <span className='body-lg-l'>{t('recommendations')}</span>*/}
-            {/*</div>*/}
-            <a
-              href='#contacts'
+            </Link>
+
+            <Link
+              href={`/${locale}#recommendations`}
               onClick={toggleSideMenu}
               className={styles.sideMenuNavItem}
             >
-              {/*Todo*/}
               <span className='body-lg-i text-color-secondary400'>04</span>
+              <span className='body-lg-l'>{t('recommendations')}</span>
+            </Link>
+
+            <Link
+              href={`/${locale}#contacts`}
+              onClick={toggleSideMenu}
+              className={styles.sideMenuNavItem}
+            >
+              <span className='body-lg-i text-color-secondary400'>05</span>
               <span className='body-lg-l'>{t('contacts')}</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
