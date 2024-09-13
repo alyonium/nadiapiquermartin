@@ -1,6 +1,6 @@
 import 'normalize.css';
 import { ReactNode } from 'react';
-
+import Providers from '@/app/providers';
 type Props = {
   children: ReactNode;
 };
@@ -10,24 +10,9 @@ type Props = {
 export default function RootLayout({ children }: Props) {
   return (
     <html>
-      {/*Todo*/}
-      {/*<head>*/}
-      {/*  <title>Nadia Piquer Martin</title>*/}
-      {/*  <link rel='icon' href='/favicon.ico' sizes='any' />*/}
-      {/*  <link*/}
-      {/*    rel='icon'*/}
-      {/*    href='/icon?<generated>'*/}
-      {/*    type='image/<generated>'*/}
-      {/*    sizes='<generated>'*/}
-      {/*  />*/}
-      {/*  <link*/}
-      {/*    rel='apple-touch-icon'*/}
-      {/*    href='/apple-icon?<generated>'*/}
-      {/*    type='image/<generated>'*/}
-      {/*    sizes='<generated>'*/}
-      {/*  />*/}
-      {/*</head>*/}
-      <body>{children}</body>
+      <body>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }

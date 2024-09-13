@@ -4,38 +4,41 @@ import classNames from 'classnames';
 import styles from '@/modules/recommendations/recommendation/Recommendation.module.css';
 import Header from '@/components/header/Header';
 import Heading from '@/components/heading/Heading';
-import { temp } from '@/temp/recommendationsTempData';
 import Button from '@/components/button/Button';
 import { ButtonType } from '@/types/types';
 import { getDate } from '@/utils/getDate';
-import {
-  BlocksRenderer,
-  type BlocksContent,
-} from '@strapi/blocks-react-renderer';
 import Link from 'next/link';
-
-const content: BlocksContent = [
-  {
-    type: 'paragraph',
-    children: [
-      {
-        type: 'text',
-        text: 'Как только женщина, у которой начинаются схватки, прибывает в клинику, ей обеспечивается постоянное наблюдение. Роженицу проводят в специально оборудованную родильную палату, где медицинский персонал следит за её состоянием и прогрессом родов. Врачи и акушеры контролируют частоту и интенсивность схваток, проводят необходимые процедуры и поддерживают связь с роженицей, чтобы она чувствовала себя уверенно и спокойно на протяжении всего процесса.',
-      },
-      {
-        type: 'text',
-        text: 'Комфорт и безопасность в родильном зале',
-        italic: true,
-      },
-      {
-        type: 'text',
-        text: 'В испанских клиниках большое внимание уделяется созданию комфортных условий для роженицы. Родильные палаты оборудованы по последним медицинским стандартам, включая современные системы мониторинга, которые позволяют отслеживать состояние матери и ребенка в реальном времени. Здесь женщина окружена заботой и вниманием медперсонала, который готов в любой момент оказать необходимую помощь. Важным элементом является создание теплой и уютной атмосферы, которая способствует расслаблению и снижению уровня стресса.',
-      },
-    ],
-  },
-];
+import RichTextRenderer from '@/components/richTextRenderer/RichTextRenderer';
+import QRCode from 'react-qr-code';
+import { useParams, usePathname } from 'next/navigation';
+import { useTranslations } from 'next-intl';
+import { useSuspenseQuery } from '@tanstack/react-query';
+import { recommendationSingle } from '@/api/recommendation';
+import { localeMap } from '@/utils/localeMap';
 
 const Recommendation = () => {
+  const t = useTranslations('recommendations.single');
+  const pathname = usePathname();
+  const { recommendationId, locale } = useParams<{
+    locale: string;
+    recommendationId: string;
+  }>();
+
+  const { data } = useSuspenseQuery(
+    recommendationSingle(recommendationId, locale)
+  );
+
+  const handleLocaleChange = (newLocale: string) => {
+    const newSlug = data.data[0].attributes.localizations.data.find(
+      (el) => el.attributes.locale === localeMap[newLocale]
+    )?.attributes.slug;
+    if (!newSlug) {
+      throw new Error('no slug found');
+    }
+    return `/${newLocale}/recommendations/${newSlug}`;
+  };
+
+  console.log(data);
   return (
     <>
       <div
@@ -44,56 +47,40 @@ const Recommendation = () => {
           styles.contentWrapper
         )}
       >
-        <Header isBlue={true} />
+        <Header isBlue={true} getNewPathnameForLocale={handleLocaleChange} />
         <div className={styles.marbleContentWrapper}>
           <div className={classNames(styles.marbleContent, 'content')}>
             <Heading
               isLine={false}
               trigger={styles.contentWrapper}
               target={styles.marbleContent}
-              text={temp[0].name}
+              text={data.data[0].attributes.title}
             />
 
             {/*Todo rich text*/}
             <div className={styles.transparentWrapper}>
               <div className='body-lg-l'>
-                <BlocksRenderer
-                  content={content}
-                  blocks={{
-                    paragraph: ({ children }) => (
-                      <p className='body-lg-l text-color-primary1000'>
-                        {children}
-                      </p>
-                    ),
-                    link: ({ children, url }) => (
-                      <Link href={url}>{children}</Link>
-                    ),
-                  }}
-                  modifiers={{
-                    bold: ({ children }) => (
-                      <p className='body-lg-r text-color-primary1000'>
-                        {children}
-                      </p>
-                    ),
-                    italic: ({ children }) => (
-                      <p className='body-lg-i text-color-primary1000'>
-                        {children}
-                      </p>
-                    ),
-                  }}
-                />
+                <RichTextRenderer content={data.data[0].attributes.content} />
               </div>
 
               <div className={styles.QRwrapper}>
-                <div className={styles.QR}></div>
-                <span className='body-lg-l'>{getDate(temp[0].date)}</span>
+                <QRCode
+                  className={styles.QR}
+                  bgColor='transparent'
+                  fgColor='#23465E'
+                  level='L'
+                  value={`${process.env.NEXT_PUBLIC_ROOT_URL}${pathname}`}
+                />
+
+                <span className='body-lg-l text-color-primary1000'>
+                  {getDate(data.data[0].attributes.createdAt)}
+                </span>
               </div>
             </div>
 
-            <Button
-              text={'Вернуться к списку рекомендаций'}
-              type={ButtonType.secondary}
-            />
+            <Link href={`/${locale}/recommendations`}>
+              <Button text={t('button')} type={ButtonType.secondary} />
+            </Link>
           </div>
         </div>
       </div>

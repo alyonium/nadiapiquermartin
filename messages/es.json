@@ -185,6 +185,15 @@
       "button": "Agendar una cita"
     }
   },
+  "recommendations": {
+    "list": {
+      "heading": "Recomendaciones",
+      "button": "Ir a la recomendación"
+    },
+    "single": {
+      "button": "Volver a la lista de recomendaciones"
+    }
+  },
   "Metadata": {
     "title": "Ginecólogo-obstetra en Valencia - Dra. Nadia Piquer Martin",
     "description": "Me dedico al seguimiento del embarazo, diagnóstico y tratamiento de enfermedades ginecológicas y propias de la menopausia, asesoramiento en métodos anticonceptivos, así como revisiones ginecológicas rutinarias. Para mí, no solo es importante tratar, sino también apoyar a mis pacientes en cada etapa de su vida, ya sea en su primera consulta ginecológica, en la planificación familiar o en el período de la menopausia.",

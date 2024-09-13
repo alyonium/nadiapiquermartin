@@ -1,3 +1,5 @@
+'use client';
+
 import classNames from 'classnames';
 import styles from '@/modules/main/intro/Intro.module.css';
 import Header from '@/components/header/Header';
@@ -17,7 +19,7 @@ const Intro = () => {
         styles.contentWrapper
       )}
     >
-      <Header />
+      <Header getNewPathnameForLocale={(newLocale) => `/${newLocale}`} />
       <div className='content'>
         <div
           className={classNames(

@@ -7,12 +7,19 @@ import Heading from '@/components/heading/Heading';
 import Button from '@/components/button/Button';
 import { ButtonType } from '@/types/types';
 import Recommendation from '@/modules/main/recommendations/components/recommendation/Recommendation';
-import { temp, RecommendationType } from '@/temp/recommendationsTempData';
-import { useRouter } from 'next/navigation';
+import { useParams, usePathname } from 'next/navigation';
+import Link from 'next/link';
+import { useSuspenseQuery } from '@tanstack/react-query';
+import { recommendationsOptions } from '@/api/recommendation';
 
 const Recommendations = () => {
   const t = useTranslations('main.recommendations');
-  const { push } = useRouter();
+  const { locale } = useParams<{
+    locale: string;
+  }>();
+
+  const { data } = useSuspenseQuery(recommendationsOptions(locale));
+  const pathname = usePathname();
 
   return (
     <div
@@ -29,14 +36,14 @@ const Recommendations = () => {
         />
 
         <div className={styles.recommendationWrapper}>
-          {temp.map((item: RecommendationType) => (
-            <Recommendation key={item.name} data={item} />
+          {data.data?.map((item) => (
+            <Recommendation key={item.id} data={item} />
           ))}
         </div>
 
-        <a onClick={() => push(`/recommendations`)}>
+        <Link href={`${pathname}/recommendations`}>
           <Button text={t('button')} type={ButtonType.secondary} />
-        </a>
+        </Link>
       </div>
     </div>
   );

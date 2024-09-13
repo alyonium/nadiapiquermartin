@@ -1,15 +1,22 @@
 import classNames from 'classnames';
 import styles from '@/modules/recommendations/main/components/card/Card.module.css';
-import { RecommendationType } from '@/temp/recommendationsTempData';
+import { RecommendationType } from '@/types/recommendations';
 import { getDate } from '@/utils/getDate';
 import Button from '@/components/button/Button';
 import { ButtonType } from '@/types/types';
+import RichTextRenderer from '@/components/richTextRenderer/RichTextRenderer';
+import { usePathname } from 'next/navigation';
+import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 type CardProps = {
   data: RecommendationType;
 };
 
 const Card = ({ data }: CardProps) => {
+  const t = useTranslations('recommendations.list');
+  const pathname = usePathname();
+
   return (
     <div
       className={classNames(
@@ -17,14 +24,19 @@ const Card = ({ data }: CardProps) => {
         'transparent-wrapper box-shadow'
       )}
     >
-      <span className='body-lg-r text-color-primary1000'>{data.name}</span>
-      <span className='body-lg-l text-color-primary1000'>{data.text}</span>
+      <span className='body-lg-r text-color-primary1000'>
+        {data.attributes.title}
+      </span>
+      <span className='body-lg-l text-color-primary1000 text-overflow'>
+        <RichTextRenderer content={data.attributes.content} />
+      </span>
       <div className={styles.buttonWrapper}>
         <span className='body-lg-l text-color-primary1000'>
-          {' '}
-          {getDate(data.date)}
+          {getDate(data.attributes.createdAt)}
         </span>
-        <Button text={'Перейти к рекомендации'} type={ButtonType.secondary} />
+        <Link href={`${pathname}/${data.attributes.slug}`}>
+          <Button text={t('button')} type={ButtonType.secondary} />
+        </Link>
       </div>
     </div>
   );

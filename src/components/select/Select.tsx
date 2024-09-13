@@ -9,15 +9,22 @@ import classNames from 'classnames';
 import uaImage from '/public/ua.svg';
 import esImage from '/public/es.svg';
 
-export const SelectLang = () => {
+type SelectLangProps = {
+  getNewPathnameForLocale: (newLocale: string) => string;
+};
+
+export const SelectLang = ({ getNewPathnameForLocale }: SelectLangProps) => {
   const { locale } = useParams<{ locale: string }>();
   const { push } = useRouter();
 
+  const changeUrl = (value: string) => {
+    const newPath = getNewPathnameForLocale(value);
+    push(newPath);
+  };
+
   return (
     <Select.Root
-      onValueChange={(value) => {
-        push(`/${value}`);
-      }}
+      onValueChange={(value) => changeUrl(value)}
       defaultValue={locale}
     >
       <Select.Trigger className={styles.select} aria-label='Language'>
