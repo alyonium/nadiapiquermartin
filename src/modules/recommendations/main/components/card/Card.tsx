@@ -27,7 +27,12 @@ const Card = ({ data }: CardProps) => {
       <span className='body-lg-r text-color-primary1000'>
         {data.attributes.title}
       </span>
-      <span className='body-lg-l text-color-primary1000 text-overflow text-rendered-card'>
+      <span
+        className={classNames(
+          styles.textOverflow,
+          'body-lg-l text-color-primary1000 text-overflow text-rendered-card'
+        )}
+      >
         <RichTextRenderer content={data.attributes.content} />
       </span>
       <div className={styles.buttonWrapper}>

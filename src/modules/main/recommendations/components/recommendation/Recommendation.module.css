@@ -19,10 +19,32 @@
     color: white;
 }
 
+.textOverflow {
+    max-height: 216px;
+}
+
+/*md*/
+@media (max-width: 1727px) and (min-width: 1280px) {
+    .text-overflow {
+        max-height: 162px;
+    }
+}
+
+/*sm*/
+@media (max-width: 1279px) and (min-width: 768px) {
+    .text-overflow {
+        max-height: 144px;
+    }
+}
+
 /*xs*/
 @media (max-width: 767px) {
     .contentWrapper {
         padding: var(--space-xxs);
         gap: var(--space-xxs);
+    }
+
+    .text-overflow {
+        max-height: 126px;
     }
 }

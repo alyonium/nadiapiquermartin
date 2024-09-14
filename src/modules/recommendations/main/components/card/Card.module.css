@@ -12,11 +12,19 @@
     align-items: center;
 }
 
+.textOverflow {
+    max-height: 288px;
+}
+
 /*md*/
 @media (max-width: 1727px) and (min-width: 1280px) {
     .cardWrapper {
         gap: var(--space-lg);
         padding: var(--space-lg);
+    }
+
+    .textOverflow {
+        max-height: 216px;
     }
 }
 
@@ -26,6 +34,10 @@
         gap: var(--space-md);
         padding: var(--space-md);
     }
+
+    .textOverflow {
+        max-height: 180px;
+    }
 }
 
 /*xs*/
@@ -33,6 +45,10 @@
     .cardWrapper {
         gap: var(--space-xxs);
         padding: var(--space-xxs);
+    }
+
+    .textOverflow {
+        max-height: 162px;
     }
 
     .buttonWrapper {

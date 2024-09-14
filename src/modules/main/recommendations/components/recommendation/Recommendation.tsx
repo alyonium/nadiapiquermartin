@@ -27,7 +27,12 @@ const Recommendation = ({ data }: RecommendationsProps) => {
       <span className='label-sm text-color-primary1000'>
         {getDate(data.attributes.createdAt)}
       </span>
-      <span className='body-md-l text-color-primary1000 text-overflow text-rendered-card'>
+      <span
+        className={classNames(
+          'body-md-l text-color-primary1000 text-overflow text-rendered-card',
+          styles.textOverflow
+        )}
+      >
         <RichTextRenderer content={data.attributes.content} fontSize='md' />
       </span>
     </Link>
