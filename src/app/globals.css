@@ -53,6 +53,11 @@ body {
   overflow-x: hidden;
 }
 
+ul {
+  padding-left: unset;
+  margin: unset;
+}
+
 .backgroundBlue {
   background-image: url('../../public/backgroundBlue.webp');
 }
@@ -84,6 +89,11 @@ body {
   -webkit-line-clamp: 6;
   display: -webkit-box;
   -webkit-box-orient: vertical;
+}
+
+.text-rendered-card * {
+  font-style: normal !important;
+  font-weight: var(--font-weight-light) !important;
 }
 
 .box-shadow {
