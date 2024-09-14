@@ -1,7 +1,7 @@
-import { RootNode } from '@strapi/blocks-react-renderer/dist/BlocksRenderer';
+import { BlocksContent } from '@strapi/blocks-react-renderer';
 
 export type AttributeType = {
-  content: RootNode[];
+  content: BlocksContent;
   createdAt: string;
   locale: string;
   title: string;

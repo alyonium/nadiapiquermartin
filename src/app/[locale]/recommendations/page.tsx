@@ -7,7 +7,7 @@ import {
 } from '@tanstack/react-query';
 import { recommendationsOptions } from '@/api/recommendation';
 
-const RecommendationsPage = async (props: { params: { locale } }) => {
+const RecommendationsPage = async (props: { params: { locale: string } }) => {
   const queryClient = new QueryClient();
   await queryClient.prefetchQuery(recommendationsOptions(props.params.locale));
 

@@ -8,7 +8,7 @@ export const recommendationsOptions = (locale: string) =>
     queryKey: ['recommendations', locale],
     queryFn: async () => {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_URL}/recommendations?locale=${localeMap[locale]}&populate=localizations`,
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/recommendations?locale=${localeMap[locale as keyof typeof localeMap]}&populate=localizations`,
         {
           headers: {
             authorization: `bearer ${process.env.NEXT_PUBLIC_AUTH_TOKEN}`,
@@ -18,7 +18,7 @@ export const recommendationsOptions = (locale: string) =>
 
       return response.json();
     },
-  }) as DefinedInitialDataOptions<SingleEntityResponse<RecommendationType>>;
+  }) as DefinedInitialDataOptions<PaginatedResponse<RecommendationType>>;
 
 export const recommendationSingle = (
   recommendationId: string,
@@ -28,7 +28,7 @@ export const recommendationSingle = (
     queryKey: ['recommendations', recommendationId],
     queryFn: async () => {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_URL}/recommendations/?filters\[slug\][$eq]=${recommendationId}&locale=${localeMap[locale]}&populate=localizations`,
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/recommendations/?filters\[slug\][$eq]=${recommendationId}&locale=${localeMap[locale as keyof typeof localeMap]}&populate=localizations`,
         {
           headers: {
             authorization: `bearer ${process.env.NEXT_PUBLIC_AUTH_TOKEN}`,

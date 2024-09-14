@@ -30,7 +30,8 @@ const Recommendation = () => {
 
   const handleLocaleChange = (newLocale: string) => {
     const newSlug = data.data[0].attributes.localizations.data.find(
-      (el) => el.attributes.locale === localeMap[newLocale]
+      (el) =>
+        el.attributes.locale === localeMap[newLocale as keyof typeof localeMap]
     )?.attributes.slug;
     if (!newSlug) {
       throw new Error('no slug found');

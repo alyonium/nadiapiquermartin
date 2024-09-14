@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import { BlocksRenderer } from '@strapi/blocks-react-renderer';
-import { RootNode } from '@strapi/blocks-react-renderer/dist/BlocksRenderer';
+import { BlocksContent } from '@strapi/blocks-react-renderer';
 import { DotFilledIcon } from '@radix-ui/react-icons';
 
 type RichTextRendererProps = {
-  content: RootNode[];
+  content: BlocksContent;
   fontSize?: string;
 };
 

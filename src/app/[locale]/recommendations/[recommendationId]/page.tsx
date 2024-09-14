@@ -8,7 +8,7 @@ import {
 import { recommendationSingle } from '@/api/recommendation';
 
 const RecommendationPage = async (props: {
-  params: { recommendationId; locale };
+  params: { recommendationId: string; locale: string };
 }) => {
   const queryClient = new QueryClient();
   await queryClient.prefetchQuery(
