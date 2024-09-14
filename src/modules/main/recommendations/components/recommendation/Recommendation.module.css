@@ -20,20 +20,20 @@
 }
 
 .textOverflow {
-    max-height: 216px;
+    height: 216px;
 }
 
 /*md*/
 @media (max-width: 1727px) and (min-width: 1280px) {
     .text-overflow {
-        max-height: 162px;
+        height: 162px;
     }
 }
 
 /*sm*/
 @media (max-width: 1279px) and (min-width: 768px) {
     .text-overflow {
-        max-height: 144px;
+        height: 144px;
     }
 }
 
@@ -45,6 +45,6 @@
     }
 
     .text-overflow {
-        max-height: 126px;
+        height: 126px;
     }
 }

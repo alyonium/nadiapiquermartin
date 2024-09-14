@@ -13,7 +13,7 @@
 }
 
 .textOverflow {
-    max-height: 288px;
+    height: 192px;
 }
 
 /*md*/
@@ -24,7 +24,7 @@
     }
 
     .textOverflow {
-        max-height: 216px;
+        height: 180px;
     }
 }
 
@@ -36,7 +36,7 @@
     }
 
     .textOverflow {
-        max-height: 180px;
+        height: 180px;
     }
 }
 
@@ -48,7 +48,7 @@
     }
 
     .textOverflow {
-        max-height: 162px;
+        height: 162px;
     }
 
     .buttonWrapper {
