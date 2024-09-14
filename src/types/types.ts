@@ -17,6 +17,8 @@ export enum PriceItemType {
 export type PriceType = {
   label: string;
   value: number;
+  // This field unused in frontend and necessary only for identification price item in database
+  title: string;
   content?: string[];
   info?: string[];
 };
