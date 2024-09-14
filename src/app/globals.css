@@ -85,10 +85,6 @@ ul {
 .text-overflow {
   text-overflow: ellipsis;
   overflow: hidden;
-  line-clamp: 6;
-  -webkit-line-clamp: 6;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
 }
 
 .text-rendered-card * {
