@@ -47,8 +47,7 @@ const Header = ({ isBlue, getNewPathnameForLocale }: HeaderProps) => {
 
   const goToBlock = (id: string) => {
     if (pathname.length > 3) {
-      push(`/${locale}`);
-      scroll(id);
+      push(`/${locale}#${id}`);
     } else {
       scroll(id);
     }
