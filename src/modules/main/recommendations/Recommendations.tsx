@@ -37,9 +37,9 @@ const Recommendations = () => {
         />
 
         <div className={styles.recommendationWrapper}>
-          {data.data?.map((item) => (
-            <Recommendation key={item.id} data={item} />
-          ))}
+          {data.data
+            ?.slice(0, 3)
+            .map((item) => <Recommendation key={item.id} data={item} />)}
         </div>
 
         <Link href={`${pathname}/recommendations`}>

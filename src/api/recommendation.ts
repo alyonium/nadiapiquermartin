@@ -3,6 +3,7 @@ import { RecommendationType } from '@/types/recommendations';
 import { PaginatedResponse, SingleEntityResponse } from '@/types/api';
 import { localeMap } from '@/utils/localeMap';
 
+//todo добавить сортировку по createdAt https://docs.strapi.io/dev-docs/api/rest/sort-pagination#sorting
 export const recommendationsOptions = (locale: string) =>
   queryOptions({
     queryKey: ['recommendations', locale],
@@ -25,7 +26,7 @@ export const recommendationSingle = (
   locale: string
 ) =>
   queryOptions({
-    queryKey: ['recommendations', recommendationId],
+    queryKey: ['recommendations', recommendationId, locale],
     queryFn: async () => {
       const response = await fetch(
         `${process.env.NEXT_PUBLIC_BACKEND_URL}/recommendations/?filters\[slug\][$eq]=${recommendationId}&locale=${localeMap[locale as keyof typeof localeMap]}&populate=localizations`,
