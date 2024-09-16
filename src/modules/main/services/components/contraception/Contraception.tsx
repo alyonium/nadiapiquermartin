@@ -56,6 +56,7 @@ const Contraception = () => {
               info: item?.info?.map((item) => t(item)),
             }}
             key={index}
+            labelClassName={'body-md-i'}
           />
         )
       )}
@@ -70,6 +71,7 @@ const Contraception = () => {
               info: item?.info?.map((item) => t(item)),
             }}
             key={index}
+            labelClassName={'body-md-i'}
           />
         )
       )}
@@ -84,6 +86,7 @@ const Contraception = () => {
               type: PriceItemType.classic,
               info: item?.info?.map((item) => t(item)),
             }}
+            labelClassName={'body-md-i'}
           />
         )
       )}
@@ -98,6 +101,7 @@ const Contraception = () => {
               type: PriceItemType.classic,
               info: item?.info?.map((item) => t(item)),
             }}
+            labelClassName={'body-md-i'}
           />
         )
       )}
@@ -112,6 +116,7 @@ const Contraception = () => {
               type: PriceItemType.classic,
               info: item?.info?.map((item) => t(item)),
             }}
+            labelClassName={'body-md-i'}
           />
         )
       )}

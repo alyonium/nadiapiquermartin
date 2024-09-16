@@ -23,9 +23,10 @@ type PriceItemData =
 
 type PriceItemProps = {
   data: PriceItemData;
+  labelClassName?: string;
 };
 
-const PriceItem = ({ data }: PriceItemProps) => {
+const PriceItem = ({ data, labelClassName = 'body-md-l' }: PriceItemProps) => {
   if (data.type === PriceItemType.withNumber) {
     return (
       <div className={styles.priceWrapper}>
@@ -56,7 +57,7 @@ const PriceItem = ({ data }: PriceItemProps) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.priceWrapper}>
-        <span className='body-md-l'>{data.label} </span>
+        <span className={labelClassName}>{data.label} </span>
         <span className='body-md-l'>{data.value}€</span>
       </div>
 

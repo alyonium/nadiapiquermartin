@@ -1,5 +1,4 @@
 import { useTranslations } from 'next-intl';
-import { price } from '@/const/price';
 import { CollapseSize, PriceItemType, PriceType } from '@/types/types';
 import PriceItem from '@/modules/main/services/components/priceItem/PriceItem';
 import Collapse from '@/components/collapse/Collapse';
@@ -22,6 +21,7 @@ const Obstetrics = () => {
               type: PriceItemType.classic,
               info: item?.info?.map((item) => t(item)),
             }}
+            labelClassName={'body-md-i'}
             key={index}
           />
         )
