@@ -18,7 +18,9 @@ import { recommendationsOptions } from '@/api/recommendation';
 const Home = async (props: { params: { locale: string } }) => {
   const queryClient = new QueryClient();
 
-  await queryClient.prefetchQuery(recommendationsOptions(props.params.locale));
+  await queryClient.prefetchQuery(
+    recommendationsOptions(props.params.locale, '')
+  );
   await queryClient.prefetchQuery(priceOptions);
 
   return (

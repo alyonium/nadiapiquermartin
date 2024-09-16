@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import { Roboto, Raleway, Jost } from 'next/font/google';
 import '../globals.css';
 import { getMessages } from 'next-intl/server';
@@ -32,6 +31,18 @@ export async function generateMetadata({ params: { locale } }: any) {
     title: t('title'),
     keywords: t('keywords'),
     description: t('description'),
+    metadataBase: new URL('https://nadiapiquermartin.com'),
+    alternates: {
+      canonical: '/',
+      languages: {
+        es: '/es',
+        ru: '/ru',
+        uk: '/uk',
+      },
+    },
+    openGraph: {
+      images: '/og-image.jpg',
+    },
   };
 }
 export default async function RootLayout({

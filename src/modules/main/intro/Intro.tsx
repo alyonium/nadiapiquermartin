@@ -20,7 +20,7 @@ const Intro = () => {
       )}
     >
       <Header getNewPathnameForLocale={(newLocale) => `/${newLocale}`} />
-      <div className='content'>
+      <div className={classNames('content', styles.content)}>
         <div
           className={classNames(
             'transparent-wrapper',

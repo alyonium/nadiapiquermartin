@@ -1,15 +1,21 @@
 import { DefinedInitialDataOptions, queryOptions } from '@tanstack/react-query';
 import { RecommendationType } from '@/types/recommendations';
-import { PaginatedResponse, SingleEntityResponse } from '@/types/api';
+import { PaginatedResponse } from '@/types/api';
 import { localeMap } from '@/utils/localeMap';
 
-//todo добавить сортировку по createdAt https://docs.strapi.io/dev-docs/api/rest/sort-pagination#sorting
-export const recommendationsOptions = (locale: string) =>
+export const recommendationsOptions = (locale: string, searchValue: string) =>
   queryOptions({
-    queryKey: ['recommendations', locale],
+    queryKey: ['recommendations', locale, searchValue],
     queryFn: async () => {
+      const queryParams = new URLSearchParams({
+        locale: localeMap[locale as keyof typeof localeMap],
+        populate: 'localizations',
+        'filters[title][$containsi]': searchValue,
+        sort: 'createdAt',
+      }).toString();
+
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_URL}/recommendations?locale=${localeMap[locale as keyof typeof localeMap]}&populate=localizations`,
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/recommendations?${queryParams}`,
         {
           headers: {
             authorization: `bearer ${process.env.NEXT_PUBLIC_AUTH_TOKEN}`,

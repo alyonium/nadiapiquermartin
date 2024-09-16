@@ -188,7 +188,9 @@
   "recommendations": {
     "list": {
       "heading": "Recomendaciones",
-      "button": "Ir a la recomendación"
+      "button": "Ir a la recomendación",
+      "search": "Buscar",
+      "noResults": "No se ha encontrado nada"
     },
     "single": {
       "button": "Volver a la lista de recomendaciones"

@@ -13,8 +13,8 @@
     width: 100vw;
     display: flex;
     justify-content: center;
-    padding-top: var(--space-xxl);
-    padding-bottom: var(--space-xxl);
+    padding-top: var(--space-sm);
+    padding-bottom: var(--space-xl);
 }
 
 .marbleContent {
@@ -24,10 +24,55 @@
     gap: var(--space-xxl);
 }
 
+.inputSearchWrapper {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.inputSearch {
+    position: relative;
+    display: inline-block;
+}
+
+.inputSearch input {
+    outline: unset;
+    width: 470px;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--primary1000);
+    color: var(--primary1000);
+    background: transparent;
+    padding: var(--space-md) var(--space-xl) var(--space-md) var(--space-xs);
+}
+
+.inputSearch input::placeholder {
+    color: var(--primary500);
+}
+
+.inputIcon {
+    position: absolute;
+    right: var(--space-xs);
+    width: var(--space-md);
+    height: var(--space-md);
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary1000);
+}
+
 /*md*/
 @media (max-width: 1727px) and (min-width: 1280px) {
+    .marbleContentWrapper {
+        padding-top: var(--space-sm);
+        padding-bottom: var(--space-lg);
+    }
+
     .marbleContent {
         gap: var(--space-xl);
+    }
+
+    .inputSearch input {
+        width: 420px;
+        padding: var(--space-sm) var(--space-xl) var(--space-sm) var(--space-xs);
     }
 }
 
@@ -37,8 +82,28 @@
         background-size: cover;
     }
 
+    .marbleContentWrapper {
+        padding-top: var(--space-sm);
+        padding-bottom: var(--space-lg);
+    }
+
     .marbleContent {
         gap: var(--space-lg);
+    }
+
+    .inputSearchWrapper {
+        justify-content: center;
+    }
+
+    .inputSearch input {
+        width: 320px;
+        padding: var(--space-sm) var(--space-lg) var(--space-sm) var(--space-xs);
+    }
+
+    .inputIcon {
+        right: var(--space-xs);
+        width: var(--space-sm);
+        height: var(--space-sm);
     }
 }
 
@@ -49,9 +114,26 @@
     }
 
     .marbleContentWrapper {
+        padding-top: var(--space-xs);
+        padding-bottom: var(--space-sm);
     }
 
     .marbleContent {
         gap: var(--space-sm);
+    }
+
+    .inputSearchWrapper {
+        justify-content: center;
+    }
+
+    .inputSearch input {
+        width: 236px;
+        padding: var(--space-sm) var(--space-lg) var(--space-sm) var(--space-xs);
+    }
+
+    .inputIcon {
+        right: var(--space-xs);
+        width: var(--space-sm);
+        height: var(--space-sm);
     }
 }

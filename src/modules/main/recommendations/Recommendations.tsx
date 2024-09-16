@@ -18,7 +18,7 @@ const Recommendations = () => {
     locale: string;
   }>();
 
-  const { data } = useSuspenseQuery(recommendationsOptions(locale));
+  const { data } = useSuspenseQuery(recommendationsOptions(locale, ''));
   const pathname = usePathname();
 
   return (
