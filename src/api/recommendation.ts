@@ -11,7 +11,7 @@ export const recommendationsOptions = (locale: string, searchValue: string) =>
         locale: localeMap[locale as keyof typeof localeMap],
         populate: 'localizations',
         'filters[title][$containsi]': searchValue,
-        sort: 'createdAt',
+        sort: 'createdAt:desc',
       }).toString();
 
       const response = await fetch(
