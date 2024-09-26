@@ -112,12 +112,12 @@
     .contentWrapper {
         background-size: cover;
         min-height: 300px;
-        height: 100svh;
+        height: 100vh;
         justify-content: flex-start;
     }
 
     .content {
-        height: calc(100svh - 142px);
+        height: calc(100vh - 142px);
     }
 
     .imageWrapper {
@@ -137,7 +137,7 @@
         align-items: center;
         justify-content: center;
         padding: var(--space-lg) var(--space-md);
-        max-height: calc(100svh - 140px);
+        max-height: calc(100vh - 140px);
         min-height: 200px;
         height: 100%;
         width: calc(100vw - 100px);
