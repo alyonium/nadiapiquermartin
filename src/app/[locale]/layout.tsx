@@ -37,7 +37,7 @@ export async function generateMetadata({ params: { locale } }: any) {
       languages: {
         es: '/es',
         ru: '/ru',
-        uk: '/uk',
+        ua: '/ua',
       },
     },
     openGraph: {

@@ -72,6 +72,7 @@ const Office = () => {
 
             <iframe
               src={getIframeMapLink()}
+              title='google maps iframe'
               width='600'
               height='450'
               className={styles.map}

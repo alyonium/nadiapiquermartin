@@ -38,6 +38,7 @@ const ModalWindow = ({ button }: ModalWindowProps) => {
           <div className={styles.iframeWrapper}>
             <iframe
               id='mainFrame'
+              title='cloud clinic iframe'
               className={styles.iframe}
               name='mainFrame'
               src='https://app.clinic-cloud.com/citaonline.php/NadiaPiquerMartin'

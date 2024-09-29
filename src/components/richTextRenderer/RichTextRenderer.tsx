@@ -23,9 +23,9 @@ const RichTextRenderer = ({
         ),
         link: ({ children, url }) => <Link href={url}>{children}</Link>,
         'list-item': ({ children }) => (
-          <div className={`body-${fontSize}-l text-color-primary1000`}>
+          <li className={`body-${fontSize}-l text-color-primary1000`}>
             <DotFilledIcon fontSize={14} /> {children}
-          </div>
+          </li>
         ),
       }}
       modifiers={{
