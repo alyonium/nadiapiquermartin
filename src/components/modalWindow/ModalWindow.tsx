@@ -41,7 +41,6 @@ const ModalWindow = ({ button }: ModalWindowProps) => {
               title='doctoralia online cita'
               className={styles.doctoralia}
               frameBorder='0'
-              allowTransparency='true'
               data-id='8xs4xwzmtm'
               height='703px'
               width='auto'
