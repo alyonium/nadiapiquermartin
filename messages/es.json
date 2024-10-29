@@ -52,7 +52,10 @@
       "consultations": {
         "heading": "Consultas",
         "offline": "Consulta presencial",
-        "online": "Consulta online"
+        "online": "Consulta online",
+        "nextAppointment": "Seguimiento (1 mes)",
+        "newPrescription": "Emisión de una nueva receta (después de la consulta)",
+        "referralToSpecialist": "Derivación a un médico (después de la consulta)"
       },
       "gynecological": {
         "heading": "Servicios de ginecologia <italic>(precio no incluye la consulta)</italic>",
