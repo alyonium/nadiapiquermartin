@@ -14,8 +14,7 @@
     position: fixed;
     top: 50%;
     left: 50%;
-    width: 90vw;
-    max-width: 900px;
+    width: auto;
     padding: var(--space-sm);
     animation: contentShow var(--base-transition) cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -49,9 +48,12 @@
 }
 
 .iframeWrapper {
-    max-height: 550px;
+    margin-top: 1.3334rem !important;
+    max-height: 650px;
     overflow: auto;
 }
+
+.doctoralia {}
 
 /*sm*/
 @media (max-width: 1279px) and (min-width: 768px){
@@ -64,6 +66,10 @@
         height: 500px;
     }
 
+    .iframeWrapper {
+        max-height: 550px;
+    }
+
     .crossIcon {
         width: 18px;
     }
@@ -74,11 +80,14 @@
     .dialogContent {
         min-width: 250px;
         padding: var(--space-xs);
-        width: 85vw;
     }
 
     .iframe {
         height: 500px;
+    }
+
+    .iframeWrapper {
+        max-height: 450px;
     }
 
     .crossIcon {

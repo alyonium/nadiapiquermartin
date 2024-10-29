@@ -1,11 +1,12 @@
-import { ReviewType, StarRating } from '@/modules/main/reviews/tempData';
+import { ReviewType, StarRating } from '@/modules/main/reviews/reviewsData';
 import styles from '@/modules/main/reviews/components/review/Review.module.css';
 import classNames from 'classnames';
 import Image from 'next/image';
-import aboutPhoto from '/public/aboutPhoto.webp';
 import star from '/public/star.webp';
 import emptyStar from '/public/emptyStar.webp';
 import { getDate } from '@/utils/getDate';
+import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 const getRating = (num: StarRating) => {
   if (num === StarRating.ONE) {
@@ -221,24 +222,24 @@ type ReviewProps = {
 };
 
 const Review = ({ data }: ReviewProps) => {
+  const t = useTranslations('main.reviews');
   return (
-    <div
+    <Link
+      href={data.reviewLink}
       className={classNames(
         styles.contentWrapper,
-        'transparent-wrapper box-shadow'
+        'linkWrapper transparent-wrapper box-shadow'
       )}
     >
       <div className={styles.nameWrapper}>
         <Image
-          src={aboutPhoto}
+          src={data.profilePhoto as string}
           className={styles.googleImg}
-          alt={data.reviewer.displayName}
+          alt={data.name}
           width={32}
           height={32}
         />
-        <span className='body-md-r text-color-primary1000'>
-          {data.reviewer.displayName}
-        </span>
+        <span className='body-md-r text-color-primary1000'>{data.name}</span>
       </div>
       <div className={styles.ratingWrapper}>
         <span>{getRating(data.starRating)}</span>
@@ -248,9 +249,9 @@ const Review = ({ data }: ReviewProps) => {
       </div>
 
       <span className='body-md-l  text-color-primary1000 text-overflow'>
-        {data.comment}
+        {t(data.comment)}
       </span>
-    </div>
+    </Link>
   );
 };
 

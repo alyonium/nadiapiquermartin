@@ -37,15 +37,15 @@ const ModalWindow = ({ button }: ModalWindowProps) => {
           </div>
           <div className={styles.iframeWrapper}>
             <iframe
-              id='mainFrame'
-              title='cloud clinic iframe'
-              className={styles.iframe}
-              name='mainFrame'
-              src='https://app.clinic-cloud.com/citaonline.php/NadiaPiquerMartin'
+              src='//www.doctoralia.es/ajax/marketing/doctor/widget/big_with_calendar/nadia-piquer-martin/null?customUtm=null&amp;id=8xs4xwzmtm&amp;header=null&amp;content=null&amp;fullwidth=null&amp;referer=http%3A%2F%2Flocalhost%3A3000%2Fru&amp;hide_branding=true&amp;widget_position=bottom&amp;opinion=false&amp;saasonly=true'
+              title='doctoralia online cita'
+              className={styles.doctoralia}
               frameBorder='0'
-              height='450'
-              width='950'
-            ></iframe>
+              allowTransparency='true'
+              data-id='8xs4xwzmtm'
+              height='703px'
+              width='auto'
+            />
           </div>
         </Dialog.Content>
       </Dialog.Portal>

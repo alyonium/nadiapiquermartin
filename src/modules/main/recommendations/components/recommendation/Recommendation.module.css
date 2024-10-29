@@ -1,22 +1,8 @@
 .contentWrapper {
     padding: var(--space-sm);
-    background-color: var(--secondary100);
     display: flex;
     flex-direction: column;
     gap: var(--space-xxs);
-    cursor: pointer;
-    transition-duration: var(--base-transition);
-}
-
-
-.contentWrapper:hover,
-.contentWrapper:active {
-    transition-duration: var(--base-transition);
-    background: var(--primary500);
-}
-
-.contentWrapper:hover * {
-    color: white;
 }
 
 .textOverflow {

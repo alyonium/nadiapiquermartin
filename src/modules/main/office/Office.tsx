@@ -80,7 +80,7 @@ const Office = () => {
               allowFullScreen={false}
               loading='lazy'
               referrerPolicy='no-referrer-when-downgrade'
-            ></iframe>
+            />
           </div>
         </div>
       </div>

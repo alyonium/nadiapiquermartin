@@ -5,7 +5,7 @@ import Heading from '@/components/heading/Heading';
 import Review from '@/modules/main/reviews/components/review/Review';
 import Button from '@/components/button/Button';
 import { ButtonType } from '@/types/types';
-import { temp, ReviewType } from '@/modules/main/reviews/tempData';
+import { data, ReviewType } from '@/modules/main/reviews/reviewsData';
 
 const Reviews = () => {
   const t = useTranslations('main.reviews');
@@ -29,8 +29,8 @@ const Reviews = () => {
         </span>
 
         <div className={styles.reviewWrapper}>
-          {temp.map((item: ReviewType) => (
-            <Review key={item.reviewId} data={item} />
+          {data.map((item: ReviewType) => (
+            <Review key={item.reviewLink} data={item} />
           ))}
         </div>
 

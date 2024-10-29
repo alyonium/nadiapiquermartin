@@ -18,7 +18,7 @@ const Recommendation = ({ data }: RecommendationsProps) => {
       href={`${pathname}/recommendations/${data.attributes.slug}`}
       className={classNames(
         styles.contentWrapper,
-        'transparent-wrapper box-shadow'
+        'linkWrapper transparent-wrapper box-shadow'
       )}
     >
       <span className='body-lg-r text-color-primary1000'>
