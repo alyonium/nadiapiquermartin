@@ -4,12 +4,6 @@
     padding: 0 var(--space-xl) 0 var(--space-xl);
 }
 
-.smallCollapseWrapper {
-    background: var(--primary200);
-    border-radius: var(--border-radius);
-    padding: 0 var(--space-md) 0 var(--space-md);
-}
-
 .collapseIcon {
     transition: var(--base-transition) ease-out;
 }
@@ -33,25 +27,12 @@
     cursor: pointer;
 }
 
-.contentWrapper,
-.smallContentWrapper {
+.contentWrapper {
     height: 0;
     display: flex;
     flex-direction: column;
     gap: var(--space-md);
     overflow: hidden;
-}
-
-.smallContentWrapper {
-    opacity:0;
-    transition: opacity 0.5s ease-out;
-    gap: var(--space-sm);
-}
-
-.smallContentWrapper.collapseOpen {
-    opacity: 1;
-    transition: opacity 0.5s ease-out;
-    height: auto;
 }
 
 .collapseOpen.contentWrapper {
@@ -60,20 +41,6 @@
 
 .space {
     height: 1px;
-}
-
-.smallTrigger {
-    background: var(--primary200);
-    outline: unset;
-    border: unset;
-    border-radius: var(--border-radius);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: var(--primary1000);
-    padding: var(--space-xs) 0;
-    margin: unset;
-    cursor: pointer;
 }
 
 .line {
@@ -94,24 +61,12 @@
         gap: var(--space-sm);
     }
 
-    .smallContentWrapper {
-        gap: var(--space-xs);
-    }
-
     .collapseWrapper {
         padding: 0 var(--space-sm) 0 var(--space-sm);
     }
 
-    .smallCollapseWrapper {
-        padding: 0 var(--space-xs) 0 var(--space-xs);
-    }
-
     .trigger {
         padding: var(--space-sm) 0;
-    }
-
-    .smallTrigger {
-        padding: var(--space-xs) 0;
     }
 }
 
@@ -125,14 +80,6 @@
         padding: 0 var(--space-xxs) 0 var(--space-xxs);
     }
 
-    .smallCollapseWrapper {
-        padding: 0 var(--space-xxs) 0 var(--space-xxs);
-    }
-
-    .smallContentWrapper {
-        gap: var(--space-xxs);
-    }
-
     .trigger {
         text-align: start;
         padding: var(--space-xxs) 0;
@@ -143,10 +90,5 @@
         display: block;
         font-size: var(--font-size-xxxs);
         letter-spacing: 1px !important;
-    }
-
-    .smallTrigger {
-        text-align: start;
-        padding: var(--space-xxs) 0;
     }
 }
