@@ -2,8 +2,8 @@ import { ReviewType, StarRating } from '@/modules/main/reviews/reviewsData';
 import styles from '@/modules/main/reviews/components/review/Review.module.css';
 import classNames from 'classnames';
 import Image from 'next/image';
-import star from '/public/star.webp';
-import emptyStar from '/public/emptyStar.webp';
+import star from '/public/star.svg';
+import emptyStar from '/public/emptyStar.svg';
 import { getDate } from '@/utils/getDate';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
@@ -11,7 +11,7 @@ import { useTranslations } from 'next-intl';
 const getRating = (num: StarRating) => {
   if (num === StarRating.ONE) {
     return (
-      <div>
+      <div className={styles.starsWrapper}>
         <Image
           src={star}
           className={styles.googleImg}
@@ -52,7 +52,7 @@ const getRating = (num: StarRating) => {
   }
   if (num === StarRating.TWO) {
     return (
-      <div>
+      <div className={styles.starsWrapper}>
         <Image
           src={star}
           className={styles.googleImg}
@@ -93,7 +93,7 @@ const getRating = (num: StarRating) => {
   }
   if (num === StarRating.THREE) {
     return (
-      <div>
+      <div className={styles.starsWrapper}>
         <Image
           src={star}
           className={styles.googleImg}
@@ -134,7 +134,7 @@ const getRating = (num: StarRating) => {
   }
   if (num === StarRating.FOUR) {
     return (
-      <div>
+      <div className={styles.starsWrapper}>
         <Image
           src={star}
           className={styles.googleImg}
@@ -175,7 +175,7 @@ const getRating = (num: StarRating) => {
   }
   if (num === StarRating.FIVE) {
     return (
-      <div>
+      <div className={styles.starsWrapper}>
         <Image
           src={star}
           className={styles.googleImg}
@@ -242,7 +242,7 @@ const Review = ({ data }: ReviewProps) => {
         <span className='body-md-r text-color-primary1000'>{data.name}</span>
       </div>
       <div className={styles.ratingWrapper}>
-        <span>{getRating(data.starRating)}</span>
+        {getRating(data.starRating)}
         <span className='label-sm text-color-primary1000'>
           {getDate(data.createTime)}
         </span>

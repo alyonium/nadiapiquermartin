@@ -7,8 +7,3 @@ export type PaginatedResponse<T> = {
     total: number;
   };
 };
-
-export type SingleEntityResponse<T> = {
-  data: T;
-  meta: {};
-};

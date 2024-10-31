@@ -8,13 +8,18 @@ import Collapse from '@/components/collapse/Collapse';
 import ModalWindow from '@/components/modalWindow/ModalWindow';
 import Button from '@/components/button/Button';
 import { ButtonType } from '@/types/types';
-import Consultations from '@/modules/main/services/components/consultations/Consultations';
-import Gynecological from '@/modules/main/services/components/gynecological/Gynecological';
-import Contraception from '@/modules/main/services/components/contraception/Contraception';
-import Obstetrics from '@/modules/main/services/components/obstetrics/Obstetrics';
+import { useSuspenseQuery } from '@tanstack/react-query';
+import { servicesOptions } from '@/api/service';
+import { useParams } from 'next/navigation';
+import ServicesRichTextRenderer from '@/components/richTextRenderer/ServicesRichTextRenderer/ServicesRichTextRenderer';
 
 const Services = () => {
   const t = useTranslations('main.services');
+  const { locale } = useParams<{
+    locale: string;
+  }>();
+
+  const { data } = useSuspenseQuery(servicesOptions(locale));
 
   return (
     <div
@@ -29,42 +34,26 @@ const Services = () => {
         />
 
         <div className={styles.collapseWrapper}>
-          <Collapse
-            id='consultations'
-            heading={t('consultations.heading')}
-            content={<Consultations />}
-          />
-
-          <Collapse
-            id='gynecological'
-            heading={
-              t.rich('gynecological.heading', {
-                italic: (chunks) => <span className='body-lg-i'>{chunks}</span>,
-              }) as string
-            }
-            content={<Gynecological />}
-          />
-
-          <Collapse
-            id='contraception'
-            price={400}
-            heading={
-              t.rich('contraception.heading', {
-                italic: (chunks) => <span className='body-lg-i'>{chunks}</span>,
-              }) as string
-            }
-            content={<Contraception />}
-          />
-
-          <Collapse
-            id='obstetrics'
-            heading={
-              t.rich('obstetrics.heading', {
-                italic: (chunks) => <span className='body-lg-i'>{chunks}</span>,
-              }) as string
-            }
-            content={<Obstetrics />}
-          />
+          {data.data.map((item) => (
+            <Collapse
+              // slice(0,3) не магический, он нужен просто чтобы id нормальный собрать, просто title вставить нельзя, тк в нем содержатся пробелы и с пробелами открывание коллапса работает неверно. item.id добавляю, потому что вырезанные кусочки (slice(0,3)) title не уникальные и не могут быть id для коллапса
+              id={`${item.attributes.title.slice(0, 3)}${item.id}`}
+              key={item.id}
+              heading={
+                (
+                  <>
+                    {item.attributes.title}{' '}
+                    <span className='body-lg-i'>
+                      {item.attributes.subtitle}
+                    </span>
+                  </>
+                ) as unknown as string
+              }
+              content={
+                <ServicesRichTextRenderer content={item.attributes.content} />
+              }
+            />
+          ))}
         </div>
 
         <div className={classNames(styles.buttonWrapper, 'buttonWrapper')}>

@@ -12,8 +12,8 @@ import {
   HydrationBoundary,
   QueryClient,
 } from '@tanstack/react-query';
-import { priceOptions } from '@/api/price';
 import { recommendationsOptions } from '@/api/recommendation';
+import { servicesOptions } from '@/api/service';
 
 const Home = async (props: { params: { locale: string } }) => {
   const queryClient = new QueryClient();
@@ -21,7 +21,7 @@ const Home = async (props: { params: { locale: string } }) => {
   await queryClient.prefetchQuery(
     recommendationsOptions(props.params.locale, '')
   );
-  await queryClient.prefetchQuery(priceOptions);
+  await queryClient.prefetchQuery(servicesOptions(props.params.locale));
 
   return (
     <HydrationBoundary state={dehydrate(queryClient)}>

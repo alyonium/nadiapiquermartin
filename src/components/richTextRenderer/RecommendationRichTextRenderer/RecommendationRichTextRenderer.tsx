@@ -8,7 +8,7 @@ type RichTextRendererProps = {
   fontSize?: string;
 };
 
-const RichTextRenderer = ({
+const RecommendationRichTextRenderer = ({
   content,
   fontSize = 'lg',
 }: RichTextRendererProps) => {
@@ -44,4 +44,4 @@ const RichTextRenderer = ({
   );
 };
 
-export default RichTextRenderer;
+export default RecommendationRichTextRenderer;

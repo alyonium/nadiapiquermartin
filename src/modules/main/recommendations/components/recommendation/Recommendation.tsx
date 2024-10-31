@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import styles from '@/modules/main/recommendations/components/recommendation/Recommendation.module.css';
 import { getDate } from '@/utils/getDate';
-import RichTextRenderer from '@/components/richTextRenderer/RichTextRenderer';
+import RecommendationRichTextRenderer from '@/components/richTextRenderer/RecommendationRichTextRenderer/RecommendationRichTextRenderer';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { RecommendationType } from '@/types/recommendations';
@@ -33,7 +33,10 @@ const Recommendation = ({ data }: RecommendationsProps) => {
           styles.textOverflow
         )}
       >
-        <RichTextRenderer content={data.attributes.content} fontSize='md' />
+        <RecommendationRichTextRenderer
+          content={data.attributes.content}
+          fontSize='md'
+        />
       </span>
     </Link>
   );

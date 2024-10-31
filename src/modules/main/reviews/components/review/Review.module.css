@@ -21,14 +21,10 @@
     align-items: center;
 }
 
-/*md*/
-@media (max-width: 1727px) and (min-width: 1280px) {
-
-}
-
-/*sm*/
-@media (max-width: 1279px) and (min-width: 768px) {
-
+.starsWrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px;
 }
 
 /*xs*/

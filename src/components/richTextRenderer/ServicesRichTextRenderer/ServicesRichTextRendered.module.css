@@ -1,0 +1,41 @@
+.priceWrapper {
+    width: 100%;
+    display: flex;
+    gap: var(--space-xxl);
+    color: var(--primary1000);
+    justify-content: space-between;
+}
+
+.price {
+    margin-left: auto;
+}
+
+.list {
+    padding-left: unset;
+    margin: unset;
+    list-style-type: none;
+}
+
+.listItem {
+    margin-bottom: var(--space-xxs);
+}
+
+.packageHeading {
+    border-top: 1px solid var(--primary1000);
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-xxl);
+    padding-top: var(--space-xs);
+}
+
+.packageItem {
+    display: flex;
+    gap: var(--space-xs);
+}
+
+/*xs*/
+@media (max-width: 767px) {
+    .priceWrapper {
+        gap: var(--space-xs);
+    }
+}

@@ -4,7 +4,7 @@ import { RecommendationType } from '@/types/recommendations';
 import { getDate } from '@/utils/getDate';
 import Button from '@/components/button/Button';
 import { ButtonType } from '@/types/types';
-import RichTextRenderer from '@/components/richTextRenderer/RichTextRenderer';
+import RecommendationRichTextRenderer from '@/components/richTextRenderer/RecommendationRichTextRenderer/RecommendationRichTextRenderer';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
@@ -33,7 +33,7 @@ const Card = ({ data }: CardProps) => {
           'body-lg-l text-color-primary1000 text-overflow text-rendered-card'
         )}
       >
-        <RichTextRenderer content={data.attributes.content} />
+        <RecommendationRichTextRenderer content={data.attributes.content} />
       </span>
       <div className={styles.buttonWrapper}>
         <span className='body-lg-l text-color-primary1000'>

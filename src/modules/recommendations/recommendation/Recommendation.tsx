@@ -8,7 +8,7 @@ import Button from '@/components/button/Button';
 import { ButtonType } from '@/types/types';
 import { getDate } from '@/utils/getDate';
 import Link from 'next/link';
-import RichTextRenderer from '@/components/richTextRenderer/RichTextRenderer';
+import RecommendationRichTextRenderer from '@/components/richTextRenderer/RecommendationRichTextRenderer/RecommendationRichTextRenderer';
 import QRCode from 'react-qr-code';
 import { useParams, usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
@@ -39,7 +39,6 @@ const Recommendation = () => {
     return `/${newLocale}/recommendations/${newSlug}`;
   };
 
-  console.log(data);
   return (
     <>
       <div
@@ -65,7 +64,9 @@ const Recommendation = () => {
               )}
             >
               <div className='body-lg-l'>
-                <RichTextRenderer content={data.data[0].attributes.content} />
+                <RecommendationRichTextRenderer
+                  content={data.data[0].attributes.content}
+                />
               </div>
 
               <div className={styles.QRwrapper}>
