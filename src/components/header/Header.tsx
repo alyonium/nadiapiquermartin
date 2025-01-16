@@ -82,10 +82,14 @@ const Header = ({ isBlue, getNewPathnameForLocale }: HeaderProps) => {
           >
             {t('services')}
           </span>
-          {/*Todo*/}
-          {/*<span className={classNames(styles.menuLink, 'body-md-l')}>*/}
-          {/*  {t('reviews')}*/}
-          {/*</span>*/}
+
+          <span
+            onClick={() => goToBlock('reviews')}
+            className={classNames(styles.menuLink, 'body-md-l')}
+          >
+            {t('reviews')}
+          </span>
+
           <span
             onClick={() => goToBlock('office')}
             className={classNames(styles.menuLink, 'body-md-l')}
@@ -154,22 +158,21 @@ const Header = ({ isBlue, getNewPathnameForLocale }: HeaderProps) => {
               <span className='body-lg-l'>{t('services')}</span>
             </Link>
 
-            {/*Todo*/}
-            {/*<a*/}
-            {/*  onClick={toggleSideMenu}*/}
-            {/*  href='#reviews'*/}
-            {/*  className={styles.sideMenuNavItem}*/}
-            {/*>*/}
-            {/*  <span className='body-lg-i text-color-secondary400'>03</span>*/}
-            {/*  <span className='body-lg-l'>{t('reviews')}</span>*/}
-            {/*</a>*/}
+            <Link
+              href={`/${locale}#reviews`}
+              onClick={toggleSideMenu}
+              className={styles.sideMenuNavItem}
+            >
+              <span className='body-lg-i text-color-secondary400'>03</span>
+              <span className='body-lg-l'>{t('reviews')}</span>
+            </Link>
 
             <Link
               href={`/${locale}#office`}
               onClick={toggleSideMenu}
               className={styles.sideMenuNavItem}
             >
-              <span className='body-lg-i text-color-secondary400'>03</span>
+              <span className='body-lg-i text-color-secondary400'>04</span>
               <span className='body-lg-l'>{t('office')}</span>
             </Link>
 
@@ -178,7 +181,7 @@ const Header = ({ isBlue, getNewPathnameForLocale }: HeaderProps) => {
               onClick={toggleSideMenu}
               className={styles.sideMenuNavItem}
             >
-              <span className='body-lg-i text-color-secondary400'>04</span>
+              <span className='body-lg-i text-color-secondary400'>05</span>
               <span className='body-lg-l'>{t('recommendations')}</span>
             </Link>
 
@@ -187,7 +190,7 @@ const Header = ({ isBlue, getNewPathnameForLocale }: HeaderProps) => {
               onClick={toggleSideMenu}
               className={styles.sideMenuNavItem}
             >
-              <span className='body-lg-i text-color-secondary400'>05</span>
+              <span className='body-lg-i text-color-secondary400'>06</span>
               <span className='body-lg-l'>{t('contacts')}</span>
             </Link>
           </div>

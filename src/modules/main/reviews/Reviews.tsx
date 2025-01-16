@@ -12,6 +12,7 @@ const Reviews = () => {
 
   return (
     <div
+      id='reviews'
       className={classNames(
         'content-wrapper backgroundMarble',
         styles.contentWrapper
