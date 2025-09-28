@@ -75,7 +75,7 @@
     z-index: 5500;
     background: var(--primary1000);
     height: 100vh;
-    gap: var(--space-xxxl);
+    gap: var(--space-xxl);
     transition-duration: var(--base-transition);
 }
 

@@ -110,6 +110,13 @@ const Header = ({ isBlue, getNewPathnameForLocale }: HeaderProps) => {
           >
             {t('contacts')}
           </span>
+
+          <span
+            onClick={() => push(`/${locale}/FAQ`)}
+            className={classNames(styles.menuLink, 'body-md-l text-uppercase')}
+          >
+            {t('FAQ')}
+          </span>
         </div>
 
         <div className={styles.rightBlock}>
@@ -192,6 +199,15 @@ const Header = ({ isBlue, getNewPathnameForLocale }: HeaderProps) => {
             >
               <span className='body-lg-i text-color-secondary400'>06</span>
               <span className='body-lg-l'>{t('contacts')}</span>
+            </Link>
+
+            <Link
+              href={`/${locale}/FAQ`}
+              onClick={toggleSideMenu}
+              className={styles.sideMenuNavItem}
+            >
+              <span className='body-lg-i text-color-secondary400'>07</span>
+              <span className='body-lg-l text-uppercase'>{t('FAQ')}</span>
             </Link>
           </div>
         </div>

@@ -1,5 +1,12 @@
 import { BlocksContent } from '@strapi/blocks-react-renderer';
 
+export type ServicePackageType = {
+  id: number;
+  content: BlocksContent;
+  title: string;
+  subtitle?: string;
+};
+
 export type AttributeType = {
   content: BlocksContent;
   createdAt: string;
@@ -9,6 +16,7 @@ export type AttributeType = {
   localizations: {
     data: ServiceType[];
   };
+  servicePackages: ServicePackageType[];
 };
 
 export type ServiceType = {

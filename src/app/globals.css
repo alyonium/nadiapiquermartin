@@ -53,6 +53,15 @@ body {
   overflow-x: hidden;
 }
 
+/* rich text */
+li:last-child {
+  margin-bottom: 0;
+}
+
+/* rich text вложенный в list item bold */
+li.rich-text-list-item span.body-md-r {
+}
+
 ul {
   padding-left: unset;
   margin: unset;
@@ -147,6 +156,10 @@ a.link:hover {
   font-weight: var(--font-weight-regular);
 }
 
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+
 .header-lg,
 .header-md,
 .header-sm {
@@ -234,7 +247,8 @@ body[lang="es"] .body-xs-i {
 
 .body-sm-l,
 .body-sm-r,
-.body-sm-i {
+.body-sm-i,
+li.rich-text-list-item span.body-md-r {
   font-size: var(--font-size-md);
 }
 
@@ -428,7 +442,8 @@ body[lang="ua"] .label-sm {
 
   .body-sm-l,
   .body-sm-r,
-  .body-sm-i {
+  .body-sm-i,
+  li.rich-text-list-item span.body-md-r {
     font-size: var(--font-size-xxs);
   }
 
@@ -491,7 +506,8 @@ body[lang="ua"] .label-sm {
 
   .body-sm-l,
   .body-sm-r,
-  .body-sm-i {
+  .body-sm-i,
+  li.rich-text-list-item span.body-md-r {
     font-size: var(--font-size-xxs);
     letter-spacing: 1px !important;
   }
@@ -560,7 +576,8 @@ body[lang="ua"] .label-sm {
 
   .body-sm-l,
   .body-sm-r,
-  .body-sm-i {
+  .body-sm-i,
+  li.rich-text-list-item span.body-md-r {
     font-size: var(--font-size-xxxs);
     letter-spacing: 1px !important;
   }

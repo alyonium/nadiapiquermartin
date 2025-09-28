@@ -9,11 +9,19 @@ import gsap from 'gsap';
 
 type CollapseProps = {
   id: string;
-  heading: string;
+  heading: ReactNode;
   content: ReactNode;
+  className?: string;
+  size?: 'small' | 'large';
 };
 
-const Collapse = ({ id, heading, content }: CollapseProps) => {
+const Collapse = ({
+  id,
+  heading,
+  content,
+  className,
+  size = 'large',
+}: CollapseProps) => {
   const [open, setOpen] = useState<Boolean>(false);
 
   const toggleCollapse = () => {
@@ -37,9 +45,29 @@ const Collapse = ({ id, heading, content }: CollapseProps) => {
   }, [open, id]);
 
   return (
-    <div className={classNames(styles.collapseWrapper, 'box-shadow')}>
-      <div onClick={toggleCollapse} className={styles.trigger}>
-        <span className='body-lg-r'>{heading}</span>
+    <div
+      className={classNames(
+        styles.collapseWrapper,
+        className,
+        size === 'small' && styles.smallCollapseWrapper,
+        'box-shadow'
+      )}
+    >
+      <div
+        onClick={toggleCollapse}
+        className={classNames(
+          styles.trigger,
+          size === 'small' && styles.smallTrigger
+        )}
+      >
+        <span
+          className={classNames(
+            size === 'large' ? 'body-lg-r' : 'body-md-r',
+            size === 'small' && styles.smallHeading
+          )}
+        >
+          {heading}
+        </span>
         <TriangleDownIcon
           className={classNames(
             styles.collapseIcon,

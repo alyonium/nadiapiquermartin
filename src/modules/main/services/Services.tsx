@@ -19,7 +19,7 @@ const Services = () => {
     locale: string;
   }>();
 
-  const { data } = useSuspenseQuery(servicesOptions(locale));
+  const { data } = useSuspenseQuery(servicesOptions(locale)).data;
 
   return (
     <div
@@ -34,23 +34,44 @@ const Services = () => {
         />
 
         <div className={styles.collapseWrapper}>
-          {data.data.map((item) => (
+          {data.map((item) => (
             <Collapse
               // slice(0,3) не магический, он нужен просто чтобы id нормальный собрать, просто title вставить нельзя, тк в нем содержатся пробелы и с пробелами открывание коллапса работает неверно. item.id добавляю, потому что вырезанные кусочки (slice(0,3)) title не уникальные и не могут быть id для коллапса
               id={`${item.attributes.title.slice(0, 3)}${item.id}`}
               key={item.id}
               heading={
-                (
-                  <>
-                    {item.attributes.title}{' '}
-                    <span className='body-lg-i'>
-                      {item.attributes.subtitle}
-                    </span>
-                  </>
-                ) as unknown as string
+                <>
+                  {item.attributes.title}{' '}
+                  <span className='body-lg-i'>{item.attributes.subtitle}</span>
+                </>
               }
               content={
-                <ServicesRichTextRenderer content={item.attributes.content} />
+                <>
+                  <ServicesRichTextRenderer content={item.attributes.content} />
+                  {item.attributes.servicePackages &&
+                    item.attributes.servicePackages.map((packageItem) => {
+                      return (
+                        <Collapse
+                          id={`${packageItem.title.slice(0, 3)}${packageItem.id}`}
+                          key={packageItem.id}
+                          size='small'
+                          heading={
+                            <>
+                              {packageItem.title}{' '}
+                              <span className='body-md-r'>
+                                {packageItem.subtitle}
+                              </span>
+                            </>
+                          }
+                          content={
+                            <ServicesRichTextRenderer
+                              content={packageItem.content}
+                            />
+                          }
+                        />
+                      );
+                    })}
+                </>
               }
             />
           ))}

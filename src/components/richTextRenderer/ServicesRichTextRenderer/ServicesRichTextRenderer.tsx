@@ -2,6 +2,7 @@ import { BlocksRenderer } from '@strapi/blocks-react-renderer';
 import { BlocksContent } from '@strapi/blocks-react-renderer';
 import classNames from 'classnames';
 import styles from './ServicesRichTextRendered.module.css';
+import { DotFilledIcon } from '@radix-ui/react-icons';
 
 type RichTextRendererProps = {
   content: BlocksContent;
@@ -25,18 +26,6 @@ const ServicesRichTextRenderer = ({ content }: RichTextRendererProps) => {
         ),
         heading: ({ children, level }) => {
           switch (level) {
-            // название пакета услуг
-            case 5:
-              return (
-                <div
-                  className={classNames(
-                    styles.packageHeading,
-                    `body-md-l text-color-primary1000`
-                  )}
-                >
-                  {children}
-                </div>
-              );
             // услуга в пакете
             case 6:
               return (
@@ -49,6 +38,13 @@ const ServicesRichTextRenderer = ({ content }: RichTextRendererProps) => {
                   {children}
                 </div>
               );
+
+            case 5:
+              return (
+                <div className={classNames(`body-md-l text-color-primary1000`)}>
+                  {children}
+                </div>
+              );
           }
         },
         // доп.информация со звездочкой
@@ -56,7 +52,7 @@ const ServicesRichTextRenderer = ({ content }: RichTextRendererProps) => {
           <li
             className={classNames(
               styles.listItem,
-              `body-sm-l text-color-primary1000`
+              `body-sm-l text-color-primary1000 rich-text-list-item`
             )}
           >
             * {children}

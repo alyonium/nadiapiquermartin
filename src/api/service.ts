@@ -9,7 +9,7 @@ export const servicesOptions = (locale: string) =>
     queryFn: async () => {
       const queryParams = new URLSearchParams({
         locale: localeMap[locale as keyof typeof localeMap],
-        populate: 'localizations',
+        populate: '*',
         sort: 'createdAt:asc',
       }).toString();
 

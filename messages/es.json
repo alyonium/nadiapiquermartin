@@ -16,11 +16,12 @@
     "reviews": "Reseñas",
     "office": "Gabinete",
     "recommendations": "Recomendaciones",
-    "contacts": "Contactos"
+    "contacts": "Contactos",
+    "FAQ": "FAQ"
   },
   "main": {
     "modalHeading": "Pedir cita online",
-    "address": "Calle San Vicente Mártir, 85, planta 7ª, despacho G, 46007, Valencia",
+    "address": "Calle San Vicente Mártir, 83, planta 8, despacho E, 46007, Valencia",
     "intro": {
       "obstetrician": "Ginecólogo-obstetra en Valencia",
       "button": "Pedir cita"
@@ -77,6 +78,41 @@
       "contacts3": "¡No postergue el cuidado de su <italic>salud</italic>!",
       "button": "Agendar una cita"
     }
+  },
+  "FAQ": {
+    "heading": "FAQ",
+
+    "medicalResearchResultsHeading": "Resultados de las pruebas",
+    "medicalResearchResult1": "La revisión de los resultados de las pruebas prescritas por el médico durante la consulta (prueba de Papanicolaou, análisis de laboratorio, ecografía de mamas, mamografía, entre otros) <italic>se realiza por correo electrónico y no requiere pago adicional</italic>.",
+    "medicalResearchResult2": "Los resultados de pruebas realizadas <italic>por indicación de otros especialistas</italic> solo se aceptan para revisión si están presentados en español, ruso o ucraniano. Su interpretación solo es posible en el marco de una consulta inicial y únicamente si dichos exámenes están directamente relacionados con el motivo de la consulta.",
+    "medicalResearchResult3": "Los resultados de pruebas <italic>no relacionadas con ginecología y obstetricia</italic> no serán considerados.",
+
+    "followUpConsultationHeading": "Consulta reiterativa",
+    "followUpConsultation1": "La consulta de seguimiento es una cita que se realiza <italic>dentro del mes siguiente</italic> a la consulta inicial. Se programa si es necesario precisar un diagnóstico o realizar un examen adicional en casos en los que el tratamiento previamente indicado no haya sido suficientemente efectivo.",
+    "followUpConsultation2": "El coste de la consulta de seguimiento es de <italic>50€</italic>. Los exámenes adicionales que puedan requerirse durante la cita (ecografía, cultivo bacteriológico, prueba de PCR, entre otros) se pagan por separado.",
+    "followUpConsultation3": "<italic>Lo que no se considera consulta de seguimiento</italic>:<li>Seguimiento de enfermedades crónicas (miomas, pólipos, etc.);</li><li>Control o ajuste del método anticonceptivo;</li><li>Consulta por reaparición de síntomas similares a los de la consulta inicial, <italic>después de transcurrido un mes</italic> desde dicha consulta.</li>",
+    "followUpConsultation4": "Todos los casos mencionados se facturan según la tarifa de una <italic>consulta presencial</italic>.",
+
+    "urgentConsultationHeading": "Consulta urgente",
+    "urgentConsultation1": "Si la paciente presenta síntomas de alarma, como sangrado abundante, dolor intenso, fiebre u otros signos graves, debe acudir de inmediato al servicio de urgencias de su hospital de referencia.",
+    "urgentConsultation2": "En el marco de una consulta ambulatoria programada no es posible realizar estudios urgentes ni ofrecer la atención necesaria para tratar situaciones agudas.",
+    "urgentConsultation3": "Por este motivo, para evitar retrasos en el tratamiento, este tipo de casos no se atienden en nuestra consulta y deben ser gestionados exclusivamente en los servicios de urgencias especializados.",
+
+    "emailConsultationHeading": "Consultas por correo electrónico y redes sociales",
+    "emailConsultation1": "Se ofrecen únicamente en caso de que la paciente haya iniciado un tratamiento y siempre que las consultas sean breves y específicas. El plan de tratamiento ya se explica con detalle durante la consulta presencial.",
+    "emailConsultation2": "En otros casos, cuando las dudas no están relacionadas con el tratamiento prescrito, no es posible realizar una valoración clínica por correo electrónico. Estas situaciones requieren una nueva consulta presencial o, si existen síntomas de carácter urgente, acudir al servicio de urgencias del hospital de referencia.",
+    "emailConsultation3": "El plazo de respuesta a las consultas por correo electrónico es de hasta 72 horas.",
+    "emailConsultation4": "No se realizan consultas médicas a través de WhatsApp o Instagram, ya que estos canales son gestionados por personal no médico.",
+
+    "prescriptionsHeading": "Recetas y renovación de tratamientos",
+    "prescriptions1": "Las recetas puede solicitarse sin coste adicional si la última consulta se realizó en los últimos 3 meses y el tratamiento no ha cambiado.",
+    "prescriptions2": "Pasado este período, la receta tiene un coste de 10€ y se emite para 3 meses.",
+    "prescriptions3": "Si es necesario modificar el esquema de tratamiento o solicitar una receta por un motivo diferente, se requiere una nueva consulta.",
+    "prescriptions4": "El ginecólogo solo puede prescribir medicamentos directamente relacionados con el tratamiento que está llevando a cabo. No es posible emitir recetas de fármacos indicados por otros especialistas, ya que no entra dentro de su competencia.",
+
+    "testsHeading": "Indicación de analíticas y pruebas adicionales",
+    "tests1": "El ginecólogo solo puede indicar aquellas analíticas y pruebas complementarias <italic>que considere oportunas en el marco de la consulta realizada</italic>.",
+    "tests2": "La indicación de otros estudios (por ejemplo, cultivo de heces, análisis de cortisol, entre otros) y pruebas complementarias no relacionados con la ginecología (como resonancia magnética cerebral, ecografía de órganos abdominales, etc.) <italic>no está dentro de su competencia</italic>."
   },
   "recommendations": {
     "list": {

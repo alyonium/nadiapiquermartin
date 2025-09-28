@@ -1,5 +1,5 @@
 .contentWrapper {
-    background: linear-gradient(white, var(--secondary100), var(--primary300));
+    background: linear-gradient(white, white, white,  var(--secondary100), var(--primary300));
     padding-bottom: var(--space-xxl);
 }
 
@@ -15,7 +15,6 @@
     width: 100%;
     gap: var(--space-md);
 }
-
 
 /*md*/
 @media (max-width: 1727px) and (min-width: 1280px) {
