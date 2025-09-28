@@ -101,12 +101,12 @@
     "emailConsultationHeading": "Consultas por correo electrónico y redes sociales",
     "emailConsultation1": "Se ofrecen únicamente en caso de que la paciente haya iniciado un tratamiento y siempre que las consultas sean breves y específicas. El plan de tratamiento ya se explica con detalle durante la consulta presencial.",
     "emailConsultation2": "En otros casos, cuando las dudas no están relacionadas con el tratamiento prescrito, no es posible realizar una valoración clínica por correo electrónico. Estas situaciones requieren una nueva consulta presencial o, si existen síntomas de carácter urgente, acudir al servicio de urgencias del hospital de referencia.",
-    "emailConsultation3": "El plazo de respuesta a las consultas por correo electrónico es de hasta 72 horas.",
+    "emailConsultation3": "El plazo de respuesta a las consultas por correo electrónico es de hasta <italic>72 horas</italic>.",
     "emailConsultation4": "No se realizan consultas médicas a través de WhatsApp o Instagram, ya que estos canales son gestionados por personal no médico.",
 
     "prescriptionsHeading": "Recetas y renovación de tratamientos",
     "prescriptions1": "Las recetas puede solicitarse sin coste adicional si la última consulta se realizó en los últimos 3 meses y el tratamiento no ha cambiado.",
-    "prescriptions2": "Pasado este período, la receta tiene un coste de 10€ y se emite para 3 meses.",
+    "prescriptions2": "Pasado este período, la receta tiene un coste de <italic>10€</italic> y se emite para <italic>3 meses</italic>.",
     "prescriptions3": "Si es necesario modificar el esquema de tratamiento o solicitar una receta por un motivo diferente, se requiere una nueva consulta.",
     "prescriptions4": "El ginecólogo solo puede prescribir medicamentos directamente relacionados con el tratamiento que está llevando a cabo. No es posible emitir recetas de fármacos indicados por otros especialistas, ya que no entra dentro de su competencia.",
 
