@@ -4,8 +4,6 @@ import classNames from 'classnames';
 import styles from '@/modules/main/intro/Intro.module.css';
 import Header from '@/components/header/Header';
 import Button from '@/components/button/Button';
-import Image from 'next/image';
-import introPhoto from '/public/introPhoto.webp';
 import { useTranslations } from 'next-intl';
 import ModalWindow from '@/components/modalWindow/ModalWindow';
 
@@ -20,6 +18,7 @@ const Intro = () => {
       )}
     >
       <Header getNewPathnameForLocale={(newLocale) => `/${newLocale}`} />
+
       <div className={classNames('content', styles.content)}>
         <div
           className={classNames(
@@ -27,12 +26,6 @@ const Intro = () => {
             styles.transparentBlockWrapper
           )}
         >
-          <Image
-            alt='doctora'
-            src={introPhoto}
-            className={classNames(styles.imageWrapper)}
-          />
-
           <div className={styles.textBlockWrapper}>
             <div className={styles.textWrapper}>
               <h1 className='header-lg text-align-center'>
